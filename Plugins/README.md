@@ -4,8 +4,8 @@ The **public marketplace contains two independently installable plugins**. Growt
 
 | Team | Work stages | Claude Code source | Codex source |
 |---|---|---|---|
-| [Capture Team](capture-team/) | Find, Qualify, Research, Capture | `Plugins/capture-team/` | [`openai-plugin/capture-team/`](../openai-plugin/capture-team/) |
-| [Proposal Team](proposal-team/) | Respond, Review | `Plugins/proposal-team/` | [`openai-plugin/proposal-team/`](../openai-plugin/proposal-team/) |
+| [Capture Team](claude/capture-team/) | Find, Qualify, Research, Capture | `Plugins/claude/capture-team/` | [`Plugins/codex/capture-team/`](codex/capture-team/) |
+| [Proposal Team](claude/proposal-team/) | Respond, Review | `Plugins/claude/proposal-team/` | [`Plugins/codex/proposal-team/`](codex/proposal-team/) |
 
 The six stages describe the **learning and work lifecycle**, not a claim that every stage has a dedicated built-in Digital Employee or integration. Check each plugin's actual supported capabilities and configure your own organization inputs.
 
@@ -13,7 +13,7 @@ The six stages describe the **learning and work lifecycle**, not a claim that ev
 
 ### Claude Code
 
-The Claude marketplace uses [`.claude-plugin/marketplace.json`](../.claude-plugin/marketplace.json) and points to `Plugins/<team>/`. In Claude Code, use:
+The Claude marketplace uses [`.claude-plugin/marketplace.json`](../.claude-plugin/marketplace.json) and points to `Plugins/claude/<team>/`. In Claude Code, use:
 
 ```text
 /plugin marketplace add Compound-Leverage/THINK-school
@@ -24,7 +24,7 @@ Or install `proposal-team@think-school`. See [Claude instructions](../.claude-pl
 
 ### Codex
 
-The Codex marketplace uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `openai-plugin/<team>/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
+The Codex marketplace uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `Plugins/codex/<team>/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
 
 ## Work with the teams
 
