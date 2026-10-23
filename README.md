@@ -35,7 +35,7 @@ The marketplace currently lists two independently installable Growth Team plugin
 - **[Capture Team](Marketplaces/README.md)** — opportunity discovery, intake, intelligence, and capture support.
 - **[Proposal Team](Marketplaces/README.md)** — research, assessment, positioning, drafting, and proposal QA.
 
-Claude Code packages live under `Plugins/claude/`; Codex packages live under `Plugins/codex/`. These have different execution structures. [See platform-specific instructions](Plugins/README.md).
+Claude Code packages live under `Plugins/claude/`; Codex packages live under `Plugins/OpenAI/`. These have different execution structures. [See platform-specific instructions](Plugins/README.md).
 
 ## Repository map
 
