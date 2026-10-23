@@ -11,11 +11,17 @@ Learn to direct Managed Teams, assign real work, review finished deliverables, a
 | Goal | Resource |
 |---|---|
 | Learn the six-stage pursuit process | [Find → Qualify → Research → Capture → Respond → Review](Learn/README.md) |
-| Find and install Capture Team or Proposal Team | [Marketplaces](Marketplaces/README.md) |
+| Install Capture Team or Proposal Team directly from GitHub | [Plugins](Plugins/README.md) |
 | Learn the THINK Method | [THINK Foundations](Skills/think-foundations/SKILL.md) |
 | Use a standalone capability | [Skills library](Skills/README.md) |
 | Direct work with human accountability | [AI-native workforce guide](Docs/ai-native-workforce.md) |
 | Build a service around the work | [AI-native services guide](Docs/ai-native-services.md) |
+
+## First assignment
+
+- [Capture Team quickstart](Docs/quickstart-capture.md) · [Sample Capture Brief](Docs/samples/capture-brief.md)
+- [Proposal Team quickstart](Docs/quickstart-proposal.md) · [Sample Discovery Brief](Docs/samples/proposal-discovery-brief.md)
+- [Plugin release validation checklist](Docs/plugin-validation.md) — installation tests still pending
 
 ## Learn by doing
 
@@ -28,9 +34,13 @@ Learn to direct Managed Teams, assign real work, review finished deliverables, a
 
 **Operating model:** Customer or SME → THINK Strategist → Managed Team → Human-reviewed, finished work. The responsible person approves decisions and external delivery.
 
+## Distribution: direct installation and official marketplaces
+
+**Direct installation from GitHub is available independently of official marketplace approval.** Select the Claude Code or OpenAI Codex package in [Plugins](Plugins/README.md). Official marketplace listings provide an additional distribution channel, not a prerequisite for using the repository packages.
+
 ## Public marketplace
 
-The marketplace currently lists two independently installable Growth Team plugins:
+The repository provides two independently installable Growth Team plugins:
 
 - **[Capture Team](Marketplaces/README.md)** — opportunity discovery, intake, intelligence, and capture support.
 - **[Proposal Team](Marketplaces/README.md)** — research, assessment, positioning, drafting, and proposal QA.
@@ -41,7 +51,7 @@ Claude Code packages live under `Plugins/claude/`; Codex packages live under `Pl
 
 | Path | Purpose |
 |---|---|
-| [Marketplaces/](Marketplaces/README.md) | Start here to choose the Claude Code or Codex marketplace |
+| [Marketplaces/](Marketplaces/README.md) | Choose platform-specific manifests and marketplace information |
 | [Plugins/](Plugins/README.md) | Capture and Proposal plugin packages by platform |
 | [Skills/](Skills/README.md) | Standalone reusable capabilities |
 | [Learn/](Learn/README.md) | Six-stage learning journey |

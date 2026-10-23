@@ -9,11 +9,14 @@ The [public marketplaces](../Marketplaces/README.md) contain two independently i
 
 The six stages describe the **learning and work lifecycle**, not a claim that every stage has a dedicated built-in Digital Employee or integration. Check each plugin's actual supported capabilities and configure your own organization inputs.
 
-## Install
+## Install directly from GitHub
+
+The repository is the **user-install distribution path**. Official marketplace approval is not needed to install the packages using a supported client. The platform-specific manifests below support discovery and installation from this repository; an official listing is an optional separate channel.
+
 
 ### Claude Code
 
-The Claude marketplace uses [`.claude-plugin/marketplace.json`](../.claude-plugin/marketplace.json) and points to `Plugins/claude/<team>/`. In Claude Code, use:
+The repository's Claude marketplace manifest uses [`.claude-plugin/marketplace.json`](../.claude-plugin/marketplace.json) and points to `Plugins/claude/<team>/`. In Claude Code, use:
 
 ```text
 /plugin marketplace add Compound-Leverage/THINK-school
@@ -24,7 +27,11 @@ Or install `proposal-team@think-school`. See [Claude instructions](../.claude-pl
 
 ### OpenAI (Codex packages)
 
-The Codex marketplace uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `Plugins/OpenAI/<team>/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
+The repository's Codex marketplace manifest uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `Plugins/OpenAI/<team>/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
+
+## Quickstarts and quality checks
+
+[Capture Team: first assignment](../Docs/quickstart-capture.md) · [Proposal Team: first assignment](../Docs/quickstart-proposal.md) · [Validation checklist](../Docs/plugin-validation.md)
 
 ## Work with the teams
 
