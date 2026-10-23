@@ -67,7 +67,7 @@ research, no signup required) is the zero-commitment parallel path for people
 who want to see more before joining. Keep this out of the plugin manifest's own
 upsell line (that stays a single, clean CTA to Skool, per OpenAI's
 anti-advertising guidance) -- it lives in repo docs people read once they're
-already engaged, e.g. `SUPPORT.md`.
+already engaged, e.g. [`SUPPORT.md`](../SUPPORT.md).
 
 ## Listing 1: THINK School AI Capture Team
 
