@@ -9,19 +9,16 @@
 | [Skills](../Skills/README.md) | Standalone capabilities |
 | [Learn](../Learn/README.md) | Six work stages: Find, Qualify, Research, Capture, Respond, Review |
 | [Docs](README.md) | Supporting architecture, methodology, and service guides |
-| [Archive](../Archive/README.md) | Historical resources |
 
 ## Technical directories
 
 - `Plugins/claude/`: Claude Code-native team packages.
 - `Plugins/codex/`: Codex-oriented execution packages; different skill structure.
 - `.claude-plugin/` and `.agents/plugins/`: platform-required marketplace manifests; do not relocate for cosmetic navigation.
-- `Archive/Agents/`: preserved standalone methodology agents and expanded persona implementations.
-- `Archive/Legacy-Resources/Prompts/`, `Templates/`, `Workflows/`: preserved historical references. These are **not** the primary learner navigation.
-- `Skills/`: standalone reusable skills, separate from plugin-internal execution skills. Older persona ZIP packages are preserved under `Archive/Persona-Skills/`.
+- `Skills/`: standalone reusable skills, separate from plugin-internal execution skills.
 
 ## Learning model
 
 Use [Learn](../Learn/README.md) to choose an assignment by the work to be done, then review the expected deliverable, human decision gate, and customization guidance. Some older reference material is named after Digital Employees; it does not require beginners to orchestrate individual personas.
 
-Other team source packages are preserved in `Archive/Other-Teams/` but are **not currently listed in the public marketplaces**.
+Legacy team packages and historical reference materials are preserved on the [`legacy-archive` branch](https://github.com/Compound-Leverage/THINK-school/tree/legacy-archive/Archive), not in the active repository tree.
