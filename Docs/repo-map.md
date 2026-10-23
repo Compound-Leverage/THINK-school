@@ -4,10 +4,12 @@
 
 | Area | Purpose |
 |---|---|
-| [Learn](../Learn/README.md) | Six work stages: Find, Qualify, Research, Capture, Respond, Review |
-| [Marketplace](../Plugins/README.md) | Two installable Growth Team plugins: Capture and Proposal |
+| [Marketplaces](../Marketplaces/README.md) | Platform-specific marketplace entry points for Capture and Proposal |
+| [Plugins](../Plugins/README.md) | Claude and Codex execution packages |
 | [Skills](../Skills/README.md) | Standalone capabilities |
+| [Learn](../Learn/README.md) | Six work stages: Find, Qualify, Research, Capture, Respond, Review |
 | [Docs](README.md) | Supporting architecture, methodology, and service guides |
+| [Archive](../Archive/README.md) | Historical resources |
 
 ## Technical directories
 
