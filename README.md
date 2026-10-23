@@ -4,6 +4,13 @@
 
 Learn to direct Managed Teams, assign real work, review finished deliverables, and build AI-native services. THINK School is Compound Leverage's education and training hub. The public educational plugins are distinct from Compound Leverage's proprietary managed-service runtime.
 
+## Choose your path
+
+| I want to outsource work | I want more resources |
+|---|---|
+| **Hire a Managed Team** — Assign capture and proposal work to Compound Leverage and receive finished, human-reviewed deliverables. | **Explore Free Resources** — Learn AI-native workflows, explore guides and tools, and install Capture and Proposal Team plugins. |
+| [Explore Managed Teams](https://www.compoundleverage.com/) | [Explore Learning Resources](https://www.compoundleverage.com/examples/) |
+
 ## Install a Managed Team
 
 Choose one of two independently installable teams. Both can be installed directly from GitHub; official marketplace approval is not required.
