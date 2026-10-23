@@ -2,10 +2,10 @@
 
 The [public marketplaces](../Marketplaces/README.md) contain two independently installable plugins. Growth Team is the umbrella for Capture and Proposal, not a third installable plugin.
 
-| Team | Work stages | Claude Code source | Codex source |
+| Team | Work stages | Claude Code source | OpenAI (Codex) source |
 |---|---|---|---|
-| [Capture Team](claude/capture-team/) | Find, Qualify, Research, Capture | `Plugins/claude/capture-team/` | [`Plugins/codex/capture-team/`](codex/capture-team/) |
-| [Proposal Team](claude/proposal-team/) | Respond, Review | `Plugins/claude/proposal-team/` | [`Plugins/codex/proposal-team/`](codex/proposal-team/) |
+| [Capture Team](claude/capture-team/) | Find, Qualify, Research, Capture | `Plugins/claude/capture-team/` | [`Plugins/OpenAI/capture-team/`](OpenAI/capture-team/) |
+| [Proposal Team](claude/proposal-team/) | Respond, Review | `Plugins/claude/proposal-team/` | [`Plugins/OpenAI/proposal-team/`](OpenAI/proposal-team/) |
 
 The six stages describe the **learning and work lifecycle**, not a claim that every stage has a dedicated built-in Digital Employee or integration. Check each plugin's actual supported capabilities and configure your own organization inputs.
 
@@ -22,9 +22,9 @@ The Claude marketplace uses [`.claude-plugin/marketplace.json`](../.claude-plugi
 
 Or install `proposal-team@think-school`. See [Claude instructions](../.claude-plugin/README.md). These commands are for Claude Code, **not ordinary Claude chat**.
 
-### Codex
+### OpenAI (Codex packages)
 
-The Codex marketplace uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `Plugins/codex/<team>/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
+The Codex marketplace uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `Plugins/OpenAI/<team>/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
 
 ## Work with the teams
 
