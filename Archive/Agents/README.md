@@ -22,18 +22,18 @@ A fuller, standalone, downloadable version of a persona that also ships bundled 
 `Plugins/` team. Same rules and boundaries as the plugin version, just with the complete
 `core/`, `hooks/`, `Skills/`, and `templates/` structure so it can run on its own, be
 modified for your own use, or be pointed at directly by a scheduled routine (see the
-"preferred pattern" note in any `Workflows/` file for what that means in practice).
+"preferred pattern" note in any `Archive/Legacy-Resources/Workflows/` file for what that means in practice).
 
 | Persona | Also ships in | Folder |
 |---|---|---|
 | Chet | `Plugins/capture-team` | [`chet/`](./chet/) |
-| Eric | `Plugins/ops-team` | [`eric/`](./eric/) |
+| Eric | `Archive/Other-Teams/ops-team` | [`eric/`](./eric/) |
 | Jason | `Plugins/ops-team` | [`jason/`](./jason/) |
 | Jenny | `Plugins/ops-team` | [`jenny/`](./jenny/) |
 | Kipp | `Plugins/capture-team` | [`kipp/`](./kipp/) |
 
 More persona folders get added here over time. If a persona you want isn't here yet, the
-condensed version in their `Plugins/<team>/skills/<persona>/SKILL.md` still works on its
+condensed version in their the appropriate archived or active team package's `skills/<persona>/SKILL.md` still works on its
 own.
 
 ## Questions
