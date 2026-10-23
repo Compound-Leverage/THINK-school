@@ -11,7 +11,7 @@ Learn to direct Managed Teams, assign real work, review finished deliverables, a
 | Goal | Resource |
 |---|---|
 | Learn the six-stage pursuit process | [Find → Qualify → Research → Capture → Respond → Review](Learn/README.md) |
-| Install Capture Team or Proposal Team | [Marketplace and installation](Plugins/README.md) |
+| Find and install Capture Team or Proposal Team | [Marketplaces](Marketplaces/README.md) |
 | Learn the THINK Method | [THINK Foundations](Skills/think-foundations/SKILL.md) |
 | Use a standalone capability | [Skills library](Skills/README.md) |
 | Direct work with human accountability | [AI-native workforce guide](Docs/ai-native-workforce.md) |
@@ -32,8 +32,8 @@ Learn to direct Managed Teams, assign real work, review finished deliverables, a
 
 The marketplace currently lists two independently installable Growth Team plugins:
 
-- **[Capture Team](Plugins/claude/capture-team/)** — opportunity discovery, intake, intelligence, and capture support.
-- **[Proposal Team](Plugins/claude/proposal-team/)** — research, assessment, positioning, drafting, and proposal QA.
+- **[Capture Team](Marketplaces/README.md)** — opportunity discovery, intake, intelligence, and capture support.
+- **[Proposal Team](Marketplaces/README.md)** — research, assessment, positioning, drafting, and proposal QA.
 
 Claude Code packages live under `Plugins/claude/`; Codex packages live under `Plugins/codex/`. These have different execution structures. [See platform-specific instructions](Plugins/README.md).
 
@@ -41,12 +41,12 @@ Claude Code packages live under `Plugins/claude/`; Codex packages live under `Pl
 
 | Path | Purpose |
 |---|---|
-| [Learn/](Learn/README.md) | Primary learning journey, organized by the six stages |
-| [Plugins/](Plugins/README.md) | Claude and Codex team packages and marketplace guidance |
+| [Marketplaces/](Marketplaces/README.md) | Start here to choose the Claude Code or Codex marketplace |
+| [Plugins/](Plugins/README.md) | Capture and Proposal plugin packages by platform |
 | [Skills/](Skills/README.md) | Standalone reusable capabilities |
+| [Learn/](Learn/README.md) | Six-stage learning journey |
 | [Docs/](Docs/README.md) | Architecture and operating guides |
-| [Archive/](Archive/README.md) | Preserved historical team packages and prompt, template, and workflow references |
-| [Archive/Agents/](Archive/Agents/README.md) | Preserved standalone methodology and persona implementations |
+| [Archive/](Archive/README.md) | Historical team packages, agents, and reference resources |
 
 The [Archive](Archive/README.md) retains other experimental or legacy team packages as source material. **Their presence does not mean they are listed in the public marketplace.**
 
