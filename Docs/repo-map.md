@@ -14,9 +14,9 @@
 - `Plugins/`: Claude Code-native team packages.
 - `openai-plugin/`: Codex-oriented execution packages; different skill structure.
 - `.claude-plugin/` and `.agents/plugins/`: platform-required marketplace manifests; do not relocate for cosmetic navigation.
-- `Agents/`: standalone methodology agents and expanded persona implementations.
+- `Archive/Agents/`: preserved standalone methodology agents and expanded persona implementations.
 - `Archive/Legacy-Resources/Prompts/`, `Templates/`, `Workflows/`: preserved historical references. These are **not** the primary learner navigation.
-- `Skills/`: standalone skill packages and source files, separate from plugin-internal execution skills.
+- `Skills/`: standalone reusable skills, separate from plugin-internal execution skills. Older persona ZIP packages are preserved under `Archive/Persona-Skills/`.
 
 ## Learning model
 
