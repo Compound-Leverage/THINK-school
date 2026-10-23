@@ -46,9 +46,8 @@ Claude Code packages live under `Plugins/claude/`; Codex packages live under `Pl
 | [Skills/](Skills/README.md) | Standalone reusable capabilities |
 | [Learn/](Learn/README.md) | Six-stage learning journey |
 | [Docs/](Docs/README.md) | Architecture and operating guides |
-| [Archive/](Archive/README.md) | Historical team packages, agents, and reference resources |
 
-The [Archive](Archive/README.md) retains other experimental or legacy team packages as source material. **Their presence does not mean they are listed in the public marketplace.**
+Legacy materials are preserved on the [`legacy-archive` branch](https://github.com/Compound-Leverage/THINK-school/tree/legacy-archive/Archive), outside the current public learning path.
 
 ## Community
 
