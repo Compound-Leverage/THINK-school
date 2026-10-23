@@ -17,6 +17,12 @@ Learn to direct Managed Teams, assign real work, review finished deliverables, a
 | Direct work with human accountability | [AI-native workforce guide](Docs/ai-native-workforce.md) |
 | Build a service around the work | [AI-native services guide](Docs/ai-native-services.md) |
 
+## First assignment
+
+- [Capture Team quickstart](Docs/quickstart-capture.md) · [Sample Capture Brief](Docs/samples/capture-brief.md)
+- [Proposal Team quickstart](Docs/quickstart-proposal.md) · [Sample Discovery Brief](Docs/samples/proposal-discovery-brief.md)
+- [Plugin release validation checklist](Docs/plugin-validation.md) — installation tests still pending
+
 ## Learn by doing
 
 1. **Install a team** — Capture Team supports Find, Qualify, Research, and Capture; Proposal Team supports Respond and Review.
