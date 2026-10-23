@@ -54,7 +54,7 @@ docs = [
     "Docs/quickstart-proposal.md", "Docs/plugin-validation.md",
     "Docs/samples/capture-brief.md", "Docs/samples/proposal-discovery-brief.md",
 ]
-pattern = re.compile(r"(?<!!)\\[[^\\]]+\\]\\(([^)]+)\\)")
+pattern = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
 for name in docs:
     file = ROOT / name
     if not file.is_file():
@@ -62,7 +62,7 @@ for name in docs:
         continue
     content = file.read_text(encoding="utf-8")
     for raw in pattern.findall(content):
-        target = raw.split("#", 1)[0].strip().split(" \\"", 1)[0]
+        target = raw.split("#", 1)[0].strip().split(" ", 1)[0]
         if not target or target.startswith(("https://", "http://", "mailto:", "/")):
             continue
         dest = (file.parent / unquote(target)).resolve()
