@@ -5,7 +5,7 @@ The Growth Team marketplace currently offers **Capture Team** and **Proposal Tea
 | Environment | Marketplace configuration | Package directory |
 |---|---|---|
 | Claude Code | [Claude marketplace](../.claude-plugin/marketplace.json) | [Claude packages](../Plugins/claude/) |
-| OpenAI Codex | [Codex marketplace](../.agents/plugins/marketplace.json) | [Codex packages](../Plugins/codex/) |
+| OpenAI Codex | [Codex marketplace](../.agents/plugins/marketplace.json) | [Codex packages](../Plugins/OpenAI/) |
 
 The marketplace manifests remain at their platform-specific root locations for discovery. This folder is the **human-facing marketplace index**, not a replacement for those manifests.
 
