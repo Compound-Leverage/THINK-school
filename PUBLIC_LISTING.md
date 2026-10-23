@@ -1,10 +1,7 @@
 # Public listing copy (ChatGPT / Claude directory submission)
 
 Reference copy for the OpenAI/Codex public plugin directory submission form.
-This describes the **curated 2-team public offering only** -- not the full
-9-plugin marketplace in this repo (that stays available via direct GitHub-URL
-install for THINK School members, per `README.md`, where Fulfillment and the
-rest of the roster remain installable).
+This describes the **two-team public offering**. Both GitHub marketplace manifests now list only Capture Team and Proposal Team. Other team source directories are preserved but are not listed for marketplace installation.
 
 ## Structure
 
@@ -14,10 +11,7 @@ rest of the roster remain installable).
 - **ChatGPT:** "THINK School AI Capture Team" (standalone listing) +
   "THINK School AI Proposal Team" (standalone listing)
 - **Claude:** same two, same split
-- **THINK School on Skool:** the complete environment -- full team library
-  (including Fulfillment and the rest of the roster), Digital Employees, this
-  GitHub repository, training, customization, team-building methodology,
-  updates, community.
+- **THINK School on Skool:** training, customization, team-building methodology, updates, and community. Additional source packages in this repository are not part of the current marketplace catalog.
 
 **Why two listings:** ChatGPT/Claude directory search is semantic, matching a
 user's natural-language query against a listing's name + description. A
@@ -132,7 +126,7 @@ Deliberately scoped to two for the first public release. "Win the work" is a
 complete, tight story on its own, and both plugins are the ones directly
 validated by real survey data (a congregation grant-workshop survey and a
 GovCon capture/proposal pilot survey) this session used to refine sourcing and
-research capability. Fulfillment stays out of the public submission for now --
+research capability. Fulfillment remains outside both marketplace manifests for now --
 it's a single-persona plugin (Lincoln only, vs. Capture's 3 and Proposal's 7)
 with no equivalent validation yet, and adding a third, thinner team risks
 diluting the pitch before the market has proven out discovery and usage on the
@@ -239,11 +233,11 @@ version number (as happened between 1.1.0 and 1.1.1 for both plugins this
 cycle), bump for the highest tier actually shipped, then start applying the
 per-change logic above going forward from that number.
 
-## Submission artifacts (ready to upload)
+## Historical submission artifacts (revalidate before use)
 
 - `openai-plugin/capture-team.zip` -- SKILL.md at root, `references/`,
-  `assets/`, no hidden-file cruft. QA-verified 2026-08-29.
-- `openai-plugin/proposal-team.zip` -- same structure, QA-verified 2026-08-29.
+  `assets/`, no hidden-file cruft. historically checked 2026-08-29; rebuild and revalidate before any new submission.
+- `openai-plugin/proposal-team.zip` -- same structure, historically checked 2026-08-29; rebuild and revalidate before any new submission.
 
 **Still open before actual submission (not blockers, but unresolved):**
 verify `compoundleverage.com/privacy` and `/terms` explicitly read as
