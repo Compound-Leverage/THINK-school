@@ -4,7 +4,7 @@ Canonical version: [compoundleverage.com/terms](https://www.compoundleverage.com
 Refund policy for paid Compound Leverage engagements (not applicable to these free
 plugins): [compoundleverage.com/refund-policy](https://www.compoundleverage.com/refund-policy/).
 
-**TODO (Marvin) -- confirmed conflict, needs a fix on cl-website:**
+**Open legal review item — website carve-out not yet verified:**
 `src/pages/terms.astro` §2 (Intellectual Property) currently reads: "You may not
 reproduce, distribute, modify, create derivative works of, publicly display, or
 commercially exploit **any content from this site** without prior written consent
@@ -29,7 +29,11 @@ data at scale) that Compound Leverage's site almost certainly falls under today
 -- no edit made pending an actual counsel review of current traffic/list-size/
 revenue against those thresholds.
 
-_Draft pending legal review. Last updated: 2026-08-28._
+_Draft pending legal review. Repository review updated: 2026-10-23. The canonical website terms have not been changed by this repository update._
+
+## Distribution
+
+The GitHub repository is a direct-install source for supported clients. Official marketplace approval is not required for use of the repository packages. Marketplace listings may have additional platform terms and separate approval and deployment processes.
 
 ## License
 
