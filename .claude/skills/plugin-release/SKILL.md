@@ -1,6 +1,6 @@
 ---
 name: plugin-release
-description: Prepares a THINK School plugin (capture-team, proposal-team, or any future public plugin) for release across both distribution surfaces -- Claude Code (Plugins/claude/<team>) and OpenAI (Plugins/codex/<team>). Use when content, instructions, or copy changed in a plugin and it needs to go out as a versioned update, or before resubmitting/reuploading either surface.
+description: Prepares a THINK School plugin (capture-team, proposal-team, or any future public plugin) for release across both distribution surfaces -- Claude Code (Plugins/claude/<team>) and OpenAI (Plugins/OpenAI/<team>). Use when content, instructions, or copy changed in a plugin and it needs to go out as a versioned update, or before resubmitting/reuploading either surface.
 ---
 
 ## Purpose
@@ -12,7 +12,7 @@ source of truth:
   `skills/<persona>/SKILL.md` files, `.claude-plugin/plugin.json` +
   `.codex-plugin/plugin.json`, `customization/` config path, em dash (`—`)
   convention.
-- **`Plugins/codex/<team>/`** -- derived, Codex Skills-only packaging.
+- **`Plugins/OpenAI/<team>/`** -- derived, Codex Skills-only packaging.
   One consolidated `skills/<team>/SKILL.md` + `references/*.md`,
   `.codex-plugin/plugin.json` only, `assets/` config path, double-hyphen
   (`--`) convention (no em dashes anywhere -- OpenAI copy rule).
@@ -25,7 +25,7 @@ description on both teams). This skill is the checklist that prevents that.
 ## When to use
 
 - After editing any `SKILL.md`, `references/*.md`, or config file in either
-  `Plugins/claude/<team>/` or `Plugins/codex/<team>/`
+  `Plugins/claude/<team>/` or `Plugins/OpenAI/<team>/`
 - Before resubmitting to the Claude Code community marketplace
 - Before telling the user a new zip is ready to reupload to OpenAI
 
@@ -33,7 +33,7 @@ description on both teams). This skill is the checklist that prevents that.
 
 1. **Identify what changed and where.** Diff the edited file(s) against
    their counterpart in the other tree. Canonical persona files map to
-   `Plugins/codex/<team>/skills/<team>/references/<persona>.md`; the
+   `Plugins/OpenAI/<team>/skills/<team>/references/<persona>.md`; the
    canonical router/orchestrator persona (`proposal-engine-lead-maya`,
    or the standalone `cluster-discovery-chet` for capture-team) maps to
    the Codex package root `SKILL.md`.
@@ -54,7 +54,7 @@ description on both teams). This skill is the checklist that prevents that.
    org-identification logic, discovery prompts, or any place a "whose
    organization" question gets asked. Run:
    ```
-   grep -rliE "compound.?leverage|compoundleverage\.com" Plugins/claude/<team> Plugins/codex/<team>
+   grep -rliE "compound.?leverage|compoundleverage\.com" Plugins/claude/<team> Plugins/OpenAI/<team>
    ```
    Only the two manifest files' `author`/`developerName`/URL fields should
    match -- required publisher attribution, not skill content. Anything
@@ -73,7 +73,7 @@ description on both teams). This skill is the checklist that prevents that.
    in all three manifest locations for the affected plugin:
    `Plugins/claude/<team>/.claude-plugin/plugin.json`,
    `Plugins/claude/<team>/.codex-plugin/plugin.json`,
-   `Plugins/codex/<team>/.codex-plugin/plugin.json`.
+   `Plugins/OpenAI/<team>/.codex-plugin/plugin.json`.
 
 5. **Validate.**
    ```
@@ -103,7 +103,7 @@ description on both teams). This skill is the checklist that prevents that.
 9. **Report back**, explicitly stating:
    - Which plugin(s) changed and their new version numbers
    - Whether the zip needs reuploading to OpenAI (always, if
-     `Plugins/codex/<team>/` changed)
+     `Plugins/OpenAI/<team>/` changed)
    - Whether `main` needs a push for the Claude Code submission to see
      the update -- the review pipeline reads from the repo's default
      branch, not `Staging`. If a submission is pending or already live,
