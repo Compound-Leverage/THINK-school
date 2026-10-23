@@ -30,11 +30,11 @@ The Codex marketplace uses [`.agents/plugins/marketplace.json`](../.agents/plugi
 
 Begin with [the six-stage learning path](../Learn/README.md). Provide authorized organization-specific inputs and approve the deliverable at each relevant gate.
 
-- **Capture Team:** Chet (cluster discovery), Kipp (CRM intake), Ben (signal delivery). [Historical example prompts](../Archive/Legacy-Resources/Prompts/capture-team.md).
-- **Proposal Team:** Maya (orchestration), Chase (research), Priya (assessment), Porter (strategy), Quinn (writing), Diego (QA), Blair (funder pitch development). [Historical example prompts](../Archive/Legacy-Resources/Prompts/proposal-team.md).
+- **Capture Team:** Chet (cluster discovery), Kipp (CRM intake), Ben (signal delivery).
+- **Proposal Team:** Maya (orchestration), Chase (research), Priya (assessment), Porter (strategy), Quinn (writing), Diego (QA), Blair (funder pitch development).
 
 ## Preserved source packages
 
-Seven older team packages are preserved under [`Archive/Other-Teams/`](../Archive/Other-Teams/). They are **not listed in either public marketplace manifest**. Their historical prompts, templates, and workflows are under [`Archive/Legacy-Resources/`](../Archive/Legacy-Resources/). Archived team packages are not maintained installation targets.
+Historical packages and resources are preserved on the [`legacy-archive` branch](https://github.com/Compound-Leverage/THINK-school/tree/legacy-archive/Archive). They are not listed in the active marketplaces.
 
 [Learning stages](../Learn/README.md) · [Standalone skills](../Skills/README.md) · [Repository map](../Docs/repo-map.md)
