@@ -30,11 +30,11 @@ The Codex marketplace uses [`.agents/plugins/marketplace.json`](../.agents/plugi
 
 Begin with [the six-stage learning path](../Learn/README.md). Provide authorized organization-specific inputs and approve the deliverable at each relevant gate.
 
-- **Capture Team:** Chet (cluster discovery), Kipp (CRM intake), Ben (signal delivery). [Example prompts](../Prompts/capture-team.md).
-- **Proposal Team:** Maya (orchestration), Chase (research), Priya (assessment), Porter (strategy), Quinn (writing), Diego (QA), Blair (funder pitch development). [Example prompts](../Prompts/proposal-team.md).
+- **Capture Team:** Chet (cluster discovery), Kipp (CRM intake), Ben (signal delivery). [Historical example prompts](../Archive/Legacy-Resources/Prompts/capture-team.md).
+- **Proposal Team:** Maya (orchestration), Chase (research), Priya (assessment), Porter (strategy), Quinn (writing), Diego (QA), Blair (funder pitch development). [Historical example prompts](../Archive/Legacy-Resources/Prompts/proposal-team.md).
 
 ## Preserved source packages
 
-The repository also contains `content-team`, `sales-bd-team`, `sales-enablement`, `fulfillment`, `ops-team`, `lead-discovery`, and `proposal-generator`. These remain in source control for reference and compatibility, **but are not listed in either public marketplace manifest**. Their historical prompts, templates, and workflows are retained.
+Seven older team packages are preserved under [`Archive/Other-Teams/`](../Archive/Other-Teams/). They are **not listed in either public marketplace manifest**. Their historical prompts, templates, and workflows are under [`Archive/Legacy-Resources/`](../Archive/Legacy-Resources/). Archived team packages are not maintained installation targets.
 
 [Learning stages](../Learn/README.md) · [Standalone skills](../Skills/README.md) · [Repository map](../Docs/repo-map.md)
