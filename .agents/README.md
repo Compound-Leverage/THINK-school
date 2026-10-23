@@ -1,6 +1,6 @@
 # Codex marketplace
 
-The Codex marketplace manifest is [`plugins/marketplace.json`](plugins/marketplace.json). It currently lists **Capture Team and Proposal Team only**, pointing to `Plugins/codex/capture-team/` and `Plugins/codex/proposal-team/` respectively.
+The Codex marketplace manifest is [`plugins/marketplace.json`](plugins/marketplace.json). It currently lists **Capture Team and Proposal Team only**, pointing to `Plugins/OpenAI/capture-team/` and `Plugins/OpenAI/proposal-team/` respectively.
 
 These Codex-oriented packages use an orchestration skill with role references. They are **not identical** to the multi-persona Claude Code packages under `Plugins/`.
 
