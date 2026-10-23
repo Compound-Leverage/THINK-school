@@ -1,4 +1,7 @@
-# THINK School - DE Automation Setup
+# Historical workflow and automation reference
+
+**For new learners:** start with the [six-stage Growth Team learning path](../Learn/README.md). The workflows below are persona-specific historical setup references. They are not required to assign work to a Managed Team, and scheduled execution depends on the actual platform capabilities and user configuration. Other teams named below are not marketplace-listed.
+
 
 How to put each Digital Employee on a recurring schedule instead of running them by
 hand, one file per persona. Every file covers two paths: a Claude scheduled routine
