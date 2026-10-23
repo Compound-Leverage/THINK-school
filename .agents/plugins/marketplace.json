@@ -1,6 +1,6 @@
 {
   "name": "think-school",
-  "description": "THINK School — free, source-available AI Teams for people doing capture, proposal, growth, and grant work (start with Capture Team, Proposal Team, and Fulfillment) plus a full roster for content, sales, and ops. PolyForm Shield License: free to use, no competing product/service. Bring-your-own-data templates, no proprietary CL logic or pricing included.",
+  "description": "THINK School Growth Team: Capture and Proposal Managed Team plugins for AI-native pursuit work. Bring your own organizational data and approve decisions and deliverables.",
   "owner": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
@@ -10,38 +10,10 @@
   },
   "plugins": [
     {
-      "name": "lead-discovery",
-      "source": {
-        "source": "local",
-        "path": "./Plugins/lead-discovery"
-      },
-      "policy": {
-        "installation": "AVAILABLE"
-      },
-      "category": "Sales",
-      "interface": {
-        "displayName": "Lead Discovery"
-      }
-    },
-    {
-      "name": "proposal-generator",
-      "source": {
-        "source": "local",
-        "path": "./Plugins/proposal-generator"
-      },
-      "policy": {
-        "installation": "AVAILABLE"
-      },
-      "category": "Sales",
-      "interface": {
-        "displayName": "Proposal Drafter"
-      }
-    },
-    {
       "name": "proposal-team",
       "source": {
         "source": "local",
-        "path": "./Plugins/proposal-team"
+        "path": "./openai-plugin/proposal-team"
       },
       "policy": {
         "installation": "AVAILABLE"
@@ -52,52 +24,10 @@
       }
     },
     {
-      "name": "content-team",
-      "source": {
-        "source": "local",
-        "path": "./Plugins/content-team"
-      },
-      "policy": {
-        "installation": "AVAILABLE"
-      },
-      "category": "Marketing",
-      "interface": {
-        "displayName": "Content Team"
-      }
-    },
-    {
-      "name": "sales-bd-team",
-      "source": {
-        "source": "local",
-        "path": "./Plugins/sales-bd-team"
-      },
-      "policy": {
-        "installation": "AVAILABLE"
-      },
-      "category": "Sales",
-      "interface": {
-        "displayName": "Sales BD Team"
-      }
-    },
-    {
-      "name": "sales-enablement",
-      "source": {
-        "source": "local",
-        "path": "./Plugins/sales-enablement"
-      },
-      "policy": {
-        "installation": "AVAILABLE"
-      },
-      "category": "Sales",
-      "interface": {
-        "displayName": "Sales Enablement"
-      }
-    },
-    {
       "name": "capture-team",
       "source": {
         "source": "local",
-        "path": "./Plugins/capture-team"
+        "path": "./openai-plugin/capture-team"
       },
       "policy": {
         "installation": "AVAILABLE"
@@ -105,34 +35,6 @@
       "category": "Sales",
       "interface": {
         "displayName": "THINK School AI Capture Team"
-      }
-    },
-    {
-      "name": "fulfillment",
-      "source": {
-        "source": "local",
-        "path": "./Plugins/fulfillment"
-      },
-      "policy": {
-        "installation": "AVAILABLE"
-      },
-      "category": "Productivity",
-      "interface": {
-        "displayName": "Fulfillment"
-      }
-    },
-    {
-      "name": "ops-team",
-      "source": {
-        "source": "local",
-        "path": "./Plugins/ops-team"
-      },
-      "policy": {
-        "installation": "AVAILABLE"
-      },
-      "category": "Productivity",
-      "interface": {
-        "displayName": "Ops Team"
       }
     }
   ]

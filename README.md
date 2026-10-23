@@ -1,16 +1,41 @@
 # THINK School
 
-Compound Leverage's training and educational resource hub, every training we produce is
-THINK School, whether or not the person using it is a formal (paid) member. Free,
-source-available, community-shareable skills and plugins for people doing capture,
-proposal, growth, and grant work, whatever kind of organization they do it for.
+**Learn to Work AI-Native.**
 
-New here and wondering what THINK School is? Learn more at
-[skool.com/thinkschool/about](https://www.skool.com/thinkschool/about).
+Learn to direct AI teams, deliver finished work, and build AI-native services through practical lessons, real assignments, and installable plugins.
+
+THINK School is Compound Leverage's education and training hub. The public resources are free and source-available; structured training and the Strategist Program offer deeper support. These educational plugins are not the proprietary Compound Leverage Managed Teams service or its production runtime.
+
+## Start here
+
+**Learn the six-stage Growth Team process:** [Find → Qualify → Research → Capture → Respond → Review](Learn/README.md). Capture Team handles the first four stages; Proposal Team handles the final two. Each guide gives you an assignment, a deliverable to review, and customization steps.
+
+
+| Your goal | Start with | Outcome |
+|---|---|---|
+| Learn AI-native work | [THINK Foundations](Skills/think-foundations/SKILL.md) | Understand the THINK Method and complete a first assignment |
+| Direct AI teams | [AI-native workforce guide](Docs/ai-native-workforce.md) | Turn a request into a scoped job, coordinate the team, and review delivery |
+| Build AI-native services | [Service delivery guide](Docs/ai-native-services.md) | Scope, package, and manage customer services with human accountability |
+| Install a team | [Plugins directory](Plugins/README.md) | Choose a plugin by the work you need done |
+
+**First assignment:** Try the [Proposal Team](Plugins/proposal-team) with a fictional opportunity. Request a research and Go/No-Go assessment, approve the decision gate, and then request a finished proposal draft with QA review. Use fictional inputs and verify every externally sourced claim before use.
+
+**Operating model:** Subject Matter Expert / Customer → THINK Strategist → Managed Team (or educational AI Team) → Reviewed, finished work. The person responsible for delivery defines scope, supplies judgment, and approves work before external use.
+
+## Learn by doing
+
+1. **Learn:** Develop AI-native thinking and delegation fundamentals.
+2. **Try:** Install a team and complete a bounded assignment.
+3. **Operate:** Direct multiple jobs, manage inputs, dependencies, and approval gates.
+4. **Build:** Package repeatable AI-native services and manage customers and quality.
+
+See [AI-native workforce](Docs/ai-native-workforce.md) and [AI-native services](Docs/ai-native-services.md) for the practical progression.
+
+---
 
 ## Getting started: your first AI Teams
 
-New here? Start with these three AI Teams -- specialized AI agents that work together on
+Choose an AI Team to practice delivering a specific outcome. Start with these three AI Teams -- specialized AI agents that work together on
 one job -- following the same journey most opportunity-driven work does: find it, win it,
 deliver it.
 
