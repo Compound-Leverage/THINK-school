@@ -9,12 +9,12 @@
   "plugins": [
     {
       "name": "proposal-team",
-      "source": "./Plugins/proposal-team",
+      "source": "./Plugins/claude/proposal-team",
       "description": "Runs a qualified opportunity through a full proposal pipeline -- research, deal assessment, competitive positioning, drafting, and QA -- producing a submission-ready proposal with your approval at each stage, plus a separate grant/funder track. 7 roles: Maya (lead), Chase, Priya, Porter, Quinn, Diego, Blair. Bring your own pricing, case studies, and brand guidelines."
     },
     {
       "name": "capture-team",
-      "source": "./Plugins/capture-team",
+      "source": "./Plugins/claude/capture-team",
       "description": "THINK School AI Capture Team helps practitioners discover opportunities worth pursuing, qualify and prioritize them against organizational criteria, and turn the resulting intelligence into decision-ready Capture Briefs. Three Digital Employees work together: Chet discovers, Kipp qualifies and prioritizes, and Ben develops capture intelligence and pursuit recommendations."
     }
   ]

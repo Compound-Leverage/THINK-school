@@ -1,6 +1,6 @@
 ---
 name: plugin-release
-description: Prepares a THINK School plugin (capture-team, proposal-team, or any future public plugin) for release across both distribution surfaces -- Claude Code (Plugins/<team>) and OpenAI (openai-plugin/<team>). Use when content, instructions, or copy changed in a plugin and it needs to go out as a versioned update, or before resubmitting/reuploading either surface.
+description: Prepares a THINK School plugin (capture-team, proposal-team, or any future public plugin) for release across both distribution surfaces -- Claude Code (Plugins/claude/<team>) and OpenAI (Plugins/codex/<team>). Use when content, instructions, or copy changed in a plugin and it needs to go out as a versioned update, or before resubmitting/reuploading either surface.
 ---
 
 ## Purpose
@@ -8,11 +8,11 @@ description: Prepares a THINK School plugin (capture-team, proposal-team, or any
 THINK School plugins ship on two structurally different surfaces from one
 source of truth:
 
-- **`Plugins/<team>/`** -- canonical, Claude Code-native. Multi-persona
+- **`Plugins/claude/<team>/`** -- canonical, Claude Code-native. Multi-persona
   `skills/<persona>/SKILL.md` files, `.claude-plugin/plugin.json` +
   `.codex-plugin/plugin.json`, `customization/` config path, em dash (`—`)
   convention.
-- **`openai-plugin/<team>/`** -- derived, OpenAI Skills-only packaging.
+- **`Plugins/codex/<team>/`** -- derived, Codex Skills-only packaging.
   One consolidated `skills/<team>/SKILL.md` + `references/*.md`,
   `.codex-plugin/plugin.json` only, `assets/` config path, double-hyphen
   (`--`) convention (no em dashes anywhere -- OpenAI copy rule).
@@ -25,7 +25,7 @@ description on both teams). This skill is the checklist that prevents that.
 ## When to use
 
 - After editing any `SKILL.md`, `references/*.md`, or config file in either
-  `Plugins/<team>/` or `openai-plugin/<team>/`
+  `Plugins/claude/<team>/` or `Plugins/codex/<team>/`
 - Before resubmitting to the Claude Code community marketplace
 - Before telling the user a new zip is ready to reupload to OpenAI
 
@@ -33,17 +33,17 @@ description on both teams). This skill is the checklist that prevents that.
 
 1. **Identify what changed and where.** Diff the edited file(s) against
    their counterpart in the other tree. Canonical persona files map to
-   `openai-plugin/<team>/skills/<team>/references/<persona>.md`; the
+   `Plugins/codex/<team>/skills/<team>/references/<persona>.md`; the
    canonical router/orchestrator persona (`proposal-engine-lead-maya`,
    or the standalone `cluster-discovery-chet` for capture-team) maps to
-   the openai-plugin root `SKILL.md`.
+   the Codex package root `SKILL.md`.
 
 2. **Sync in both directions.** Apply the same logical change to both
    trees, translating conventions as you go:
-   - em dash `—` (canonical) <-> double hyphen `--` (openai-plugin)
-   - `customization/` (canonical) <-> `assets/` (openai-plugin)
+   - em dash `—` (canonical) <-> double hyphen `--` (Codex package)
+   - `customization/` (canonical) <-> `assets/` (Codex package)
    - multi-file persona structure (canonical) <-> single consolidated
-     file with `## Persona Name` sections (openai-plugin)
+     file with `## Persona Name` sections (Codex package)
    Do not skip this step because "it's just a copy change" -- the
    `.claude-plugin/plugin.json` `description` field and the
    `.codex-plugin/plugin.json` `interface.longDescription` field should
@@ -54,13 +54,13 @@ description on both teams). This skill is the checklist that prevents that.
    org-identification logic, discovery prompts, or any place a "whose
    organization" question gets asked. Run:
    ```
-   grep -rliE "compound.?leverage|compoundleverage\.com" Plugins/<team> openai-plugin/<team>
+   grep -rliE "compound.?leverage|compoundleverage\.com" Plugins/claude/<team> Plugins/codex/<team>
    ```
    Only the two manifest files' `author`/`developerName`/URL fields should
    match -- required publisher attribution, not skill content. Anything
    else is a regression of the org-identity guard fix.
 
-4. **Apply the version bump**, per the policy in `PUBLIC_LISTING.md` ->
+4. **Apply the version bump**, per the policy in `Docs/PUBLIC_LISTING.md` ->
    Versioning:
    - **Patch** -- bug fix, wording/instruction clarification, metadata
      copy change. No capability change.
@@ -71,20 +71,20 @@ description on both teams). This skill is the checklist that prevents that.
    Each plugin (capture-team, proposal-team, future additions) versions
    independently -- they don't need to move together. Update the version
    in all three manifest locations for the affected plugin:
-   `Plugins/<team>/.claude-plugin/plugin.json`,
-   `Plugins/<team>/.codex-plugin/plugin.json`,
-   `openai-plugin/<team>/.codex-plugin/plugin.json`.
+   `Plugins/claude/<team>/.claude-plugin/plugin.json`,
+   `Plugins/claude/<team>/.codex-plugin/plugin.json`,
+   `Plugins/codex/<team>/.codex-plugin/plugin.json`.
 
 5. **Validate.**
    ```
-   claude plugin validate ./Plugins/<team> --strict
+   claude plugin validate ./Plugins/claude/<team> --strict
    python3 -c "import json; json.load(open('<path>'))"  # every touched .json
    ```
 
 6. **Rebuild the OpenAI zip from a clean state** -- never trust an
    existing zip after a content change:
    ```
-   cd openai-plugin
+   cd Plugins/codex
    rm -f <team>.zip
    cd <team> && zip -r -X ../<team>.zip . -x "*.DS_Store" -x "__MACOSX*" && cd ..
    ```
@@ -103,7 +103,7 @@ description on both teams). This skill is the checklist that prevents that.
 9. **Report back**, explicitly stating:
    - Which plugin(s) changed and their new version numbers
    - Whether the zip needs reuploading to OpenAI (always, if
-     `openai-plugin/<team>/` changed)
+     `Plugins/codex/<team>/` changed)
    - Whether `main` needs a push for the Claude Code submission to see
      the update -- the review pipeline reads from the repo's default
      branch, not `Staging`. If a submission is pending or already live,
@@ -119,6 +119,6 @@ description on both teams). This skill is the checklist that prevents that.
 - Never skip the identity-leak sweep when the change touches org-detection
   logic -- this is the one category of bug that shipped twice already
   because it wasn't checked mechanically
-- If canonical and openai-plugin diverge in ways that aren't just the
+- If canonical and Codex package diverge in ways that aren't just the
   stated conventions (em dash, path names, file structure), stop and
   flag it rather than silently picking one side
