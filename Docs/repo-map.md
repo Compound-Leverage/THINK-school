@@ -13,7 +13,7 @@
 ## Technical directories
 
 - `Plugins/claude/`: Claude Code-native team packages.
-- `Plugins/codex/`: Codex-oriented execution packages; different skill structure.
+- `Plugins/OpenAI/`: Codex-oriented execution packages; different skill structure.
 - `.claude-plugin/` and `.agents/plugins/`: platform-required marketplace manifests; do not relocate for cosmetic navigation.
 - `Skills/`: standalone reusable skills, separate from plugin-internal execution skills.
 
