@@ -84,7 +84,7 @@ description on both teams). This skill is the checklist that prevents that.
 6. **Rebuild the OpenAI zip from a clean state** -- never trust an
    existing zip after a content change:
    ```
-   cd Plugins/codex
+   cd Plugins/OpenAI
    rm -f <team>.zip
    cd <team> && zip -r -X ../<team>.zip . -x "*.DS_Store" -x "__MACOSX*" && cd ..
    ```
