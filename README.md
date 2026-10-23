@@ -46,10 +46,10 @@ Claude Code packages live under `Plugins/`; Codex packages live under `openai-pl
 | [openai-plugin/](openai-plugin/) | Codex-oriented team packages |
 | [Skills/](Skills/README.md) | Standalone reusable capabilities |
 | [Docs/](Docs/README.md) | Architecture and operating guides |
-| [Prompts/](Prompts/README.md), [Templates/](Templates/README.md), [Workflows/](Workflows/README.md) | Preserved reference materials; not the beginner learning path |
+| [Archive/](Archive/README.md) | Preserved historical team packages and prompt, template, and workflow references |
 | [Agents/](Agents/README.md) | Standalone methodology and persona implementations |
 
-The repository also retains other experimental or legacy team packages as source material. **Their presence does not mean they are listed in the public marketplace.**
+The [Archive](Archive/README.md) retains other experimental or legacy team packages as source material. **Their presence does not mean they are listed in the public marketplace.**
 
 ## Community
 
