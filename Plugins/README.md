@@ -26,6 +26,10 @@ Or install `proposal-team@think-school`. See [Claude instructions](../.claude-pl
 
 The Codex marketplace uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `Plugins/OpenAI/<team>/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
 
+## Quickstarts and quality checks
+
+[Capture Team: first assignment](../Docs/quickstart-capture.md) · [Proposal Team: first assignment](../Docs/quickstart-proposal.md) · [Validation checklist](../Docs/plugin-validation.md)
+
 ## Work with the teams
 
 Begin with [the six-stage learning path](../Learn/README.md). Provide authorized organization-specific inputs and approve the deliverable at each relevant gate.
