@@ -32,18 +32,17 @@ Learn to direct Managed Teams, assign real work, review finished deliverables, a
 
 The marketplace currently lists two independently installable Growth Team plugins:
 
-- **[Capture Team](Plugins/capture-team)** — opportunity discovery, intake, intelligence, and capture support.
-- **[Proposal Team](Plugins/proposal-team)** — research, assessment, positioning, drafting, and proposal QA.
+- **[Capture Team](Plugins/claude/capture-team/)** — opportunity discovery, intake, intelligence, and capture support.
+- **[Proposal Team](Plugins/claude/proposal-team/)** — research, assessment, positioning, drafting, and proposal QA.
 
-Claude Code packages live under `Plugins/`; Codex packages live under `openai-plugin/`. These have different execution structures. [See platform-specific instructions](Plugins/README.md).
+Claude Code packages live under `Plugins/claude/`; Codex packages live under `Plugins/codex/`. These have different execution structures. [See platform-specific instructions](Plugins/README.md).
 
 ## Repository map
 
 | Path | Purpose |
 |---|---|
 | [Learn/](Learn/README.md) | Primary learning journey, organized by the six stages |
-| [Plugins/](Plugins/README.md) | Claude Code team packages and marketplace guidance |
-| [openai-plugin/](openai-plugin/) | Codex-oriented team packages |
+| [Plugins/](Plugins/README.md) | Claude and Codex team packages and marketplace guidance |
 | [Skills/](Skills/README.md) | Standalone reusable capabilities |
 | [Docs/](Docs/README.md) | Architecture and operating guides |
 | [Archive/](Archive/README.md) | Preserved historical team packages and prompt, template, and workflow references |
