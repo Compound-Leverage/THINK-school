@@ -8,6 +8,9 @@ THINK School is Compound Leverage's education and training hub. The public resou
 
 ## Start here
 
+**Learn the six-stage Growth Team process:** [Find → Qualify → Research → Capture → Respond → Review](Learn/README.md). Capture Team handles the first four stages; Proposal Team handles the final two. Each guide gives you an assignment, a deliverable to review, and customization steps.
+
+
 | Your goal | Start with | Outcome |
 |---|---|---|
 | Learn AI-native work | [THINK Foundations](Skills/think-foundations/SKILL.md) | Understand the THINK Method and complete a first assignment |
