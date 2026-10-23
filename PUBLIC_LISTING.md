@@ -1,7 +1,7 @@
 # Public listing copy (ChatGPT / Claude directory submission)
 
 Reference copy for the OpenAI/Codex public plugin directory submission form.
-This describes the **two-team public offering**. Both GitHub marketplace manifests now list only Capture Team and Proposal Team. Other team source directories are preserved but are not listed for marketplace installation.
+This describes the **two-team public offering**. Both GitHub marketplace manifests now list only Capture Team and Proposal Team. Other team packages are preserved under `Archive/Other-Teams/` but are not listed for marketplace installation.
 
 ## Structure
 
@@ -11,7 +11,7 @@ This describes the **two-team public offering**. Both GitHub marketplace manifes
 - **ChatGPT:** "THINK School AI Capture Team" (standalone listing) +
   "THINK School AI Proposal Team" (standalone listing)
 - **Claude:** same two, same split
-- **THINK School on Skool:** training, customization, team-building methodology, updates, and community. Additional source packages in this repository are not part of the current marketplace catalog.
+- **THINK School on Skool:** training, customization, team-building methodology, updates, and community. Additional source packages in `Archive/Other-Teams/` are not part of the current marketplace catalog.
 
 **Why two listings:** ChatGPT/Claude directory search is semantic, matching a
 user's natural-language query against a listing's name + description. A
