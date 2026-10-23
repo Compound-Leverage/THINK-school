@@ -12,7 +12,7 @@ source of truth:
   `skills/<persona>/SKILL.md` files, `.claude-plugin/plugin.json` +
   `.codex-plugin/plugin.json`, `customization/` config path, em dash (`—`)
   convention.
-- **`Plugins/codex/<team>/`** -- derived, OpenAI Skills-only packaging.
+- **`Plugins/codex/<team>/`** -- derived, Codex Skills-only packaging.
   One consolidated `skills/<team>/SKILL.md` + `references/*.md`,
   `.codex-plugin/plugin.json` only, `assets/` config path, double-hyphen
   (`--`) convention (no em dashes anywhere -- OpenAI copy rule).
@@ -36,14 +36,14 @@ description on both teams). This skill is the checklist that prevents that.
    `Plugins/codex/<team>/skills/<team>/references/<persona>.md`; the
    canonical router/orchestrator persona (`proposal-engine-lead-maya`,
    or the standalone `cluster-discovery-chet` for capture-team) maps to
-   the openai-plugin root `SKILL.md`.
+   the Codex package root `SKILL.md`.
 
 2. **Sync in both directions.** Apply the same logical change to both
    trees, translating conventions as you go:
-   - em dash `—` (canonical) <-> double hyphen `--` (openai-plugin)
-   - `customization/` (canonical) <-> `assets/` (openai-plugin)
+   - em dash `—` (canonical) <-> double hyphen `--` (Codex package)
+   - `customization/` (canonical) <-> `assets/` (Codex package)
    - multi-file persona structure (canonical) <-> single consolidated
-     file with `## Persona Name` sections (openai-plugin)
+     file with `## Persona Name` sections (Codex package)
    Do not skip this step because "it's just a copy change" -- the
    `.claude-plugin/plugin.json` `description` field and the
    `.codex-plugin/plugin.json` `interface.longDescription` field should
@@ -119,6 +119,6 @@ description on both teams). This skill is the checklist that prevents that.
 - Never skip the identity-leak sweep when the change touches org-detection
   logic -- this is the one category of bug that shipped twice already
   because it wasn't checked mechanically
-- If canonical and openai-plugin diverge in ways that aren't just the
+- If canonical and Codex package diverge in ways that aren't just the
   stated conventions (em dash, path names, file structure), stop and
   flag it rather than silently picking one side
