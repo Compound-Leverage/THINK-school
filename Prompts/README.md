@@ -1,4 +1,7 @@
-# THINK School — DE Prompt Library
+# Historical prompt reference library
+
+**For new learners:** start with the [six stages](../Learn/README.md) and assign work to Capture Team or Proposal Team. These preserved examples are organized by plugin/persona for advanced reference, not the current marketplace catalog. Other team files below are **not marketplace-listed**.
+
 
 Starter prompts for every Digital Employee in the THINK School marketplace. Each file below pairs with one plugin (or the standalone skills) — install the plugin first, then paste its prompts into Claude, swapping in your own systems and data.
 
