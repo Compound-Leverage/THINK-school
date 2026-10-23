@@ -235,9 +235,9 @@ per-change logic above going forward from that number.
 
 ## Historical submission artifacts (revalidate before use)
 
-- `openai-plugin/capture-team.zip` -- SKILL.md at root, `references/`,
+- `Plugins/codex/capture-team.zip` -- SKILL.md at root, `references/`,
   `assets/`, no hidden-file cruft. historically checked 2026-08-29; rebuild and revalidate before any new submission.
-- `openai-plugin/proposal-team.zip` -- same structure, historically checked 2026-08-29; rebuild and revalidate before any new submission.
+- `Plugins/codex/proposal-team.zip` -- same structure, historically checked 2026-08-29; rebuild and revalidate before any new submission.
 
 **Still open before actual submission (not blockers, but unresolved):**
 verify `compoundleverage.com/privacy` and `/terms` explicitly read as
