@@ -11,8 +11,8 @@
 
 ## Technical directories
 
-- `Plugins/`: Claude Code-native team packages.
-- `openai-plugin/`: Codex-oriented execution packages; different skill structure.
+- `Plugins/claude/`: Claude Code-native team packages.
+- `Plugins/codex/`: Codex-oriented execution packages; different skill structure.
 - `.claude-plugin/` and `.agents/plugins/`: platform-required marketplace manifests; do not relocate for cosmetic navigation.
 - `Archive/Agents/`: preserved standalone methodology agents and expanded persona implementations.
 - `Archive/Legacy-Resources/Prompts/`, `Templates/`, `Workflows/`: preserved historical references. These are **not** the primary learner navigation.
