@@ -1,6 +1,6 @@
-# THINK School Growth Team Marketplace
+# THINK School Growth Team Plugins
 
-The **public marketplace contains two independently installable plugins**. Growth Team is the umbrella for Capture and Proposal, not a third installable plugin.
+The [public marketplaces](../Marketplaces/README.md) contain two independently installable plugins. Growth Team is the umbrella for Capture and Proposal, not a third installable plugin.
 
 | Team | Work stages | Claude Code source | Codex source |
 |---|---|---|---|
