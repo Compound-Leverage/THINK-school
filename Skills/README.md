@@ -15,4 +15,4 @@ Skill support and installation differ by platform. Uploading a file into a chat 
 
 ## Archived Digital Employee packages
 
-Former standalone persona ZIPs and the LinkedIn Content reference are preserved in [Archive/Persona-Skills](../Archive/Persona-Skills/). For current team-based work, install the [Capture or Proposal plugin](../Plugins/README.md) and use [Learn](../Learn/README.md) rather than coordinating individual personas manually.
+Former standalone persona ZIPs and the LinkedIn Content reference are preserved in [the `legacy-archive` branch](https://github.com/Compound-Leverage/THINK-school/tree/legacy-archive/Archive/Persona-Skills). For current team-based work, install the [Capture or Proposal plugin](../Plugins/README.md) and use [Learn](../Learn/README.md) rather than coordinating individual personas manually.
