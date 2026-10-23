@@ -26,6 +26,32 @@ Choose one of two independently installable teams. Both can be installed directl
 
 ![THINK School logo](assets/icons/think-school.png)
 
+## What each team delivers
+
+The examples below illustrate the work sequence; linked samples use fictional organizations and opportunities.
+
+**Capture Team — from opportunity to capture decision**
+
+```mermaid
+flowchart LR
+    A[Opportunity signals] --> B[Qualification and research]
+    B --> C[Capture brief]
+    C --> D{Human go / no-go review}
+```
+
+[View fictional Capture Brief](Docs/samples/capture-brief.md)
+
+**Proposal Team — from requirements to reviewed response**
+
+```mermaid
+flowchart LR
+    A[Requirements and inputs] --> B[Discovery and positioning]
+    B --> C[Draft response]
+    C --> D{Human quality review}
+```
+
+[View fictional Proposal Discovery Brief](Docs/samples/proposal-discovery-brief.md)
+
 ## Start here
 
 **Managed Teams → Growth Team → Capture Team + Proposal Team**
