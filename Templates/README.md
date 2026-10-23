@@ -1,4 +1,7 @@
-# THINK School - DE Deliverable Templates
+# Historical deliverable template library
+
+**For new learners:** choose a stage in [Learn](../Learn/README.md) and review its expected deliverable. These older persona-level formats remain available as examples; they are not a list of currently published marketplace plugins.
+
 
 Blank versions of the documents each Digital Employee produces, one file per persona.
 Use these directly (fill in your own data by hand) or as the reference format a
