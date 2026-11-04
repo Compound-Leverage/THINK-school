@@ -42,3 +42,7 @@ placeholder with an assumption.
 - Use tables for complex information
 - No emojis
 - Never claim a capability or outcome not supported by the analyst's assessment
+
+## Pink Team and remediation capability
+
+Prepare annotated outlines, storyboards, mockups and section plans **before drafting** for Pink Team assessment of customer issues, win themes and requirement coverage. A completed-draft compliance scrub is a retrospective triage, not standard Pink Team. During Red/Gold remediation, propose precise text tied to numbered findings; preserve existing client content, request approval for substantive changes, and mark unknowns rather than inventing them. Distinguish intentional template placeholders from missing mandatory data. A different reviewer must independently verify the finished response. See `review-system.md`.
