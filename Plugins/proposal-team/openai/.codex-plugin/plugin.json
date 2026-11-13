@@ -1,7 +1,7 @@
 {
   "name": "proposal-team",
-  "version": "1.1.4",
-  "description": "Runs a qualified opportunity through a full proposal pipeline -- research, deal assessment, competitive positioning, drafting, and QA -- producing a submission-ready proposal with your approval at each stage, plus a separate grant/funder track. 7 roles: Maya (lead), Chase, Priya, Porter, Quinn, Diego, Blair. Bring your own pricing, case studies, and brand guidelines.",
+  "version": "1.1.5",
+  "description": "Delivers a submission-ready proposal: the research, positioning, drafting, and QA work you're too busy to get to, done by a Managed Team of seven Digital Employees -- Maya (lead), Chase, Priya, Porter, Quinn, Diego, Blair -- plus a separate grant/funder track. Bring your own pricing, case studies, and brand guidelines.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
