@@ -20,7 +20,7 @@
       },
       "category": "Sales",
       "interface": {
-        "displayName": "THINK School AI Proposal Team"
+        "displayName": "Managed Teams for Proposal Work"
       }
     },
     {
@@ -34,7 +34,7 @@
       },
       "category": "Sales",
       "interface": {
-        "displayName": "THINK School AI Capture Team"
+        "displayName": "Managed Teams for Capture Work"
       }
     }
   ]
