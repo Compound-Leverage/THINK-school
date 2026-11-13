@@ -13,7 +13,7 @@
       "name": "proposal-team",
       "source": {
         "source": "local",
-        "path": "./Plugins/OpenAI/proposal-team"
+        "path": "./Plugins/proposal-team/openai"
       },
       "policy": {
         "installation": "AVAILABLE"
@@ -27,7 +27,7 @@
       "name": "capture-team",
       "source": {
         "source": "local",
-        "path": "./Plugins/OpenAI/capture-team"
+        "path": "./Plugins/capture-team/openai"
       },
       "policy": {
         "installation": "AVAILABLE"

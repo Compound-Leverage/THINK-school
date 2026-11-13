@@ -2,7 +2,7 @@
 
 **Install:** Choose [Claude Code](../.claude-plugin/README.md) or [OpenAI Codex](../.agents/README.md). Installation differs by client; follow the platform instructions and confirm the plugin appears before proceeding.
 
-**Configure:** Identify the organization explicitly. For OpenAI Codex, fill in the placeholders in [my-capture-config.json](../Plugins/OpenAI/capture-team/skills/capture-team/assets/my-capture-config.json) with your own capability and qualification criteria. Provide authorized sources and integrations only when available.
+**Configure:** Identify the organization explicitly. For OpenAI Codex, fill in the placeholders in [my-capture-config.json](../Plugins/capture-team/openai/skills/capture-team/assets/my-capture-config.json) with your own capability and qualification criteria. Provide authorized sources and integrations only when available.
 
 **Paste this assignment:**
 

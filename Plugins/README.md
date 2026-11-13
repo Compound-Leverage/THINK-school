@@ -4,8 +4,8 @@ The [public marketplaces](../Marketplaces/README.md) contain two independently i
 
 | Team | Work stages | Claude Code source | OpenAI (Codex) source |
 |---|---|---|---|
-| [Capture Team](claude/capture-team/) | Find, Qualify, Research, Capture | `Plugins/claude/capture-team/` | [`Plugins/OpenAI/capture-team/`](OpenAI/capture-team/) |
-| [Proposal Team](claude/proposal-team/) | Respond, Review | `Plugins/claude/proposal-team/` | [`Plugins/OpenAI/proposal-team/`](OpenAI/proposal-team/) |
+| [Capture Team](capture-team/claude/) | Find, Qualify, Research, Capture | `Plugins/capture-team/claude/` | [`Plugins/capture-team/openai/`](capture-team/openai/) |
+| [Proposal Team](proposal-team/claude/) | Respond, Review | `Plugins/proposal-team/claude/` | [`Plugins/proposal-team/openai/`](proposal-team/openai/) |
 
 The six stages describe the **learning and work lifecycle**, not a claim that every stage has a dedicated built-in Digital Employee or integration. Check each plugin's actual supported capabilities and configure your own organization inputs.
 
@@ -16,7 +16,7 @@ The repository is the **user-install distribution path**. Official marketplace a
 
 ### Claude Code
 
-The repository's Claude marketplace manifest uses [`.claude-plugin/marketplace.json`](../.claude-plugin/marketplace.json) and points to `Plugins/claude/<team>/`. In Claude Code, use:
+The repository's Claude marketplace manifest uses [`.claude-plugin/marketplace.json`](../.claude-plugin/marketplace.json) and points to `Plugins/<team>/claude/`. In Claude Code, use:
 
 ```text
 /plugin marketplace add Compound-Leverage/THINK-school
@@ -27,7 +27,7 @@ Or install `proposal-team@think-school`. See [Claude instructions](../.claude-pl
 
 ### OpenAI (Codex packages)
 
-The repository's Codex marketplace manifest uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `Plugins/OpenAI/<team>/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
+The repository's Codex marketplace manifest uses [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) and points to `Plugins/<team>/openai/`, whose skill structure differs from the Claude Code packages. See [Codex instructions](../.agents/README.md). Availability and installation surfaces can vary; do not assume that uploading a SKILL.md in an ordinary chat installs a full plugin.
 
 ## Quickstarts and quality checks
 
