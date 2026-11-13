@@ -93,7 +93,7 @@ The repository provides two independently installable Growth Team plugins:
 - **[Capture Team](Marketplaces/README.md)** — opportunity discovery, intake, intelligence, and capture support.
 - **[Proposal Team](Marketplaces/README.md)** — research, assessment, positioning, drafting, and proposal QA.
 
-Claude Code packages live under `Plugins/claude/`; Codex packages live under `Plugins/OpenAI/`. These have different execution structures. [See platform-specific instructions](Plugins/README.md).
+Claude Code packages live under `Plugins/<team>/claude/`; Codex packages live under `Plugins/<team>/openai/`. These have different execution structures. [See platform-specific instructions](Plugins/README.md).
 
 ## Repository map
 

@@ -4,8 +4,8 @@ THINK School provides **Capture Team** and **Proposal Team** for direct installa
 
 | Environment | Marketplace configuration | Package directory |
 |---|---|---|
-| Claude Code | [Claude marketplace](../.claude-plugin/marketplace.json) | [Claude packages](../Plugins/claude/) |
-| OpenAI Codex | [Codex marketplace](../.agents/plugins/marketplace.json) | [Codex packages](../Plugins/OpenAI/) |
+| Claude Code | [Claude marketplace](../.claude-plugin/marketplace.json) | [Claude packages](../Plugins/) |
+| OpenAI Codex | [Codex marketplace](../.agents/plugins/marketplace.json) | [Codex packages](../Plugins/) |
 
 **Start with a task:** [Capture Team quickstart](../Docs/quickstart-capture.md) · [Proposal Team quickstart](../Docs/quickstart-proposal.md). See [sample deliverables](../Docs/samples/capture-brief.md) and [release validation](../Docs/plugin-validation.md).
 

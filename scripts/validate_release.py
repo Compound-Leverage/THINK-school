@@ -14,7 +14,7 @@ def require(condition, message):
 
 for manifest, platform, metadata in [
     (".claude-plugin/marketplace.json", "claude", ".claude-plugin/plugin.json"),
-    (".agents/plugins/marketplace.json", "OpenAI", ".codex-plugin/plugin.json"),
+    (".agents/plugins/marketplace.json", "openai", ".codex-plugin/plugin.json"),
 ]:
     file = ROOT / manifest
     try:
@@ -33,7 +33,7 @@ for manifest, platform, metadata in [
         require(isinstance(source, str) and source.startswith("./"), f"{manifest}: invalid source for {name}")
         if not isinstance(source, str) or not source.startswith("./"):
             continue
-        expected = f"./Plugins/{platform}/{name}"
+        expected = f"./Plugins/{name}/{platform}"
         require(source.rstrip("/") == expected, f"{manifest}: {name} points to {source}, expected {expected}")
         package = ROOT / source
         require(package.is_dir(), f"{manifest}: missing package {source}")
