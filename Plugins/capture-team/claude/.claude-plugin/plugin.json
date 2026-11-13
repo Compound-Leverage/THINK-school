@@ -1,8 +1,8 @@
 {
   "name": "capture-team",
-  "version": "1.1.8",
+  "version": "1.1.10",
   "icon": "assets/think-school.png",
-  "description": "A Capture Managed Team that delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to.\n\nUse it across government contracting, grants and funding, or business development workflows. Bring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage.\n\nNothing is pre-wired to a specific vendor. Three Digital Employees work together: Chet discovers, Kipp qualifies and prioritizes, and Ben delivers the brief.\n\nWant to build, customize, and manage AI Teams for your own workflows?\n\nTHINK School on Skool teaches you how.",
+  "description": "A Capture Managed Team that delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to.\n\nUse it across government contracting, grants and funding, or business development workflows. Bring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage.\n\nNothing is pre-wired to a specific vendor. Three Digital Employees work together: Chet discovers, Kipp qualifies and prioritizes, and Ben delivers the brief.\n\nWant to build, direct, and manage your own Managed Teams?\n\nTHINK School on Skool teaches you how.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
@@ -10,6 +10,8 @@
   "homepage": "https://www.skool.com/thinkschool/about",
   "privacyPolicyUrl": "https://www.compoundleverage.com/privacy/",
   "termsOfServiceUrl": "https://www.compoundleverage.com/terms/",
+  "supportUrl": "https://www.compoundleverage.com/contact/",
+  "documentationUrl": "https://github.com/Compound-Leverage/THINK-school/tree/main/Docs",
   "repository": "https://github.com/Compound-Leverage/THINK-school",
   "license": "PolyForm-Shield-1.0.0",
   "keywords": [

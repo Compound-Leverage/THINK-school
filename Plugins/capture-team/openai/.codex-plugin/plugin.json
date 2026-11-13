@@ -1,6 +1,6 @@
 {
   "name": "capture-team",
-  "version": "1.1.8",
+  "version": "1.1.10",
   "description": "Delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to, done by a Managed Team of three Digital Employees. Chet discovers, Kipp qualifies, and Ben delivers the brief. Bring your own criteria, CRM, and opportunity sources.",
   "author": {
     "name": "Compound Leverage",
@@ -26,7 +26,7 @@
   "interface": {
     "displayName": "THINK School AI Capture Team",
     "shortDescription": "Find, assess & prioritize bids",
-    "longDescription": "A Capture Managed Team that delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to.\n\nUse it across government contracting, grants and funding, or business development workflows. Bring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage.\n\nNothing is pre-wired to a specific vendor. Three Digital Employees work together: Chet discovers, Kipp qualifies and prioritizes, and Ben delivers the brief.\n\nWant to build, customize, and manage AI Teams for your own workflows?\n\nTHINK School on Skool teaches you how.",
+    "longDescription": "A Capture Managed Team that delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to.\n\nUse it across government contracting, grants and funding, or business development workflows. Bring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage.\n\nNothing is pre-wired to a specific vendor. Three Digital Employees work together: Chet discovers, Kipp qualifies and prioritizes, and Ben delivers the brief.\n\nWant to build, direct, and manage your own Managed Teams?\n\nTHINK School on Skool teaches you how.",
     "developerName": "Compound Leverage",
     "category": "Business & Operations",
     "capabilities": [
