@@ -1,7 +1,7 @@
 {
   "name": "capture-team",
-  "version": "1.1.4",
-  "description": "THINK School AI Capture Team helps practitioners discover opportunities worth pursuing, qualify and prioritize them against organizational criteria, and turn the resulting intelligence into decision-ready Capture Briefs. Three Digital Employees work together: Chet discovers, Kipp qualifies and prioritizes, and Ben develops capture intelligence and pursuit recommendations.",
+  "version": "1.1.5",
+  "description": "Delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to, done by a Managed Team of three Digital Employees. Chet discovers, Kipp qualifies, and Ben delivers the brief. Bring your own criteria, CRM, and opportunity sources.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
