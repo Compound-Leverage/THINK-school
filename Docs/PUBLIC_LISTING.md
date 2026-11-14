@@ -8,8 +8,8 @@ This describes the **two-team public offering**. Both GitHub marketplace manifes
 **Two separate plugin listings, not one bundled app** (decision finalized
 2026-08-28, per Julian's growth-lane review -- see rationale below):
 
-- **ChatGPT:** "THINK School AI Capture Team" (standalone listing) +
-  "THINK School AI Proposal Team" (standalone listing)
+- **ChatGPT:** "Managed Teams for Capture Work" (standalone listing) +
+  "Managed Teams for Proposal Work" (standalone listing)
 - **Claude:** same two, same split
 - **THINK School on Skool:** training, customization, team-building methodology, updates, and community. Additional source packages in `legacy-archive branch (Archive/Other-Teams/)` are not part of the current marketplace catalog.
 
@@ -35,10 +35,25 @@ find this one again. A shortened "THINK [Team]" was tried next, but
 overruled too -- "THINK" alone is not an actual marketed term (Compound
 Leverage markets "THINK School" as a whole phrase, never "THINK" on its own),
 so it would carry zero real brand recognition, just an invented abbreviation.
-Resolution: use the full "THINK School AI [Team]" -- "THINK School AI Capture
-Team" (28 chars) and "THINK School AI Proposal Team" (29 chars) fit the
-~30-char budget, use the actual marketed brand phrase, add "AI" for category
-clarity, and keep the job-function search term intact.
+Resolution (2026-08-28): use the full "THINK School AI [Team]" -- "THINK
+School AI Capture Team" (28 chars) and "THINK School AI Proposal Team" (29
+chars) fit the ~30-char budget, use the actual marketed brand phrase, add
+"AI" for category clarity, and keep the job-function search term intact.
+
+**Revised 2026-11-13: "AI Team" is not on-brand.** Marvin: "we should say
+Managed Teams, that is what we use on the site and when explaining -- AI
+Team is not on brand" (confirmed against platform.compoundleverage.com's own
+language, e.g. the Strategist Program FAQ: "build, direct, and manage their
+own Managed Teams"). "Managed Teams" replaces "AI" as the category term, and
+"for Capture Work" / "for Proposal Work" replaces "[Team]" as the
+job-function search term -- same structural slot, same rationale (branded
+category term + job-function term in one ~30-char name), different words.
+New names: **"Managed Teams for Capture Work"** (30 chars) and **"Managed
+Teams for Proposal Work"** (31 chars), set via `displayName` in each
+plugin.json (Claude and Codex) and in `.agents/plugins/marketplace.json`.
+"THINK School" no longer appears in the searchable name itself -- it still
+appears in the description's closing CTA ("THINK School on Skool teaches you
+how") and as the `homepage` link, so the funnel path is unchanged.
 
 **Publisher: Compound Leverage, not THINK School.** Per this project's
 original brief, Compound Leverage is the company/publisher and THINK School
@@ -69,10 +84,10 @@ upsell line (that stays a single, clean CTA to Skool, per OpenAI's
 anti-advertising guidance) -- it lives in repo docs people read once they're
 already engaged, e.g. [`SUPPORT.md`](../SUPPORT.md).
 
-## Listing 1: THINK School AI Capture Team
+## Listing 1: Managed Teams for Capture Work
 
-**Name:** THINK School AI Capture Team
-(28 chars -- fits the ~30-char limit reported for this field; verify in the
+**Name:** Managed Teams for Capture Work
+(30 chars -- fits the ~30-char limit reported for this field; verify in the
 submission portal.)
 
 **Subtitle:** Find and pursue opportunities -- by Compound Leverage
@@ -81,7 +96,7 @@ Publisher goes here, matching the verified developer identity -- see naming
 note below.)
 
 **Description:** Part of THINK School, Compound Leverage's free practitioner
-resource. An AI Team of three Digital Employees that finds named groups worth
+resource. A Managed Team of three Digital Employees that finds named groups worth
 pursuing, enriches and classifies inbound leads against your ICP, and turns
 signals into client-ready intelligence briefs. Configurable to your own
 business -- bring your ICP, capability map, and connect whatever CRM,
@@ -91,17 +106,17 @@ are required.
 
 Try: "Find named groups or clusters that share a capacity gap we can fill"
 
-## Listing 2: THINK School AI Proposal Team
+## Listing 2: Managed Teams for Proposal Work
 
-**Name:** THINK School AI Proposal Team
-(29 chars -- fits the ~30-char limit; verify in the submission portal.)
+**Name:** Managed Teams for Proposal Work
+(31 chars -- fits the ~30-char limit; verify in the submission portal.)
 
 **Subtitle:** Win the work with compliant proposals -- by Compound Leverage
 (~63 chars -- verify the portal's actual subtitle limit; may need trimming.
 Publisher goes here, matching the verified developer identity.)
 
 **Description:** Part of THINK School, Compound Leverage's free practitioner
-resource. An AI Team of seven Digital Employees that carries a qualified
+resource. A Managed Team of seven Digital Employees that carries a qualified
 opportunity from research through a submission-ready proposal -- requirement
 extraction, competitive positioning, drafting, and QA, plus a parallel
 grant/funder track. Every stage stops for your approval before moving on.
