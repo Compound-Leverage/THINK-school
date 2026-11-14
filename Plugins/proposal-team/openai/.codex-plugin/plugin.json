@@ -1,12 +1,12 @@
 {
   "name": "proposal-team",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "Delivers a submission-ready proposal: the research, positioning, drafting, and QA work you're too busy to get to, done by a Managed Team of seven Digital Employees -- Maya (lead), Chase, Priya, Porter, Quinn, Diego, Blair -- plus a separate grant/funder track. Bring your own pricing, case studies, and brand guidelines.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
   },
-  "homepage": "https://www.skool.com/thinkschool/about",
+  "homepage": "https://www.compoundleverage.com/",
   "repository": "https://github.com/Compound-Leverage/THINK-school",
   "license": "PolyForm-Shield-1.0.0",
   "keywords": [
@@ -32,7 +32,8 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://www.skool.com/thinkschool/about",
+    "websiteURL": "https://www.compoundleverage.com/",
+    "supportURL": "https://www.compoundleverage.com/contact/",
     "customerSupportURL": "https://www.compoundleverage.com/contact/",
     "privacyPolicyURL": "https://www.compoundleverage.com/privacy/",
     "termsOfServiceURL": "https://www.compoundleverage.com/terms/",

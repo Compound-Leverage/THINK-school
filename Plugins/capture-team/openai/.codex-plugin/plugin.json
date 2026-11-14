@@ -1,12 +1,12 @@
 {
   "name": "capture-team",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "Delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to, done by a Managed Team of three Digital Employees. Chet discovers, Kipp qualifies, and Ben delivers the brief. Bring your own criteria, CRM, and opportunity sources.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
   },
-  "homepage": "https://www.skool.com/thinkschool/about",
+  "homepage": "https://www.compoundleverage.com/",
   "repository": "https://github.com/Compound-Leverage/THINK-school",
   "license": "PolyForm-Shield-1.0.0",
   "keywords": [
@@ -33,7 +33,8 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://www.skool.com/thinkschool/about",
+    "websiteURL": "https://www.compoundleverage.com/",
+    "supportURL": "https://www.compoundleverage.com/contact/",
     "customerSupportURL": "https://www.compoundleverage.com/contact/",
     "privacyPolicyURL": "https://www.compoundleverage.com/privacy/",
     "termsOfServiceURL": "https://www.compoundleverage.com/terms/",
