@@ -1,6 +1,6 @@
 {
   "name": "capture-team",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "Delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to, done by a Managed Team of three Digital Employees. Chet discovers, Kipp qualifies, and Ben delivers the brief. Bring your own criteria, CRM, and opportunity sources.",
   "author": {
     "name": "Compound Leverage",
@@ -34,8 +34,8 @@
       "Write"
     ],
     "websiteURL": "https://www.compoundleverage.com/",
-    "supportURL": "https://www.compoundleverage.com/contact/",
-    "customerSupportURL": "https://www.compoundleverage.com/contact/",
+    "supportURL": "https://platform.compoundleverage.com/getting-started/plugin-quick-start/",
+    "customerSupportURL": "https://platform.compoundleverage.com/getting-started/plugin-quick-start/",
     "privacyPolicyURL": "https://www.compoundleverage.com/privacy/",
     "termsOfServiceURL": "https://www.compoundleverage.com/terms/",
     "brandColor": "#6944BA",
