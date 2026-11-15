@@ -14,7 +14,7 @@ claude:
   version: "1.2.0"
   display_name: "Managed Teams for Proposal Work"
   support_url: https://www.compoundleverage.com/contact/
-  documentation_url: https://platform.compoundleverage.com/
+  documentation_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
   keywords:
     - ai-team
     - digital-employee
