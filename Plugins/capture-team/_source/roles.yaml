@@ -3,6 +3,9 @@
 # openai_file: filename under openai/skills/<team>/references/<openai_file> (only used when "openai" is in platforms)
 # platforms: which platforms currently ship this role -- a narrower list here is a REAL,
 # intentional content gap (see plan's Phase 1 scope), not something the generator invents or closes.
+# All three roles here have a body.md + meta.yaml in their skills/<role>/ dir (unified --
+# one canonical body rendered into both platform shapes). See
+# Docs/plugin-content-audit-2026-11-15.md for what that means and why.
 roles:
   - key: chet
     claude_dir: cluster-discovery-chet

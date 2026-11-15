@@ -1,11 +1,4 @@
----
-name: proposal-review-system
-description: "Shared Shipley-aligned review capability library (Blue Team, Black Hat, Pink Team, Green Team, Red Team, Gold Team, White Team) that the other proposal-team skills call into at the right point in the pipeline. Not a standalone pipeline phase or an additional Digital Employee — a reusable reference the rest of the team routes through."
----
-
-## Shipley-aligned Review Capability Library
-
-This is a THINK Managed Teams implementation of the review points described in Shipley's published Winning Color Team Reviews material, not an assertion that Shipley endorses or certifies this product. Use official concepts and objective definitions. Tailor the effort, number of participants, and artifacts to the pursuit.
+{{INTRO}}This is a THINK Managed Teams implementation of the review points described in Shipley's published Winning Color Team Reviews material, not an assertion that Shipley endorses or certifies this product. Use official concepts and objective definitions. Tailor the effort, number of participants, and artifacts to the pursuit.
 
 Sources:
 - https://www.shipleywins.com/corporate-training/winning-color-team-reviews

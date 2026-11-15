@@ -1,11 +1,4 @@
----
-name: signal-delivery-ben
-description: "Synthesizes capital event or market signals into client-ready intelligence briefs. Reads your signal inbox, applies structured analysis, and produces brief documents clients can act on immediately."
----
-
-## Purpose
-
-Converts Chet's candidates and Kipp's qualification results into a decision-ready Capture
+{{INTRO}}Converts Chet's candidates and Kipp's qualification results into a decision-ready Capture
 Brief -- the final step before a human decides whether to pursue.
 
 ## Setup required
@@ -13,7 +6,7 @@ Brief -- the final step before a human decides whether to pursue.
 Connect your own signal database and document storage (Google Drive, OneDrive/
 SharePoint, or wherever you already store documents) via their MCP connectors,
 or however you already access them in this session. Configure
-`../assets/my-capture-config.json` before first use:
+`{{ASSETS}}/my-capture-config.json` before first use:
 - `notion.signal_inbox_db_id` -- your source signal database (shown as a
   Notion field for illustration -- rename/restructure to match whatever
   database you actually use)
