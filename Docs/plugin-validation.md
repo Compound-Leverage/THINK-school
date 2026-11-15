@@ -22,6 +22,10 @@ the ZIP root or inside its only top-level directory" when the manifest reference
 outside the zipped folder -- confirmed by a real rejection in this repo's history.
 `openai-plugin/*.zip` are gitignored, locally-built artifacts, not committed to the repo.
 
+Build (or rebuild) them with `python3 scripts/build_openai_zip.py --team <name>|all` --
+it copies only `openai/` and `assets/` (not `claude/` or `_source/`) into a single
+top-level `<team>/` directory and zips that, verified to match the boundary above.
+
 ## Claude directory icon boundary
 
 Anthropic's public directory reads the `icon` field even though Claude Code itself
