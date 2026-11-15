@@ -10,7 +10,7 @@ Follow the [Codex marketplace instructions](../../../.agents/README.md). Confirm
 
 ## Configuration
 
-Identify the organization explicitly. Supply only authorized organization information and sources. Complete the placeholders in `../assets/my-capture-config.json`. Do not assume live CRM access, procurement data, or permission to contact third parties.
+Identify the organization explicitly. Supply only authorized organization information and sources. Complete the placeholders in `./assets/my-capture-config.json`. Do not assume live CRM access, procurement data, or permission to contact third parties.
 
 ## First assignment
 

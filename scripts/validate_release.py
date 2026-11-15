@@ -50,6 +50,27 @@ for manifest, platform, metadata in [
                     icon_file = (package / icon).resolve()
                     require(icon_file.is_relative_to(package.resolve()) and icon_file.is_file(),
                             f"{meta}: missing in-root icon: {icon}")
+            else:
+                policy = plugin.get("policy", {})
+                require(bool(policy.get("authentication")),
+                        f"{manifest}: {name} missing policy.authentication")
+                for field in ("skills",):
+                    value = details.get(field, "")
+                    require(isinstance(value, str) and value.startswith("./") and ".." not in Path(value).parts,
+                            f"{meta}: unsafe {field} path: {value}")
+                    if isinstance(value, str) and value.startswith("./"):
+                        target = (package / value).resolve()
+                        require(target.is_relative_to(package.resolve()) and target.is_dir(),
+                                f"{meta}: missing in-root {field}: {value}")
+                interface = details.get("interface", {})
+                for field in ("composerIcon", "logo"):
+                    value = interface.get(field, "") if isinstance(interface, dict) else ""
+                    require(isinstance(value, str) and value.startswith("./") and ".." not in Path(value).parts,
+                            f"{meta}: unsafe {field} path: {value}")
+                    if isinstance(value, str) and value.startswith("./"):
+                        target = (package / value).resolve()
+                        require(target.is_relative_to(package.resolve()) and target.is_file(),
+                                f"{meta}: missing in-root {field}: {value}")
         except (OSError, ValueError) as exc:
             errors.append(f"{meta}: invalid plugin metadata: {exc}")
         require(any(package.rglob("SKILL.md")), f"{package}: no SKILL.md")
