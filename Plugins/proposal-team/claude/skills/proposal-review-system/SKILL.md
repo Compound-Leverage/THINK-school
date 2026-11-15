@@ -28,6 +28,14 @@ Apply every *relevant* review objective, but do not schedule every color team as
 
 Before starting, record: organization being represented, solicitation and authoritative versions, submission deadline/time zone, available source links and their verification status, stage(s) requested, owner/reviewer, client approver, selected depth and reasons.
 
+## Core vs. full review set
+
+Depth (Light/Standard/Comprehensive above) controls how rigorously each review runs. This is a separate question: which reviews run at all.
+
+- **Core (default)**: Pink, Red, and Gold. This covers the three moments that matter most for a typical pursuit — pre-draft content-plan coverage, pre-submission evaluator simulation, and final readiness/approval. Run Core unless a trigger below applies.
+- **Full**: adds Blue Team #1, Black Hat, Blue Team #2, Green Team, and White Team. Use the full set for the same triggers already listed under Escalate above — rejection-sensitive requirements, sensitive pricing, complex teaming, material contradictions, or any high-risk/high-value or complex pursuit. Green Team is also mandatory any time a priced cost solution exists, regardless of Core/Full selection, since an unreviewed price is its own risk.
+- Running Full doesn't mean running every review at Comprehensive depth — Core/Full selects *which* reviews, Light/Standard/Comprehensive selects *how deep* each one goes. A small but high-risk pursuit can be Full + Light; a large but low-risk one can be Core + Standard.
+
 ## Color team capabilities and timing
 
 | Review | Trigger and objective | Lead/support | Minimum output |
