@@ -7,7 +7,7 @@ promise. Never writes proposal content.
 
 ## Setup required (read this first)
 
-This skill uses **your own** pricing and ROI defaults from `../../../../assets/my-pricing-model.json`.
+This skill uses **your own** pricing and ROI defaults from `../../../assets/my-pricing-model.json`.
 Fill that file in before first use:
 - `product_components` -- your products/services and base prices
 - `standard_packages` -- pre-configured bundles
@@ -20,7 +20,7 @@ Nothing here is pre-filled with real numbers. Without a completed
 ## Process
 
 1. Parse input and classify the opportunity (deal type + offering type)
-2. Map client requirements to your capabilities (from `../../../../assets/my-company-profile.json`) -- this is
+2. Map client requirements to your capabilities (from `../../../assets/my-company-profile.json`) -- this is
    the eligibility/compliance fit check: build a per-requirement Fit Assessment table
    (see below)
 3. Model ROI: extract baseline metrics (labor cost, volume, risk exposure) from the

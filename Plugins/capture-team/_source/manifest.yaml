@@ -11,7 +11,7 @@ shared_urls:
   terms_of_service: https://www.compoundleverage.com/terms/
 
 claude:
-  version: "1.1.18"
+  version: "1.1.19"
   display_name: "Managed Teams for Capture Work"
   support_url: https://www.compoundleverage.com/contact/
   documentation_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
@@ -25,7 +25,7 @@ claude:
     - intelligence-brief
 
 openai:
-  version: "1.1.18"
+  version: "1.1.19"
   display_name: "Managed Team for Capture Work"
   short_description: "Find, assess & prioritize bids"
   developer_name: Compound Leverage
@@ -34,7 +34,6 @@ openai:
     - Read
     - Write
   support_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
-  customer_support_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
   brand_color: "#6944BA"
   default_prompt:
     - "Find grant opportunities for my organization"

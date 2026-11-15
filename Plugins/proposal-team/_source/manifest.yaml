@@ -34,7 +34,6 @@ openai:
     - Read
     - Write
   support_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
-  customer_support_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
   brand_color: "#6944BA"
   default_prompt:
     - "Should we pursue this opportunity?"

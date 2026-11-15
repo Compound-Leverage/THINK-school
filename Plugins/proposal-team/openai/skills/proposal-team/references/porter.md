@@ -15,7 +15,7 @@ Discovery Brief and Priya's Assessment Package.
    populate the analysis
 2. Win theme development -- 3-5 themes mapped to proposal sections with emphasis level,
    covering at least 3 of: Capability, Value, Approach, Risk, Partnership
-3. Case study matching -- score candidate case studies (from `../../../../assets/my-case-studies.json`)
+3. Case study matching -- score candidate case studies (from `../../../assets/my-case-studies.json`)
    against the opportunity and select the top 3 with snippets
 4. Synthesize into a strategy package with an elevator pitch
 
