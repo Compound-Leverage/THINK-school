@@ -10,12 +10,11 @@ similar without naming who that is, do not guess or default to any company -- in
 Stop and ask the current user whose qualification criteria to apply (their own, or a
 named client's) before scoring anything against them.
 
-Runs a daily (or on-demand) sweep of new candidates from Chet (or any inbound
-source), qualifies each one against your organization's own criteria, and
-writes clean, scored, prioritized records into your CRM. "ICP" is one kind of
-qualification profile -- the same underlying process supports GovCon
-eligibility/capability alignment, grant eligibility/program alignment, or
-business-development ICP fit, depending on what you configure.
+Runs a daily (or on-demand) sweep of new candidates from Chet (or any inbound source),
+qualifies each one against your organization's own criteria, and writes clean, scored,
+prioritized records into your CRM. "ICP" is one kind of qualification profile -- the same
+underlying process supports GovCon eligibility/capability alignment, grant eligibility/
+program alignment, or business-development ICP fit, depending on what you configure.
 
 ## Setup required
 
@@ -23,13 +22,12 @@ Connect your own CRM (Notion, Airtable, HubSpot, Salesforce, or whatever you
 already use) and enrichment tool via their MCP connectors, or however you
 already access them in this session. Configure
 `../../../../assets/my-capture-config.json` before first use:
-- `qualification_profiles` -- your qualification profiles, one per pursuit
-  type: `business_development`, `govcon`, or `grant_funding`. Each profile
-  defines its own criteria set -- business-development ICP (industry,
-  company size, capacity gap, buying signal), GovCon (capability alignment,
-  NAICS/certifications, past performance, mandatory requirements, contract
-  size, geography, deadline), or grant/funding (organization eligibility,
-  program alignment, funder priorities, geography, award amount, deadline,
+- `qualification_profiles` -- your qualification profiles, one per pursuit type:
+  `business_development`, `govcon`, or `grant_funding`. Each profile defines its own
+  criteria set -- business-development ICP (industry, company size, capacity gap, buying
+  signal), GovCon (capability alignment, NAICS/certifications, past performance, mandatory
+  requirements, contract size, geography, deadline), or grant/funding (organization
+  eligibility, program alignment, funder priorities, geography, award amount, deadline,
   matching requirements). Nothing is hard-coded to one pursuit type
 - `routing_flags` -- how classified records get flagged
 - `notion.*_db_id` -- your Contacts, Orgs, and Deals Pipeline database IDs
