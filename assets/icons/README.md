@@ -27,7 +27,7 @@ shared bar-chart mark:
 assets/icons/
   think-school.png       (shared identity -- reference copy, in place)
   capture-team.png        (not yet supplied -- capture-team uses the shared mark)
-  proposal-team.png       (supplied, but shipped as Plugins/proposal-team/assets/think-school.png, not this filename)
+  proposal-team.png       (supplied -- reference copy, in place; shipped as Plugins/proposal-team/assets/think-school.png)
   content-team.png        (not yet supplied)
   sales-bd-team.png       (not yet supplied)
   sales-enablement.png    (not yet supplied)
