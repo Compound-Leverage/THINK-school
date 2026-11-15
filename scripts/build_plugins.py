@@ -35,6 +35,11 @@ mechanical formatting (different intro framing, generic role names vs persona na
 selectively combined/dropped Rules bullets) and force-unifying them would silently
 change approved, shipped wording on one platform or the other. See
 Docs/plugin-content-audit-2026-11-15.md for which roles are which and why.
+
+Cross-team shared content (2026-11-15): Plugins/_shared/ holds content identical across
+BOTH teams and BOTH platforms -- not team-specific like _source/, so it isn't duplicated
+into each team's own source tree. See shared_resource_discovery(): appended once per
+claude role's SKILL.md, hoisted once into each team's openai master SKILL.md.
 """
 import argparse
 import json
