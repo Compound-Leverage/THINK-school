@@ -13,4 +13,4 @@ Alternatively, install `proposal-team@think-school`. Reload plugins or restart t
 
 **Claude Code plugins are not the same as ordinary Claude.ai chat attachments.** Configure your own organizational inputs; do not put private credentials into committed files. Store custom configuration outside replaceable plugin files where practical.
 
-[Plugin guide](../Plugins/README.md) · [Six-stage learning path](../Learn/README.md) · [Codex packages](../.agents/README.md)
+[Plugin guide](../Plugins/README.md) · [Codex packages](../.agents/README.md)

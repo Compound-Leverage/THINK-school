@@ -15,4 +15,4 @@ The marketplace manifests remain at their platform-specific root locations for d
 
 **ChatGPT:** No separate ChatGPT-specific package is verified in this repository. A Codex plugin is not automatically a ChatGPT plugin.
 
-[Plugins](../Plugins/README.md) · [Skills](../Skills/README.md) · [Learn](../Learn/README.md)
+[Plugins](../Plugins/README.md) · [Skills](../Skills/README.md)
