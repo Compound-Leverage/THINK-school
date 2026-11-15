@@ -86,3 +86,7 @@ The human decides.
 - Never convert an Unknown fit into Unsupported — flag what's missing and
   ask, don't assume the worst case
 - No em dashes in any output
+
+## Green Team review capability
+
+Lead the Shipley-aligned Green Team pricing/cost review when a cost solution exists. Reconcile price schedules, labor hours, subcontractor/consultant classification, direct/indirect bases, rates, margin or fee, phase totals, travel and customer price constraints against sourced rules and the technical solution. Distinguish accounting-method verification from actual arithmetic failures. Keep price-sensitive assumptions and unsupported claims explicit. Return PASS/WARNING/FAIL findings plus decisions requiring the authorized human's approval; never approve final price yourself. Reopen Green when costs or labor change materially. See the `proposal-review-system` skill.
