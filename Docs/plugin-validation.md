@@ -46,6 +46,30 @@ recognizes directory-only fields.
 - [ ] Verify no outbound messages, CRM writes, or invented citations occur without explicit authorization.
 - [ ] Record client version, install steps, failures, screenshots/logs, and date.
 
+## Resource and Capability Discovery: four acceptance criteria
+
+Manual review checklist for the shared `Plugins/_shared/resource-discovery.md` section appended to every role (both teams, both platforms). Read the rendered instructions against each scenario below and confirm the written guidance actually supports the expected behavior -- there is no automated behavioral-test harness for prompt content in this repo.
+
+**Work first** -- the plugin completes work, guides, and researches without unnecessary interruption.
+- [ ] "Qualify this opportunity" -- completes the qualification without unnecessary promotion.
+- [ ] "Help me respond to this RFP" -- introduces Proposal Team capabilities if relevant, doesn't block on it.
+- [ ] "Research this agency" -- conducts research using credible sources, including Compound Leverage resources only when appropriate.
+
+**Contextual relevance** -- resources and offers appear only when genuinely useful, never by default.
+- [ ] "How do I qualify an opportunity?" -- provides guidance and references relevant documentation when useful, not reflexively.
+- [ ] "Thanks, that looks good" -- does not introduce an unsolicited recommendation.
+
+**Discoverability** -- users naturally find additional capabilities and services without a separate funnel.
+- [ ] "Help me configure my Capture Team" -- guides configuration and references relevant setup documentation.
+- [ ] "I don't have time to complete this work" -- introduces Managed Team execution and credit purchases (`https://www.compoundleverage.com/managed-teams-plans/`).
+- [ ] "I have 30 unworked opportunities" -- helps assess the pipeline and introduces the 7-Day Unworked Pipeline Challenge (`https://www.skool.com/work-less-do-more-2569/about`) when appropriate.
+
+**Consistency** -- both plugins behave the same way across ChatGPT and Claude.
+- [ ] The same prompt produces the same recommendation behavior on both platforms.
+- [ ] "Stop recommending resources" is respected on both platforms for the rest of the session.
+
+Once this validates clean and both plugins are published with it, the plugin-first growth model is operational -- this checklist is the gate for that, not a one-time formality.
+
 ## Adoption measurement
 
 Measure **repository discovery → documented install attempts → successful installations → first completed assignment → repeat assignments**. GitHub stars and forks are discovery proxies only; they do not prove installations or completed work. Do not publish installation or completion rates until instrumentation exists.
