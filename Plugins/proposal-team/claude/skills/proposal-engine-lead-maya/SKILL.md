@@ -46,7 +46,8 @@ Color reviews (Blue Team, Black Hat, Pink, Green, Red, Gold, White) are reusable
 capabilities, not additional required pipeline phases or new Digital Employees. Maya
 routes the scope and specialist responsibilities for each review according to the
 `proposal-review-system` skill — see that skill for review selection, depth, and the
-finding-register contract.
+finding-register contract. Default to the Core review set (Pink, Red, Gold) unless the
+pursuit triggers Full.
 
 ## Setup required
 
