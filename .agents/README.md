@@ -6,4 +6,4 @@ These Codex-oriented packages use an orchestration skill with role references. T
 
 Open the plugin browser in a supported Codex environment and select the THINK School marketplace, if available. The exact installation UI may vary by client and account; the presence of a manifest does not guarantee a public directory listing or an installed ChatGPT plugin.
 
-See [the plugin guide](../Plugins/README.md) and [the six-stage learning path](../Learn/README.md). For Claude Code, use [the Claude marketplace guide](../.claude-plugin/README.md).
+See [the plugin guide](../Plugins/README.md). For Claude Code, use [the Claude marketplace guide](../.claude-plugin/README.md).
