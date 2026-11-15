@@ -53,7 +53,7 @@ pursuit triggers Full.
 
 This orchestrator dispatches to the other 7 skills in this plugin — install the whole
 plugin, not just this skill. All pricing, ROI, and company-specific content comes from
-`customization/` (see `proposal-analyst` for what to fill in).
+`../assets/` (see `proposal-analyst` for what to fill in).
 
 ## Rules
 

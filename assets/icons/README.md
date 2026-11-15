@@ -10,19 +10,24 @@ if it asks for something smaller, don't re-export from a lower-res source.
 
 ## Structure
 
-Each plugin keeps its own copy under `Plugins/<name>/assets/think-school.png` so
-plugin manifests can reference a plugin-relative path (matching the existing
-`"skills": "./skills"` convention) without depending on a shared repo-root path
-that may not resolve the same way across hosts.
+Each team keeps one copy at `Plugins/<team>/assets/think-school.png` -- shared
+between that team's Claude and OpenAI manifests (`../assets/think-school.png`
+relative to each), not duplicated per platform. The team folder is the zip
+boundary for OpenAI submission (see Docs/plugin-validation.md), so this file
+has to live inside it, not at this repo-root `assets/icons/` location, which
+is a reference copy only and isn't read by `scripts/build_plugins.py` -- the
+real source of truth per team is `Plugins/<team>/_source/icon/think-school.png`.
 
-Future per-team icons (once approved) drop in the same way, no manifest
-restructuring needed:
+Per-team icons, as they're approved, replace that team's copy -- as of
+2026-11-15, proposal-team already has its own distinct icon (document/
+checkmark design) under this filename; capture-team still uses the original
+shared bar-chart mark:
 
 ```
 assets/icons/
-  think-school.png       (shared identity -- in place)
-  capture-team.png        (not yet supplied)
-  proposal-team.png       (not yet supplied)
+  think-school.png       (shared identity -- reference copy, in place)
+  capture-team.png        (not yet supplied -- capture-team uses the shared mark)
+  proposal-team.png       (supplied, but shipped as Plugins/proposal-team/assets/think-school.png, not this filename)
   content-team.png        (not yet supplied)
   sales-bd-team.png       (not yet supplied)
   sales-enablement.png    (not yet supplied)
@@ -31,6 +36,7 @@ assets/icons/
   proposal-generator.png  (not yet supplied)
 ```
 
-When a per-team icon is supplied, copy it into that plugin's own `assets/`
-folder and repoint that plugin's `interface.composerIcon`/`logo` at it -- every
-other plugin keeps using the shared `think-school.png` until its turn comes.
+When a per-team icon is supplied, drop it into that team's own
+`Plugins/<team>/_source/icon/think-school.png` and run
+`python3 scripts/build_plugins.py --write --team <name>` -- every other team
+keeps using its existing icon until its turn comes.

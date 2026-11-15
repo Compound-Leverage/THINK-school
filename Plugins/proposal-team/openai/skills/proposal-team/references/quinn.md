@@ -28,7 +28,7 @@ Project Team, Investment, Terms and Conditions, Past Performance.
 
 ## Setup
 
-Apply your brand voice and terminology rules from `assets/my-brand-guidelines.md`.
+Apply your brand voice and terminology rules from `../../../../assets/my-brand-guidelines.md`.
 
 ## Placeholder convention
 
