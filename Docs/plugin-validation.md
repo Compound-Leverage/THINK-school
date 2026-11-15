@@ -22,6 +22,21 @@ the ZIP root or inside its only top-level directory" when the manifest reference
 outside the zipped folder -- confirmed by a real rejection in this repo's history.
 `openai-plugin/*.zip` are gitignored, locally-built artifacts, not committed to the repo.
 
+## Claude directory icon boundary
+
+Anthropic's public directory reads the `icon` field even though Claude Code itself
+currently reports that field as directory-only metadata. The icon path must resolve
+inside the Claude plugin root. Each Claude package therefore carries
+`assets/think-school.png` and references it as `./assets/think-school.png`; do not point
+the Claude manifest at the team-level `../assets/` copy used by the OpenAI package.
+
+`privacyPolicyUrl`, `termsOfServiceUrl`, `supportUrl`, and `documentationUrl` are
+directory-only listing metadata. Released Claude Code builds currently warn that they
+ignore these fields at plugin load time, but Anthropic's directory review explicitly
+reads all four and reports that no action is needed. Keep them in the submitted
+manifest; use non-strict `claude plugin validate` for the release check until the CLI
+recognizes directory-only fields.
+
 ## Live platform tests (run separately)
 
 - [ ] Claude Code: add the marketplace, install Capture Team, and run the fictional first assignment.

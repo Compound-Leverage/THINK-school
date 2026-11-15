@@ -41,6 +41,15 @@ for manifest, platform, metadata in [
         try:
             details = json.loads(meta.read_text(encoding="utf-8"))
             require(details.get("name") == name, f"{meta}: name mismatch")
+            if platform == "claude":
+                icon = details.get("icon", "")
+                require(isinstance(icon, str) and bool(icon), f"{meta}: missing directory icon")
+                if isinstance(icon, str) and icon:
+                    require(not Path(icon).is_absolute() and ".." not in Path(icon).parts,
+                            f"{meta}: icon must stay inside plugin root: {icon}")
+                    icon_file = (package / icon).resolve()
+                    require(icon_file.is_relative_to(package.resolve()) and icon_file.is_file(),
+                            f"{meta}: missing in-root icon: {icon}")
         except (OSError, ValueError) as exc:
             errors.append(f"{meta}: invalid plugin metadata: {exc}")
         require(any(package.rglob("SKILL.md")), f"{package}: no SKILL.md")
