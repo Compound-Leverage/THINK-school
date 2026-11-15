@@ -1,22 +1,32 @@
 #!/usr/bin/env python3
-"""Generate the claude/ and openai/ plugin trees from each team's _source/ directory.
+"""Generate the claude/, openai/, and shared assets/ trees from each team's _source/.
 
 Usage:
     python3 scripts/build_plugins.py --team capture-team|proposal-team|all --check
     python3 scripts/build_plugins.py --team capture-team|proposal-team|all --write
 
 --check renders everything in memory and diffs it against the committed files under
-Plugins/<team>/claude/ and Plugins/<team>/openai/ without writing anything.
+Plugins/<team>/ (assets/, claude/, openai/) without writing anything.
 --write renders and overwrites those committed files.
 
-Scope note: plugin.json, the icon, customization/config templates, and the per-platform
-README are truly unified here -- one value in _source feeds both platform renders. Skill
-content (SKILL.md / reference.md bodies) and the openai master SKILL.md are stored once
-per platform in _source and copied out verbatim; they are not yet merged into one shared
-body, because today's real content already differs by platform (see roles.yaml comments
-and the project plan at /Users/admin/.claude/plans/calm-hatching-bentley.md). This script
-still gives those files a single source-of-truth location, and check_build_drift.py still
-catches it if the shipped tree is hand-edited without updating _source.
+Zip-boundary note (corrected 2026-11-15): OpenAI's submission zip requires the manifest
+to resolve inside the zip's one top-level directory -- confirmed by a real rejection in
+this repo's history. That boundary is the TEAM folder (Plugins/<team>/), not the platform
+folder. The icon and customization/config templates are byte-identical, non-platform-
+specific assets, so they now live once at Plugins/<team>/assets/, referenced by relative
+path from both plugin.json files ("../assets/...") and from the openai skill content
+("../../../assets/..." from openai/skills/<team>/). Building the OpenAI submission zip
+must zip Plugins/<team>/ as the top-level directory (openai/ + assets/ together), not
+openai/ alone -- see Docs/plugin-validation.md.
+
+Scope note: plugin.json, the shared icon/config assets, and the per-platform README are
+unified here -- one value in _source feeds both platform renders. Skill content (SKILL.md
+/ reference.md bodies) and the openai master SKILL.md are stored once per platform in
+_source and copied out verbatim; they are not yet merged into one shared body, because
+today's real content already differs by platform (see roles.yaml comments and the project
+plan at /Users/admin/.claude/plans/calm-hatching-bentley.md). This script still gives
+those files a single source-of-truth location, and check_build_drift.py still catches it
+if the shipped tree is hand-edited without updating _source.
 """
 import argparse
 import json
@@ -41,7 +51,7 @@ def render_claude_plugin_json(manifest, descriptions):
         "name": manifest["name"],
         "displayName": c["display_name"],
         "version": c["version"],
-        "icon": "assets/think-school.png",
+        "icon": "../assets/think-school.png",
         "description": descriptions["long_description"],
         "author": {"name": manifest["author"]["name"], "url": manifest["author"]["url"]},
         "homepage": manifest["shared_urls"]["homepage"],
@@ -81,8 +91,8 @@ def render_openai_plugin_json(manifest, descriptions):
             "privacyPolicyURL": manifest["shared_urls"]["privacy_policy"],
             "termsOfServiceURL": manifest["shared_urls"]["terms_of_service"],
             "brandColor": o["brand_color"],
-            "composerIcon": "./assets/think-school.png",
-            "logo": "./assets/think-school.png",
+            "composerIcon": "../assets/think-school.png",
+            "logo": "../assets/think-school.png",
             "defaultPrompt": o["default_prompt"],
         },
     }
@@ -110,18 +120,14 @@ def render_team(team):
     out[f"claude/.claude-plugin/plugin.json"] = render_claude_plugin_json(manifest, descriptions).encode("utf-8")
     out[f"openai/.codex-plugin/plugin.json"] = render_openai_plugin_json(manifest, descriptions).encode("utf-8")
 
-    # icon -> 3 destinations
-    icon_bytes = read_bytes(src / "icon" / "think-school.png")
-    out["claude/assets/think-school.png"] = icon_bytes
-    out["openai/assets/think-school.png"] = icon_bytes
-    out[f"openai/skills/{team}/assets/think-school.png"] = icon_bytes
+    # icon -> one shared copy at the team level (sibling of claude/ and openai/,
+    # inside the zip boundary for OpenAI submission -- see module docstring)
+    out["assets/think-school.png"] = read_bytes(src / "icon" / "think-school.png")
 
-    # customization/config templates -> claude/customization/ and openai/skills/<team>/assets/
+    # customization/config templates -> one shared copy at the team level
     cust_dir = src / "customization"
     for f in sorted(cust_dir.iterdir()):
-        content = read_bytes(f)
-        out[f"claude/customization/{f.name}"] = content
-        out[f"openai/skills/{team}/assets/{f.name}"] = content
+        out[f"assets/{f.name}"] = read_bytes(f)
 
     # README
     out["claude/README.md"] = read_bytes(src / "readme" / "claude.md")
@@ -144,10 +150,17 @@ def render_team(team):
 
 
 def committed_files(team):
-    """Return {relative_path: bytes} for every file currently committed under claude/ and openai/."""
+    """Return {relative_path: bytes} for every file currently committed under
+    Plugins/<team>/ -- assets/ (shared, team-level) plus claude/ and openai/ (platform)."""
     out = {}
+    team_root = ROOT / "Plugins" / team
+    assets_dir = team_root / "assets"
+    if assets_dir.is_dir():
+        for p in assets_dir.rglob("*"):
+            if p.is_file():
+                out[f"assets/{p.relative_to(assets_dir).as_posix()}"] = p.read_bytes()
     for platform in ("claude", "openai"):
-        base = ROOT / "Plugins" / team / platform
+        base = team_root / platform
         for p in base.rglob("*"):
             if p.is_file():
                 rel = f"{platform}/{p.relative_to(base).as_posix()}"
