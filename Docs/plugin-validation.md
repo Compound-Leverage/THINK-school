@@ -13,18 +13,20 @@ This checklist is a **manual test protocol**, not a claim that installations hav
 
 ## OpenAI submission zip boundary
 
-`Plugins/<team>/openai/.codex-plugin/plugin.json` references the icon and config
-templates one level up, at `Plugins/<team>/assets/` -- a sibling of `openai/`, not a
-child of it. When building the OpenAI submission zip, **zip `Plugins/<team>/` as the
-top-level directory** (so `openai/` and `assets/` are both inside it), not `openai/`
-alone. OpenAI's upload has rejected a zip before with "Plugin manifest not found... at
-the ZIP root or inside its only top-level directory" when the manifest referenced a path
-outside the zipped folder -- confirmed by a real rejection in this repo's history.
+`Plugins/<team>/openai/` is the OpenAI plugin root. Its `.codex-plugin/`, `skills/`,
+`assets/`, and `README.md` entries must remain together. The submission ZIP contains one
+top-level `<team>/` directory whose direct contents are those plugin-root entries. The
+manifest must therefore resolve at `<team>/.codex-plugin/plugin.json`, not one level
+deeper at `<team>/openai/.codex-plugin/plugin.json`. All declared paths start with `./`
+and stay inside this root. OpenAI's upload has rejected a zip before with "Plugin
+manifest not found... at the ZIP root or inside its only top-level directory" --
+confirmed by a real rejection in this repo's history.
 `openai-plugin/*.zip` are gitignored, locally-built artifacts, not committed to the repo.
 
 Build (or rebuild) them with `python3 scripts/build_openai_zip.py --team <name>|all` --
-it copies only `openai/` and `assets/` (not `claude/` or `_source/`) into a single
-top-level `<team>/` directory and zips that, verified to match the boundary above.
+it copies the contents of `openai/` (not the containing directory, `claude/`, `_source/`,
+or the compatibility team-level `assets/`) into a single top-level `<team>/` directory,
+validates the manifest and icon paths, and zips that.
 
 ## Claude directory icon boundary
 
@@ -32,7 +34,7 @@ Anthropic's public directory reads the `icon` field even though Claude Code itse
 currently reports that field as directory-only metadata. The icon path must resolve
 inside the Claude plugin root. Each Claude package therefore carries
 `assets/think-school.png` and references it as `./assets/think-school.png`; do not point
-the Claude manifest at the team-level `../assets/` copy used by the OpenAI package.
+the Claude manifest at the team-level compatibility copy outside the plugin root.
 
 `privacyPolicyUrl`, `termsOfServiceUrl`, `supportUrl`, and `documentationUrl` are
 directory-only listing metadata. Released Claude Code builds currently warn that they
@@ -40,6 +42,10 @@ ignore these fields at plugin load time, but Anthropic's directory review explic
 reads all four and reports that no action is needed. Keep them in the submitted
 manifest; use non-strict `claude plugin validate` for the release check until the CLI
 recognizes directory-only fields.
+
+Configuration templates are also copied into each platform package's own `assets/`
+directory. Skills must reference those in-package copies and must not depend on the
+team-level compatibility `assets/` directory outside the released plugin root.
 
 ## Live platform tests (run separately)
 

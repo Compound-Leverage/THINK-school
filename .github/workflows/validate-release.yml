@@ -21,3 +21,5 @@ jobs:
         run: python scripts/validate_release.py
       - name: Check generated plugin output matches _source
         run: python scripts/check_build_drift.py
+      - name: Build and validate OpenAI submission archives
+        run: python scripts/build_openai_zip.py --team all

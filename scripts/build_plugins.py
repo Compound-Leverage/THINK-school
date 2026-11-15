@@ -9,16 +9,12 @@ Usage:
 Plugins/<team>/ (assets/, claude/, openai/) without writing anything.
 --write renders and overwrites those committed files.
 
-Zip-boundary note (corrected 2026-11-15): OpenAI's submission zip requires the manifest
-to resolve inside the zip's one top-level directory -- confirmed by a real rejection in
-this repo's history. That boundary is the TEAM folder (Plugins/<team>/), not the platform
-folder. The customization/config templates and OpenAI icon therefore live at
-Plugins/<team>/assets/, referenced from the openai package. Claude directory validation
-requires its icon to remain inside the Claude plugin root, so the same source icon is
-also rendered to claude/assets/think-school.png and referenced as
-"./assets/think-school.png". Building the OpenAI submission zip must zip
-Plugins/<team>/ as the top-level directory (openai/ + assets/ together), not openai/
-alone -- see Docs/plugin-validation.md.
+Package-boundary note (corrected 2026-11-15): each platform package must be
+self-contained. OpenAI requires the manifest at the plugin root and all declared paths
+to stay inside that root with a ./ prefix. Claude's directory likewise requires its
+icon inside the Claude plugin root. The source icon and customization templates are
+therefore rendered into both openai/assets/ and claude/assets/. Team-level assets/ are
+also retained for repository compatibility, but released packages never depend on them.
 
 Scope note: plugin.json, the shared icon/config assets, and the per-platform README are
 unified here -- one value in _source feeds both platform renders. The openai master
@@ -106,12 +102,11 @@ def render_openai_plugin_json(manifest, descriptions):
             "capabilities": o["capabilities"],
             "websiteURL": manifest["shared_urls"]["homepage"],
             "supportURL": o["support_url"],
-            "customerSupportURL": o["customer_support_url"],
             "privacyPolicyURL": manifest["shared_urls"]["privacy_policy"],
             "termsOfServiceURL": manifest["shared_urls"]["terms_of_service"],
             "brandColor": o["brand_color"],
-            "composerIcon": "../assets/think-school.png",
-            "logo": "../assets/think-school.png",
+            "composerIcon": "./assets/think-school.png",
+            "logo": "./assets/think-school.png",
             "defaultPrompt": o["default_prompt"],
         },
     }
@@ -140,7 +135,7 @@ def render_unified_claude_skill(body, meta):
     references a skill by name, openai by file path) resolves generically.
     """
     text = body.replace("{{INTRO}}", f'## {meta["intro_heading"]}\n\n')
-    text = text.replace("{{ASSETS}}", "../assets")
+    text = text.replace("{{ASSETS}}", "../../assets")
     if "review_ref" in meta:
         text = text.replace("{{REVIEW_REF_SENTENCE}}", meta["review_ref"]["claude"])
     text = _apply_platform_refs(text, meta, "claude")
@@ -174,7 +169,7 @@ def render_unified_openai_reference(body, meta):
     """
     text = body.replace("{{INTRO}}", "")
     text = text.replace("—", "--")
-    text = text.replace("{{ASSETS}}", "../../../../assets")
+    text = text.replace("{{ASSETS}}", "../../../assets")
     if "review_ref" in meta:
         text = text.replace("{{REVIEW_REF_SENTENCE}}", meta["review_ref"]["openai"])
     text = _apply_platform_refs(text, meta, "openai")
@@ -212,16 +207,22 @@ def render_team(team):
     out[f"claude/.claude-plugin/plugin.json"] = render_claude_plugin_json(manifest, descriptions).encode("utf-8")
     out[f"openai/.codex-plugin/plugin.json"] = render_openai_plugin_json(manifest, descriptions).encode("utf-8")
 
-    # OpenAI packages use the team-level asset inside their submission boundary.
-    # Claude's directory requires a separate copy inside the Claude plugin root.
+    # Each platform package must carry its own icon inside its plugin root.
+    # Keep the team-level copy for repository compatibility.
     icon = read_bytes(src / "icon" / "think-school.png")
     out["assets/think-school.png"] = icon
     out["claude/assets/think-school.png"] = icon
+    out["openai/assets/think-school.png"] = icon
 
-    # customization/config templates -> one shared copy at the team level
+    # Customization/config templates are copied inside both platform roots so no
+    # released package relies on a path outside its plugin boundary. Keep the
+    # team-level copies for direct repository users and backwards compatibility.
     cust_dir = src / "customization"
     for f in sorted(cust_dir.iterdir()):
-        out[f"assets/{f.name}"] = read_bytes(f)
+        content = read_bytes(f)
+        out[f"assets/{f.name}"] = content
+        out[f"claude/assets/{f.name}"] = content
+        out[f"openai/assets/{f.name}"] = content
 
     # README
     out["claude/README.md"] = read_bytes(src / "readme" / "claude.md")

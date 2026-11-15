@@ -26,7 +26,7 @@ program alignment, or business-development ICP fit, depending on what you config
 Connect your own CRM (Notion, Airtable, HubSpot, Salesforce, or whatever you
 already use) and enrichment tool via their MCP connectors, or however you
 already access them in this session. Configure
-`../assets/my-capture-config.json` before first use:
+`../../assets/my-capture-config.json` before first use:
 - `qualification_profiles` -- your qualification profiles, one per pursuit type:
   `business_development`, `govcon`, or `grant_funding`. Each profile defines its own
   criteria set -- business-development ICP (industry, company size, capacity gap, buying

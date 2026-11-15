@@ -16,7 +16,8 @@
         "path": "./Plugins/proposal-team/openai"
       },
       "policy": {
-        "installation": "AVAILABLE"
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
       },
       "category": "Sales",
       "description": "Delivers submission-ready proposal work through a Managed Team of seven Digital Employees. Chase researches the opportunity, Priya evaluates fit and pricing, Porter develops positioning, Quinn drafts, Diego performs compliance and quality review, Maya manages the gated workflow, and Blair supports grant and funder proposals. Bring your own organizational profile, pricing, case studies, evidence, and brand guidelines.",
@@ -31,7 +32,8 @@
         "path": "./Plugins/capture-team/openai"
       },
       "policy": {
-        "installation": "AVAILABLE"
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
       },
       "category": "Sales",
       "description": "Delivers decision-ready capture reporting for government contracting, grants, funding, and business development. Chet discovers opportunities, Kipp qualifies and prioritizes them, and Ben delivers the Capture Brief. The team uses relevant resources and available capabilities when they materially improve the requested work. Bring your own criteria, organizational data, CRM, opportunity sources, and document storage.",

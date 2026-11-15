@@ -48,7 +48,7 @@ pursuit triggers Full.
 
 This orchestrator dispatches to the other skills in this plugin -- install the whole
 plugin, not just this one. All pricing, ROI, and company-specific content comes from
-`../../../../assets/` (see `references/priya.md` for what to fill in).
+`../../../assets/` (see `references/priya.md` for what to fill in).
 
 ## Rules
 

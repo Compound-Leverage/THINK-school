@@ -5,17 +5,14 @@ Usage:
     python3 scripts/build_openai_zip.py --team capture-team|proposal-team|all
 
 Zip-boundary requirement (see Docs/plugin-validation.md "OpenAI submission zip
-boundary"): Plugins/<team>/openai/.codex-plugin/plugin.json references the shared
-icon/config templates one level up, at Plugins/<team>/assets/ -- a sibling of
-openai/, not a child of it. OpenAI's upload has rejected a zip before with "Plugin
-manifest not found... at the ZIP root or inside its only top-level directory" when
-the manifest referenced a path outside the zipped folder. The zip's single
-top-level directory must therefore contain openai/ and assets/ together -- not
-claude/ or _source/, which aren't part of the OpenAI submission at all.
+boundary"): the archive's single top-level <team>/ directory is the plugin root.
+It directly contains .codex-plugin/, skills/, assets/, and README.md. Every declared
+path starts with ./ and remains inside that root.
 
 Output: openai-plugin/<team>.zip (gitignored, locally-built, not committed).
 """
 import argparse
+import json
 import shutil
 import tempfile
 import zipfile
@@ -25,6 +22,24 @@ ROOT = Path(__file__).resolve().parent.parent
 TEAMS = ("capture-team", "proposal-team")
 
 
+def validate_staging(team, staging):
+    manifest_path = staging / ".codex-plugin" / "plugin.json"
+    if not manifest_path.is_file():
+        raise ValueError(f"[{team}] manifest is not at the staged plugin root")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("name") != team:
+        raise ValueError(f"[{team}] manifest name mismatch")
+    if not any((staging / "skills").rglob("SKILL.md")):
+        raise ValueError(f"[{team}] staged package has no skill")
+    for field in ("composerIcon", "logo"):
+        value = manifest.get("interface", {}).get(field, "")
+        if not isinstance(value, str) or not value.startswith("./") or ".." in Path(value).parts:
+            raise ValueError(f"[{team}] unsafe {field} path: {value!r}")
+        target = (staging / value).resolve()
+        if not target.is_relative_to(staging.resolve()) or not target.is_file():
+            raise ValueError(f"[{team}] missing in-package {field}: {value}")
+
+
 def build_zip(team):
     team_src = ROOT / "Plugins" / team
     out_path = ROOT / "openai-plugin" / f"{team}.zip"
@@ -32,8 +47,8 @@ def build_zip(team):
 
     with tempfile.TemporaryDirectory() as tmp:
         staging = Path(tmp) / team
-        shutil.copytree(team_src / "openai", staging / "openai")
-        shutil.copytree(team_src / "assets", staging / "assets")
+        shutil.copytree(team_src / "openai", staging)
+        validate_staging(team, staging)
 
         if out_path.exists():
             out_path.unlink()
