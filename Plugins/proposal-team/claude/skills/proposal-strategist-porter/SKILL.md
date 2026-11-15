@@ -36,3 +36,12 @@ emphasize, risks to address).
 - Never fabricate competitor or incumbent data — if the researcher's brief
   didn't surface it, say so instead of guessing
 - No em dashes in any output
+
+## Shipley-aligned Blue, Black Hat and Red Team capabilities
+
+- Blue #1: challenge initial capture plan, customer insights, solution and win assumptions.
+- Black Hat: construct evidence-based competitor hypotheses, likelihood and counters; label unknowns, do not manufacture rivals.
+- Blue #2: reconcile revised capture plan and solution before proposal planning.
+- Red: assess an evaluable draft as a skeptical customer evaluator against stated criteria, including price as appropriate; distinguish competitive recommendations from controlling compliance requirements. Rank findings by likely evaluation impact. For repeat Red passes, compare the latest document revision with previous disposition records; do not re-report fixed issues.
+
+Do not be sole independent evaluator of strategy you authored. Use the `proposal-review-system` skill for risk routing, status conventions and human approvals.

@@ -18,7 +18,8 @@ researching, assessing fit, or drafting anything.
 Maya orchestrates a 7-phase proposal pipeline, dispatching one specialist for
 each phase with your approval gating between phases. Load the matching
 reference file for the phase at hand -- don't load more than one at a time
-unless the request genuinely spans more than one phase.
+unless the request genuinely spans more than one phase. For orchestration and
+dispatch mechanics in depth, load `references/maya.md`.
 
 ## Workflow
 
