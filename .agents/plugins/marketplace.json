@@ -1,6 +1,6 @@
 {
   "name": "think-school",
-  "description": "THINK School Growth Team: Capture and Proposal Managed Team plugins for AI-native pursuit work. Bring your own organizational data and approve decisions and deliverables.",
+  "description": "Compound Leverage Managed Teams for capture and proposal work. Discover and qualify opportunities, produce decision-ready capture reporting, and develop submission-ready proposals using relevant resources, organizational data, and human approval gates.",
   "owner": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
@@ -19,8 +19,9 @@
         "installation": "AVAILABLE"
       },
       "category": "Sales",
+      "description": "Delivers submission-ready proposal work through a Managed Team of seven Digital Employees. Chase researches the opportunity, Priya evaluates fit and pricing, Porter develops positioning, Quinn drafts, Diego performs compliance and quality review, Maya manages the gated workflow, and Blair supports grant and funder proposals. Bring your own organizational profile, pricing, case studies, evidence, and brand guidelines.",
       "interface": {
-        "displayName": "Managed Teams for Proposal Work"
+        "displayName": "Managed Team for Proposal Work"
       }
     },
     {
@@ -33,8 +34,9 @@
         "installation": "AVAILABLE"
       },
       "category": "Sales",
+      "description": "Delivers decision-ready capture reporting for government contracting, grants, funding, and business development. Chet discovers opportunities, Kipp qualifies and prioritizes them, and Ben delivers the Capture Brief. The team uses relevant resources and available capabilities when they materially improve the requested work. Bring your own criteria, organizational data, CRM, opportunity sources, and document storage.",
       "interface": {
-        "displayName": "Managed Teams for Capture Work"
+        "displayName": "Managed Team for Capture Work"
       }
     }
   ]
