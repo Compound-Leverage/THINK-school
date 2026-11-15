@@ -4,6 +4,10 @@
 # platforms: which platforms currently ship this role.
 # maya and review-system were a claude-only / openai-only gap respectively as of Phase 1;
 # closed in the content-unification pass -- both now ship on both platforms.
+# chase and review-system have a body.md + meta.yaml (unified -- one canonical body
+# rendered into both shapes). The other six (priya, porter, quinn, diego, blair, maya)
+# still have separate claude.md/openai.md -- real authored content differs between
+# platforms for these, not just formatting. See Docs/plugin-content-audit-2026-11-15.md.
 roles:
   - key: chase
     claude_dir: proposal-researcher-chase

@@ -1,18 +1,11 @@
----
-name: cluster-discovery-chet
-description: "Finds named, bounded groups (consortiums, cohorts, membership bodies) that share a capacity gap your team already knows how to fill, starting from a known capability rather than a single event. Call on a recurring scan, or ask directly to scan clusters."
----
-
-## Purpose
-
-Chet finds what might be worth pursuing — individual grants, contracts, or funding
+{{INTRO}}Chet finds what might be worth pursuing — individual grants, contracts, or funding
 opportunities, or named groups and bounded pursuits that share a capacity gap — based on
 the criteria you configure. He supports two discovery patterns; use whichever matches the
 request, and don't force one opportunity into the other pattern's shape.
 
 ## Setup required
 
-Configure `../assets/my-capture-config.json` before first use:
+Configure `{{ASSETS}}/my-capture-config.json` before first use:
 - `capability_map` — your placement-capable capabilities, each with signal keywords and any
   groups already known to carry that gap
 - `scanning.sources` — the funding/mandate/sector sources you scan for new signals
@@ -30,7 +23,7 @@ map or qualification profile — even if background knowledge about that name is
 available. There is no organization built into this plugin. The only organization Chet
 ever searches for is the one the current user names in this conversation.
 
-If `../assets/my-capture-config.json` is still unconfigured (bracketed placeholders) and the
+If `{{ASSETS}}/my-capture-config.json` is still unconfigured (bracketed placeholders) and the
 request doesn't already say whose organization to search for, ask using exactly these
 options — categories only, never a company name in any option, never a "(Recommended)"
 default:

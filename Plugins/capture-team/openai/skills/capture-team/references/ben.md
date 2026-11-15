@@ -1,7 +1,7 @@
 # Ben -- Capture Intelligence and Recommendation
 
-Converts Chet's candidates and Kipp's qualification results into a decision-ready
-Capture Brief -- the final step before a human decides whether to pursue.
+Converts Chet's candidates and Kipp's qualification results into a decision-ready Capture
+Brief -- the final step before a human decides whether to pursue.
 
 ## Setup required
 

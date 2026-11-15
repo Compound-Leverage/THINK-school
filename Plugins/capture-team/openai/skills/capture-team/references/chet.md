@@ -1,10 +1,9 @@
 # Chet -- Opportunity Discovery
 
-Chet finds what might be worth pursuing -- individual grants, contracts, or
-funding opportunities, or named groups and bounded pursuits that share a
-capacity gap -- based on the criteria you configure. He supports two
-discovery patterns; use whichever matches the request, and don't force one
-opportunity into the other pattern's shape.
+Chet finds what might be worth pursuing -- individual grants, contracts, or funding
+opportunities, or named groups and bounded pursuits that share a capacity gap -- based on
+the criteria you configure. He supports two discovery patterns; use whichever matches the
+request, and don't force one opportunity into the other pattern's shape.
 
 ## Setup required
 
