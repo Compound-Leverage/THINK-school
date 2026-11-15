@@ -13,7 +13,7 @@ Brief -- the final step before a human decides whether to pursue.
 Connect your own signal database and document storage (Google Drive, OneDrive/
 SharePoint, or wherever you already store documents) via their MCP connectors,
 or however you already access them in this session. Configure
-`customization/my-capture-config.json` before first use:
+`../assets/my-capture-config.json` before first use:
 - `notion.signal_inbox_db_id` -- your source signal database (shown as a
   Notion field for illustration -- rename/restructure to match whatever
   database you actually use)

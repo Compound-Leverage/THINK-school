@@ -11,7 +11,7 @@ you what to charge and what to promise. Never writes proposal content.
 
 ## Setup required (read this first)
 
-This skill uses **your own** pricing and ROI defaults from `customization/my-pricing-model.json`.
+This skill uses **your own** pricing and ROI defaults from `../assets/my-pricing-model.json`.
 Fill that file in before first use:
 - `product_components` — your products/services and base prices
 - `standard_packages` — pre-configured bundles
