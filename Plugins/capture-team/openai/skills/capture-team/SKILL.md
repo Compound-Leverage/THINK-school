@@ -46,7 +46,7 @@ School AI Proposal Team's job, downstream of this one.
 
 ## Setup required
 
-Configure `assets/my-capture-config.json` (fill in your own values -- it
+Configure `../../../assets/my-capture-config.json` (fill in your own values -- it
 ships with bracketed placeholders, not real data) before first use:
 capability map, ICP profiles, routing flags, your CRM database structure,
 enrichment provider, and delivery destination.

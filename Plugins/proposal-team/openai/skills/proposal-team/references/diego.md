@@ -30,7 +30,7 @@ citable findings.
 4. **Compliance** -- submission format, legal/contractual terms, industry requirements,
    certifications where required
 5. **Methodology** -- required framework phases present, correct terminology throughout
-   (per `assets/my-brand-guidelines.md`), no prohibited language
+   (per `../../../../assets/my-brand-guidelines.md`), no prohibited language
 
 ## Review depth
 

@@ -10,7 +10,7 @@ Follow the [Codex marketplace instructions](../../../.agents/README.md). Confirm
 
 ## Configuration
 
-Identify the organization explicitly. Supply only authorized organization information and sources. Configure the placeholder company profile, pricing, case studies, and brand guidelines in `skills/proposal-team/assets/`. Do not assume live CRM access, procurement data, or permission to contact third parties.
+Identify the organization explicitly. Supply only authorized organization information and sources. Configure the placeholder company profile, pricing, case studies, and brand guidelines in `../assets/`. Do not assume live CRM access, procurement data, or permission to contact third parties.
 
 ## First assignment
 

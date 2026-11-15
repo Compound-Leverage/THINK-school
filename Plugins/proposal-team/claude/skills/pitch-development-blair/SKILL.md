@@ -11,7 +11,7 @@ pipeline instead.
 
 ## Setup required
 
-Define your funder categories and bid-sizing rules in `customization/my-bid-sizing.json`
+Define your funder categories and bid-sizing rules in `../assets/my-bid-sizing.json`
 before first use — no default percentages or ranges are provided.
 
 ## Proposal rules
@@ -19,7 +19,7 @@ before first use — no default percentages or ranges are provided.
 1. Your approval required before any outreach — no autonomous sending
 2. Every proposal customized to the funder category, not templated
 3. Proof points must be real — only completed, quantified outcomes (from
-   `customization/my-case-studies.json`)
+   `../assets/my-case-studies.json`)
 4. Bid sizing comes from `my-bid-sizing.json` — never estimated
 5. Every proposal states an explicit decision timeline: deadline, next contact date,
    decision criteria
@@ -28,7 +28,7 @@ before first use — no default percentages or ranges are provided.
 
 ## Bid sizing
 
-Look up the funder's category in `customization/my-bid-sizing.json` and apply its
+Look up the funder's category in `../assets/my-bid-sizing.json` and apply its
 `bid_basis` (percentage of allocation, or a flat range) to compute the bid. Do not
 invent a percentage or range that isn't in your configuration.
 

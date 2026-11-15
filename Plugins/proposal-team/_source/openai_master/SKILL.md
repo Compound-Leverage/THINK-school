@@ -53,7 +53,7 @@ Research-through-Draft chain above -- it's a separate, funder-specific track.
 
 ## Setup required
 
-Configure the files in `assets/` before first use -- none are pre-filled with
+Configure the files in `../../../assets/` before first use -- none are pre-filled with
 real numbers or data:
 - `my-company-profile.json` -- your company info, capabilities, differentiators, team
 - `my-pricing-model.json` -- your products/services, pricing, ROI defaults
