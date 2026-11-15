@@ -12,12 +12,13 @@ Plugins/<team>/ (assets/, claude/, openai/) without writing anything.
 Zip-boundary note (corrected 2026-11-15): OpenAI's submission zip requires the manifest
 to resolve inside the zip's one top-level directory -- confirmed by a real rejection in
 this repo's history. That boundary is the TEAM folder (Plugins/<team>/), not the platform
-folder. The icon and customization/config templates are byte-identical, non-platform-
-specific assets, so they now live once at Plugins/<team>/assets/, referenced by relative
-path from both plugin.json files ("../assets/...") and from the openai skill content
-("../../../assets/..." from openai/skills/<team>/). Building the OpenAI submission zip
-must zip Plugins/<team>/ as the top-level directory (openai/ + assets/ together), not
-openai/ alone -- see Docs/plugin-validation.md.
+folder. The customization/config templates and OpenAI icon therefore live at
+Plugins/<team>/assets/, referenced from the openai package. Claude directory validation
+requires its icon to remain inside the Claude plugin root, so the same source icon is
+also rendered to claude/assets/think-school.png and referenced as
+"./assets/think-school.png". Building the OpenAI submission zip must zip
+Plugins/<team>/ as the top-level directory (openai/ + assets/ together), not openai/
+alone -- see Docs/plugin-validation.md.
 
 Scope note: plugin.json, the shared icon/config assets, and the per-platform README are
 unified here -- one value in _source feeds both platform renders. The openai master
@@ -59,10 +60,15 @@ def render_claude_plugin_json(manifest, descriptions):
         "name": manifest["name"],
         "displayName": c["display_name"],
         "version": c["version"],
-        "icon": "../assets/think-school.png",
+        # Directory-only metadata: Claude Code currently warns that it ignores this
+        # field, while Anthropic's directory requires it and requires the path to stay
+        # inside the plugin root.
+        "icon": "./assets/think-school.png",
         "description": descriptions["long_description"],
         "author": {"name": manifest["author"]["name"], "url": manifest["author"]["url"]},
         "homepage": manifest["shared_urls"]["homepage"],
+        # Directory-only listing metadata. Released Claude Code builds warn that
+        # they ignore these fields, but Anthropic's directory reads all four.
         "privacyPolicyUrl": manifest["shared_urls"]["privacy_policy"],
         "termsOfServiceUrl": manifest["shared_urls"]["terms_of_service"],
         "supportUrl": c["support_url"],
@@ -153,12 +159,25 @@ def render_unified_openai_reference(body, meta):
     return f'# {meta["openai_title"]}\n\n' + text
 
 
+def shared_resource_discovery():
+    """Canonical cross-team, cross-platform resource/capability-discovery snippet.
+
+    Lives at Plugins/_shared/, not under either team's _source/ -- it's identical
+    for both plugins, not just both platforms within one plugin. Appended to every
+    claude role's SKILL.md and hoisted once into each team's openai master SKILL.md,
+    the same way other cross-cutting rules are hoisted vs. repeated per platform.
+    """
+    return read_text(ROOT / "Plugins" / "_shared" / "resource-discovery.md")
+
+
 def render_team(team):
     """Return {relative_path_under_Plugins/<team>: bytes} for every generated file."""
     src = ROOT / "Plugins" / team / "_source"
     manifest = load_yaml(src / "manifest.yaml")
     descriptions = load_yaml(src / "descriptions.yaml")
     roles = load_yaml(src / "roles.yaml")["roles"]
+    shared_claude = shared_resource_discovery()
+    shared_openai = shared_claude.replace("—", "--")
 
     out = {}
 
@@ -166,9 +185,11 @@ def render_team(team):
     out[f"claude/.claude-plugin/plugin.json"] = render_claude_plugin_json(manifest, descriptions).encode("utf-8")
     out[f"openai/.codex-plugin/plugin.json"] = render_openai_plugin_json(manifest, descriptions).encode("utf-8")
 
-    # icon -> one shared copy at the team level (sibling of claude/ and openai/,
-    # inside the zip boundary for OpenAI submission -- see module docstring)
-    out["assets/think-school.png"] = read_bytes(src / "icon" / "think-school.png")
+    # OpenAI packages use the team-level asset inside their submission boundary.
+    # Claude's directory requires a separate copy inside the Claude plugin root.
+    icon = read_bytes(src / "icon" / "think-school.png")
+    out["assets/think-school.png"] = icon
+    out["claude/assets/think-school.png"] = icon
 
     # customization/config templates -> one shared copy at the team level
     cust_dir = src / "customization"
@@ -179,11 +200,14 @@ def render_team(team):
     out["claude/README.md"] = read_bytes(src / "readme" / "claude.md")
     out["openai/README.md"] = read_bytes(src / "readme" / "openai.md")
 
-    # openai master SKILL.md (verbatim)
-    out[f"openai/skills/{team}/SKILL.md"] = read_bytes(src / "openai_master" / "SKILL.md")
+    # openai master SKILL.md (verbatim) + hoisted shared resource-discovery section
+    master = read_text(src / "openai_master" / "SKILL.md").rstrip("\n") + "\n\n" + shared_openai
+    out[f"openai/skills/{team}/SKILL.md"] = master.encode("utf-8")
 
     # per-role skill content: unified (one body.md -> both shapes) or legacy
-    # (separate claude.md/openai.md, copied out verbatim) -- see module docstring
+    # (separate claude.md/openai.md, copied out verbatim) -- see module docstring.
+    # Every claude role gets the shared resource-discovery section appended, since
+    # claude loads one skill at a time with no always-on master to hoist it into.
     for role in roles:
         key = role["key"]
         platforms = role["platforms"]
@@ -193,12 +217,14 @@ def render_team(team):
             body = read_text(body_path)
             meta = load_yaml(role_dir / "meta.yaml")
             if "claude" in platforms:
-                out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = render_unified_claude_skill(body, meta).encode("utf-8")
+                rendered = render_unified_claude_skill(body, meta).rstrip("\n") + "\n\n" + shared_claude
+                out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = rendered.encode("utf-8")
             if "openai" in platforms:
                 out[f"openai/skills/{team}/references/{role['openai_file']}"] = render_unified_openai_reference(body, meta).encode("utf-8")
         else:
             if "claude" in platforms:
-                out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = read_bytes(role_dir / "claude.md")
+                rendered = read_text(role_dir / "claude.md").rstrip("\n") + "\n\n" + shared_claude
+                out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = rendered.encode("utf-8")
             if "openai" in platforms:
                 out[f"openai/skills/{team}/references/{role['openai_file']}"] = read_bytes(role_dir / "openai.md")
 
