@@ -9,5 +9,3 @@
 > Use Proposal Team for a completely fictional applicant, Harborlight Systems, responding to a fictional public-sector digital services opportunity. Label every invented assumption. Start with intake and Chase's research/Go-No-Go Discovery Brief only. Include requirements, preliminary fit, risks, evidence gaps, and a human decision gate. Stop for my approval before Priya's detailed assessment or any proposal drafting.
 
 **Review:** Verify the opportunity and organization are explicitly fictional; check sources and assumptions; approve or request revisions at the gate. See [illustrative Discovery Brief](../Docs/samples/proposal-discovery-brief.md).
-
-**Next:** [Respond](../Learn/05-Respond/README.md) → [Review](../Learn/06-Review/README.md).

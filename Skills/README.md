@@ -1,6 +1,6 @@
 # Standalone Skills
 
-Reusable capabilities for learners who do not need an entire Managed Team. The current public Growth Team plugins are [Capture Team and Proposal Team](../Plugins/README.md); the [six-stage learning journey](../Learn/README.md) is the recommended starting point.
+Reusable capabilities for learners who do not need an entire Managed Team. The current public Growth Team plugins are [Capture Team and Proposal Team](../Plugins/README.md).
 
 ## Current skills
 
@@ -15,4 +15,4 @@ Skill support and installation differ by platform. Uploading a file into a chat 
 
 ## Archived Digital Employee packages
 
-Former standalone persona ZIPs and the LinkedIn Content reference are preserved in [the `legacy-archive` branch](https://github.com/Compound-Leverage/THINK-school/tree/legacy-archive/Archive/Persona-Skills). For current team-based work, install the [Capture or Proposal plugin](../Plugins/README.md) and use [Learn](../Learn/README.md) rather than coordinating individual personas manually.
+Former standalone persona ZIPs and the LinkedIn Content reference are preserved in [the `legacy-archive` branch](https://github.com/Compound-Leverage/THINK-school/tree/legacy-archive/Archive/Persona-Skills). For current team-based work, install the [Capture or Proposal plugin](../Plugins/README.md) rather than coordinating individual personas manually.

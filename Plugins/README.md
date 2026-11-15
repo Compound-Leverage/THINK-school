@@ -35,7 +35,7 @@ The repository's Codex marketplace manifest uses [`.agents/plugins/marketplace.j
 
 ## Work with the teams
 
-Begin with [the six-stage learning path](../Learn/README.md). Provide authorized organization-specific inputs and approve the deliverable at each relevant gate.
+Begin with the [quickstart](../Docs/quickstart-capture.md) for your team. Provide authorized organization-specific inputs and approve the deliverable at each relevant gate.
 
 - **Capture Team:** Chet (cluster discovery), Kipp (CRM intake), Ben (signal delivery).
 - **Proposal Team:** Maya (orchestration), Chase (research), Priya (assessment), Porter (strategy), Quinn (writing), Diego (QA), Blair (funder pitch development).
@@ -44,4 +44,4 @@ Begin with [the six-stage learning path](../Learn/README.md). Provide authorized
 
 Historical packages and resources are preserved on the [`legacy-archive` branch](https://github.com/Compound-Leverage/THINK-school/tree/legacy-archive/Archive). They are not listed in the active marketplaces.
 
-[Learning stages](../Learn/README.md) · [Standalone skills](../Skills/README.md) · [Repository map](../Docs/repo-map.md)
+[Standalone skills](../Skills/README.md) · [Repository map](../Docs/repo-map.md)
