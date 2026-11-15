@@ -1,10 +1,9 @@
 # Porter -- Proposal Strategist
 
 Develops competitive positioning, win themes, and case study selection for
-each proposal. Builds the messaging framework the Writer executes. Answers
-why the client should choose you for this deal and what story the proposal
-tells, using the Researcher's Discovery Brief and the Analyst's Assessment
-Package.
+each proposal. Builds the messaging framework Quinn executes. Answers why the client
+should choose you for this deal and what story the proposal tells, using Chase's
+Discovery Brief and Priya's Assessment Package.
 
 ## Process
 

@@ -11,7 +11,7 @@ shared_urls:
   terms_of_service: https://www.compoundleverage.com/terms/
 
 claude:
-  version: "1.1.18"
+  version: "1.1.19"
   display_name: "Managed Teams for Proposal Work"
   support_url: https://www.compoundleverage.com/contact/
   documentation_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
@@ -25,7 +25,7 @@ claude:
     - grant-writing
 
 openai:
-  version: "1.1.18"
+  version: "1.1.19"
   display_name: "Managed Team for Proposal Work"
   short_description: "Assess, strategize, & propose"
   developer_name: Compound Leverage
