@@ -11,6 +11,17 @@ This checklist is a **manual test protocol**, not a claim that installations hav
 - [ ] No plugin silently assumes the publisher's organization is the user's client.
 - [ ] Historical content is not required from the `legacy-archive` branch.
 
+## OpenAI submission zip boundary
+
+`Plugins/<team>/openai/.codex-plugin/plugin.json` references the icon and config
+templates one level up, at `Plugins/<team>/assets/` -- a sibling of `openai/`, not a
+child of it. When building the OpenAI submission zip, **zip `Plugins/<team>/` as the
+top-level directory** (so `openai/` and `assets/` are both inside it), not `openai/`
+alone. OpenAI's upload has rejected a zip before with "Plugin manifest not found... at
+the ZIP root or inside its only top-level directory" when the manifest referenced a path
+outside the zipped folder -- confirmed by a real rejection in this repo's history.
+`openai-plugin/*.zip` are gitignored, locally-built artifacts, not committed to the repo.
+
 ## Live platform tests (run separately)
 
 - [ ] Claude Code: add the marketplace, install Capture Team, and run the fictional first assignment.
