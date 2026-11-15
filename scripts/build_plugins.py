@@ -20,16 +20,24 @@ must zip Plugins/<team>/ as the top-level directory (openai/ + assets/ together)
 openai/ alone -- see Docs/plugin-validation.md.
 
 Scope note: plugin.json, the shared icon/config assets, and the per-platform README are
-unified here -- one value in _source feeds both platform renders. Skill content (SKILL.md
-/ reference.md bodies) and the openai master SKILL.md are stored once per platform in
-_source and copied out verbatim; they are not yet merged into one shared body, because
-today's real content already differs by platform (see roles.yaml comments and the project
-plan at /Users/admin/.claude/plans/calm-hatching-bentley.md). This script still gives
-those files a single source-of-truth location, and check_build_drift.py still catches it
-if the shipped tree is hand-edited without updating _source.
+unified here -- one value in _source feeds both platform renders. The openai master
+SKILL.md is still stored once per platform and copied out verbatim -- its content
+genuinely differs by platform beyond mechanics (routing table, hoisted rules), see the
+project plan at /Users/admin/.claude/plans/calm-hatching-bentley.md.
+
+Per-role skill content (2026-11-15 update): roles with a `body.md` in their
+_source/skills/<role>/ directory are "unified" -- one canonical body rendered into both
+platforms' shapes (see render_unified_claude_skill / render_unified_openai_reference).
+Roles that still have separate claude.md/openai.md files are "legacy" -- copied out
+verbatim, unchanged, because their actual content differs between platforms beyond
+mechanical formatting (different intro framing, generic role names vs persona names,
+selectively combined/dropped Rules bullets) and force-unifying them would silently
+change approved, shipped wording on one platform or the other. See
+Docs/plugin-content-audit-2026-11-15.md for which roles are which and why.
 """
 import argparse
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -107,6 +115,44 @@ def read_bytes(path):
     return path.read_bytes()
 
 
+def render_unified_claude_skill(body, meta):
+    """Render a unified role's claude.md from its canonical body + meta.
+
+    Canonical body is authored claude-flavored (em dash, no platform path prefix --
+    {{ASSETS}} token instead) with an {{INTRO}} token marking wherever the intro
+    heading belongs (not always right after frontmatter -- several roles have the
+    guardrail section before it). Claude render: frontmatter, {{INTRO}} resolves to
+    its heading, {{ASSETS}} resolves to the plugin-root-relative path, the optional
+    review-ref sentence token resolves to its claude phrasing.
+    """
+    text = body.replace("{{INTRO}}", f'## {meta["intro_heading"]}\n\n')
+    text = text.replace("{{ASSETS}}", "../assets")
+    if "review_ref" in meta:
+        text = text.replace("{{REVIEW_REF_SENTENCE}}", meta["review_ref"]["claude"])
+    frontmatter = f'---\nname: {meta["claude_name"]}\ndescription: "{meta["claude_description"]}"\n---\n\n'
+    return frontmatter + text
+
+
+def render_unified_openai_reference(body, meta):
+    """Render a unified role's openai reference.md from the same canonical body.
+
+    OpenAI render: H1 title instead of frontmatter, {{INTRO}} resolves to nothing
+    (openai doesn't repeat the intro heading -- the H1 already serves that role),
+    em dash mechanically rewritten to double-hyphen, {{ASSETS}} resolved to the
+    reference-file-relative path (4 levels up from openai/skills/<team>/references/),
+    review-ref token resolved to its openai phrasing, and the "No em dashes" rule
+    bullet dropped (hoisted once into the team's openai master SKILL.md instead,
+    not repeated per role).
+    """
+    text = body.replace("{{INTRO}}", "")
+    text = text.replace("—", "--")
+    text = text.replace("{{ASSETS}}", "../../../../assets")
+    if "review_ref" in meta:
+        text = text.replace("{{REVIEW_REF_SENTENCE}}", meta["review_ref"]["openai"])
+    text = re.sub(r"\n- No em dashes in any output\n", "\n", text)
+    return f'# {meta["openai_title"]}\n\n' + text
+
+
 def render_team(team):
     """Return {relative_path_under_Plugins/<team>: bytes} for every generated file."""
     src = ROOT / "Plugins" / team / "_source"
@@ -136,15 +182,25 @@ def render_team(team):
     # openai master SKILL.md (verbatim)
     out[f"openai/skills/{team}/SKILL.md"] = read_bytes(src / "openai_master" / "SKILL.md")
 
-    # per-role skill content (verbatim copy-out per platform)
+    # per-role skill content: unified (one body.md -> both shapes) or legacy
+    # (separate claude.md/openai.md, copied out verbatim) -- see module docstring
     for role in roles:
         key = role["key"]
         platforms = role["platforms"]
         role_dir = src / "skills" / key
-        if "claude" in platforms:
-            out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = read_bytes(role_dir / "claude.md")
-        if "openai" in platforms:
-            out[f"openai/skills/{team}/references/{role['openai_file']}"] = read_bytes(role_dir / "openai.md")
+        body_path = role_dir / "body.md"
+        if body_path.exists():
+            body = read_text(body_path)
+            meta = load_yaml(role_dir / "meta.yaml")
+            if "claude" in platforms:
+                out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = render_unified_claude_skill(body, meta).encode("utf-8")
+            if "openai" in platforms:
+                out[f"openai/skills/{team}/references/{role['openai_file']}"] = render_unified_openai_reference(body, meta).encode("utf-8")
+        else:
+            if "claude" in platforms:
+                out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = read_bytes(role_dir / "claude.md")
+            if "openai" in platforms:
+                out[f"openai/skills/{team}/references/{role['openai_file']}"] = read_bytes(role_dir / "openai.md")
 
     return out
 

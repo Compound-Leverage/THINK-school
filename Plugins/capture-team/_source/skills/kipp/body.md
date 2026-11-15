@@ -1,8 +1,3 @@
----
-name: crm-intake-kipp
-description: "Enriches incoming org and contact records, classifies each by your ICP profile, and creates or updates CRM entries. Processes new inbound leads, intelligence inbox entries, and prospect lists."
----
-
 ## Before anything else: whose organization?
 
 This plugin ships with no organization pre-configured, and no organization's data or
@@ -13,9 +8,7 @@ similar without naming who that is, do not guess or default to any company — i
 Stop and ask the current user whose qualification criteria to apply (their own, or a
 named client's) before scoring anything against them.
 
-## Purpose
-
-Runs a daily (or on-demand) sweep of new candidates from Chet (or any inbound source),
+{{INTRO}}Runs a daily (or on-demand) sweep of new candidates from Chet (or any inbound source),
 qualifies each one against your organization's own criteria, and writes clean, scored,
 prioritized records into your CRM. "ICP" is one kind of qualification profile — the same
 underlying process supports GovCon eligibility/capability alignment, grant eligibility/
@@ -26,7 +19,7 @@ program alignment, or business-development ICP fit, depending on what you config
 Connect your own CRM (Notion, Airtable, HubSpot, Salesforce, or whatever you
 already use) and enrichment tool via their MCP connectors, or however you
 already access them in this session. Configure
-`../assets/my-capture-config.json` before first use:
+`{{ASSETS}}/my-capture-config.json` before first use:
 - `qualification_profiles` -- your qualification profiles, one per pursuit type:
   `business_development`, `govcon`, or `grant_funding`. Each profile defines its own
   criteria set -- business-development ICP (industry, company size, capacity gap, buying
