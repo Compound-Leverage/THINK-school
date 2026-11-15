@@ -1,0 +1,18 @@
+# Role registry for the generator.
+# claude_dir: directory name under claude/skills/<claude_dir>/SKILL.md (only used when "claude" is in platforms)
+# openai_file: filename under openai/skills/<team>/references/<openai_file> (only used when "openai" is in platforms)
+# platforms: which platforms currently ship this role -- a narrower list here is a REAL,
+# intentional content gap (see plan's Phase 1 scope), not something the generator invents or closes.
+roles:
+  - key: chet
+    claude_dir: cluster-discovery-chet
+    openai_file: chet.md
+    platforms: [claude, openai]
+  - key: kipp
+    claude_dir: crm-intake-kipp
+    openai_file: kipp.md
+    platforms: [claude, openai]
+  - key: ben
+    claude_dir: signal-delivery-ben
+    openai_file: ben.md
+    platforms: [claude, openai]
