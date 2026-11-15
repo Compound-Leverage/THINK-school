@@ -1,8 +1,3 @@
----
-name: proposal-engine-lead-maya
-description: "Orchestrates the full 7-phase proposal pipeline from intake to final document, dispatching Researcher, Analyst, Strategist, Writer, and QA in sequence with human approval gates between phases."
----
-
 ## Before anything else: whose organization?
 
 This plugin ships with no organization pre-configured, and no organization's data or
@@ -13,20 +8,18 @@ without naming who that is, do not guess or default to any company — including
 the current user which organization is bidding (their own, or a named client) before
 researching, assessing fit, or drafting anything.
 
-## Purpose
-
-Runs the end-to-end proposal workflow: intake, research, assessment, strategy, draft,
-QA, and final output. Each phase dispatches a specialist skill and gates at your approval
-before the next phase starts.
+{{INTRO}}Orchestrates the full 7-phase proposal pipeline from intake to final document,
+dispatching Research, Assessment, Strategy, Draft, and QA in sequence with human approval
+gates between phases.
 
 ## Workflow
 
 1. **Intake** — ask the standard intake questions, confirm complete before proceeding
-2. **Research** (`proposal-researcher`) — Discovery Brief, Go/No-Go gate
-3. **Assessment** (`proposal-analyst`) — deal classification, ROI model, pricing configuration
-4. **Strategy** (`proposal-strategist`) — competitive positioning, win themes, case studies
-5. **Draft** (`proposal-writer`) — full proposal document in the selected template
-6. **QA** (`proposal-qa`) — five-check review, PASS/WARNING/FAIL verdict
+2. **Research** ({{RESEARCH_REF}}) — Discovery Brief, Go/No-Go gate
+3. **Assessment** ({{ASSESSMENT_REF}}) — deal classification, ROI model, pricing configuration
+4. **Strategy** ({{STRATEGY_REF}}) — competitive positioning, win themes, case studies
+5. **Draft** ({{DRAFT_REF}}) — full proposal document in the selected template
+6. **QA** ({{QA_REF}}) — five-check review, PASS/WARNING/FAIL verdict
 7. **Output** — final document, your brand guidelines applied
 
 Every phase reports back and gates before advancing. A REVISE/FAIL verdict at any gate
@@ -44,16 +37,16 @@ recommendation from either phase bypass your own approval gate.
 
 Color reviews (Blue Team, Black Hat, Pink, Green, Red, Gold, White) are reusable
 capabilities, not additional required pipeline phases or new Digital Employees. Maya
-routes the scope and specialist responsibilities for each review according to the
-`proposal-review-system` skill — see that skill for review selection, depth, and the
+routes the scope and specialist responsibilities for each review according to
+{{REVIEW_SYSTEM_REF}} — see that for review selection, depth, and the
 finding-register contract. Default to the Core review set (Pink, Red, Gold) unless the
 pursuit triggers Full.
 
 ## Setup required
 
-This orchestrator dispatches to the other 7 skills in this plugin — install the whole
-plugin, not just this skill. All pricing, ROI, and company-specific content comes from
-`../assets/` (see `proposal-analyst` for what to fill in).
+This orchestrator dispatches to the other skills in this plugin — install the whole
+plugin, not just this one. All pricing, ROI, and company-specific content comes from
+`{{ASSETS}}/` (see {{ASSESSMENT_REF}} for what to fill in).
 
 ## Rules
 

@@ -27,13 +27,58 @@ in). This changes zero words and zero rendered meaning, only where a soft line
 break falls. `proposal-team`'s chase and review-system did not have this
 issue -- their original wrapping already matched.
 
-## Still legacy (separate `claude.md` + `openai.md`, unchanged, do not merge)
+## Update 2026-11-15 (later same day): unified, content decisions resolved
+
+Marvin resolved the three open content questions below, and `priya`, `porter`,
+`quinn`, `diego`, `blair`, `maya` are now unified into `body.md` + `meta.yaml`
+the same way the first five roles were:
+
+- **Voice: persona name everywhere, both platforms.** Claude's generic
+  references ("the researcher's Discovery Brief") were rewritten to the
+  persona name ("Chase's Discovery Brief"), matching openai and matching how
+  Maya's own content already names everyone.
+- **Intro-paragraph duplication:** one canonical intro, used as both the
+  claude frontmatter `description:` and the openai body-intro prose (same
+  pattern chase already used). Maya's specific case -- "dispatching
+  Researcher, Analyst, Strategist, Writer, and QA" (frontmatter) vs.
+  "dispatching Research, Assessment, Strategy, Draft, and QA" (openai body) --
+  resolved to the phase-style wording (matching the Workflow list's existing,
+  already-consistent phrasing on both platforms).
+- **Blair's missing content** (the autonomy sentence and the explicit
+  chase→priya→porter→quinn→diego chain reference) ported into the canonical
+  body, now on both platforms.
+
+**New generator mechanism added:** `_apply_platform_refs()` generalizes the
+existing `review_ref` claude-vs-openai cross-reference pattern (claude
+references a skill by name, openai by file path) to any meta.yaml key shaped
+`{claude: ..., openai: ...}`. Maya needed five of these (one per pipeline
+phase: `research_ref`, `assessment_ref`, `strategy_ref`, `draft_ref`,
+`qa_ref`) plus `review_system_ref` for her review-orchestration paragraph,
+since her Workflow list points at a different skill/file per phase per
+platform -- `review_ref` alone only handled one cross-reference per role.
+
+**Two small, disclosed deviations from strict content preservation** (content
+was already changing here, per the plan's own note that byte-identical
+reproduction wasn't the goal for this pass):
+- Maya's "Setup required" line originally said `priya.md` (no `references/`
+  prefix) on openai, inconsistent with the Workflow list's `references/
+  priya.md`. Reused the same `{{ASSESSMENT_REF}}` token for both for
+  consistency rather than adding a second, near-duplicate token just for this
+  one line -- cosmetic only, both point at the same file.
+- Blair's claude.md `Rules` section was only ever the em-dash rule; openai.md
+  had no `Rules` heading at all (nothing else to repeat). Keeping the heading
+  in the canonical body (claude still needs it stated somewhere -- unlike
+  openai, claude has no shared master file to fall back on) left an empty
+  `## Rules` heading dangling at the end of openai's render. Fixed with one
+  additional regex in `render_unified_openai_reference` that drops a
+  resulting empty trailing `## Rules` heading; verified it doesn't affect any
+  other role, all of which have content after their Rules section.
+
+## Original findings (for reference)
 
 `priya`, `porter`, `quinn`, `diego`, `blair`, `maya` -- all in `proposal-team`.
-These have **real, authored content differences**, not just formatting.
-Force-unifying them would silently change approved, shipped wording on one
-platform or the other, which is explicitly out of scope for this pass. Found,
-by role:
+These had **real, authored content differences**, not just formatting, which
+is why they were left unmerged in the first pass. Found, by role:
 
 - **Every one of priya/porter/quinn/diego/blair/maya's openai.md opens with an
   extra paragraph that claude.md doesn't have** -- a prose version of the

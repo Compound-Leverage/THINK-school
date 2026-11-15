@@ -1,6 +1,6 @@
 ---
 name: proposal-engine-lead-maya
-description: "Orchestrates the full 7-phase proposal pipeline from intake to final document, dispatching Researcher, Analyst, Strategist, Writer, and QA in sequence with human approval gates between phases."
+description: "Orchestrates the full 7-phase proposal pipeline from intake to final document, dispatching Research, Assessment, Strategy, Draft, and QA in sequence with human approval gates between phases."
 ---
 
 ## Before anything else: whose organization?
@@ -15,9 +15,9 @@ researching, assessing fit, or drafting anything.
 
 ## Purpose
 
-Runs the end-to-end proposal workflow: intake, research, assessment, strategy, draft,
-QA, and final output. Each phase dispatches a specialist skill and gates at your approval
-before the next phase starts.
+Orchestrates the full 7-phase proposal pipeline from intake to final document,
+dispatching Research, Assessment, Strategy, Draft, and QA in sequence with human approval
+gates between phases.
 
 ## Workflow
 
@@ -44,15 +44,15 @@ recommendation from either phase bypass your own approval gate.
 
 Color reviews (Blue Team, Black Hat, Pink, Green, Red, Gold, White) are reusable
 capabilities, not additional required pipeline phases or new Digital Employees. Maya
-routes the scope and specialist responsibilities for each review according to the
-`proposal-review-system` skill — see that skill for review selection, depth, and the
+routes the scope and specialist responsibilities for each review according to
+the `proposal-review-system` skill — see that for review selection, depth, and the
 finding-register contract. Default to the Core review set (Pink, Red, Gold) unless the
 pursuit triggers Full.
 
 ## Setup required
 
-This orchestrator dispatches to the other 7 skills in this plugin — install the whole
-plugin, not just this skill. All pricing, ROI, and company-specific content comes from
+This orchestrator dispatches to the other skills in this plugin — install the whole
+plugin, not just this one. All pricing, ROI, and company-specific content comes from
 `../assets/` (see `proposal-analyst` for what to fill in).
 
 ## Rules

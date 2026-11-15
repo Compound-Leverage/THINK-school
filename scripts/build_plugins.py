@@ -134,14 +134,30 @@ def render_unified_claude_skill(body, meta):
     heading belongs (not always right after frontmatter -- several roles have the
     guardrail section before it). Claude render: frontmatter, {{INTRO}} resolves to
     its heading, {{ASSETS}} resolves to the plugin-root-relative path, the optional
-    review-ref sentence token resolves to its claude phrasing.
+    review-ref sentence token resolves to its claude phrasing, and any other
+    per-platform cross-reference token (e.g. {{RESEARCH_REF}} for maya's phase
+    pointers, which differ by platform the same way review_ref does -- claude
+    references a skill by name, openai by file path) resolves generically.
     """
     text = body.replace("{{INTRO}}", f'## {meta["intro_heading"]}\n\n')
     text = text.replace("{{ASSETS}}", "../assets")
     if "review_ref" in meta:
         text = text.replace("{{REVIEW_REF_SENTENCE}}", meta["review_ref"]["claude"])
+    text = _apply_platform_refs(text, meta, "claude")
     frontmatter = f'---\nname: {meta["claude_name"]}\ndescription: "{meta["claude_description"]}"\n---\n\n'
     return frontmatter + text
+
+
+def _apply_platform_refs(text, meta, platform):
+    """Resolve any {{KEY}} token where meta[key] is a {"claude": ..., "openai": ...}
+    dict, other than review_ref (handled separately for backward-compatible naming
+    with its existing {{REVIEW_REF_SENTENCE}} token in already-unified roles)."""
+    for key, value in meta.items():
+        if key == "review_ref" or not isinstance(value, dict):
+            continue
+        if "claude" in value and "openai" in value:
+            text = text.replace("{{" + key.upper() + "}}", value[platform])
+    return text
 
 
 def render_unified_openai_reference(body, meta):
@@ -153,14 +169,20 @@ def render_unified_openai_reference(body, meta):
     reference-file-relative path (4 levels up from openai/skills/<team>/references/),
     review-ref token resolved to its openai phrasing, and the "No em dashes" rule
     bullet dropped (hoisted once into the team's openai master SKILL.md instead,
-    not repeated per role).
+    not repeated per role). If a role's only Rules bullet was that one (e.g. blair),
+    the now-empty trailing "## Rules" heading is dropped too rather than left dangling.
     """
     text = body.replace("{{INTRO}}", "")
     text = text.replace("—", "--")
     text = text.replace("{{ASSETS}}", "../../../../assets")
     if "review_ref" in meta:
         text = text.replace("{{REVIEW_REF_SENTENCE}}", meta["review_ref"]["openai"])
+    text = _apply_platform_refs(text, meta, "openai")
     text = re.sub(r"\n- No em dashes in any output\n", "\n", text)
+    # If that was the only bullet under a trailing Rules heading (e.g. a role whose
+    # claude.md Rules section is only ever the em-dash rule), don't leave an empty
+    # heading dangling at the end of the openai render.
+    text = re.sub(r"\n## Rules\n\n$", "\n", text)
     return f'# {meta["openai_title"]}\n\n' + text
 
 

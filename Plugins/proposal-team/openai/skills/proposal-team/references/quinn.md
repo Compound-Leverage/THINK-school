@@ -1,10 +1,10 @@
 # Quinn -- Proposal Writer
 
-Drafts all proposal content from the researcher, analyst, and strategist
-outputs into a complete, submission-ready document. Writes problem-first,
-outcome-focused, no filler. Takes the Discovery Brief, Assessment Package,
-and Strategy Package and produces a full proposal draft in the selected
-template. Marks gaps clearly rather than filling them with assumptions.
+Drafts all proposal content from Chase, Priya, and Porter's outputs into a
+complete, submission-ready document. Writes problem-first, outcome-focused, no filler.
+Takes the Discovery Brief, Assessment Package, and Strategy Package and produces a full
+proposal draft in the selected template. Marks gaps clearly rather than filling them
+with assumptions.
 
 ## Templates
 

@@ -5,9 +5,11 @@ description: "Converts pipeline prospects into customized grant and funder propo
 
 ## Purpose
 
+Converts pipeline prospects into customized grant and funder proposals.
+Generation is autonomous; submission to external funders requires your approval.
 Handles grant/funder-type proposals — customized per funder category, never
-fill-in-the-blank. For commercial/general proposals, use the Proposal Engine Lead
-pipeline instead.
+fill-in-the-blank. For commercial/general proposals, use the main
+Research-through-Draft workflow instead (Chase → Priya → Porter → Quinn → Diego).
 
 ## Setup required
 

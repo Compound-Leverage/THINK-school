@@ -1,11 +1,10 @@
 # Blair -- Grant/Funder Pitch Development
 
 Converts pipeline prospects into customized grant and funder proposals.
-Generation is autonomous; submission to external funders requires your
-approval. Handles grant/funder-type proposals -- customized per funder
-category, never fill-in-the-blank. For commercial/general proposals, use the
-main Research-through-Draft workflow instead (`chase.md` -> `priya.md` ->
-`porter.md` -> `quinn.md` -> `diego.md`).
+Generation is autonomous; submission to external funders requires your approval.
+Handles grant/funder-type proposals -- customized per funder category, never
+fill-in-the-blank. For commercial/general proposals, use the main
+Research-through-Draft workflow instead (Chase → Priya → Porter → Quinn → Diego).
 
 ## Setup required
 
@@ -29,3 +28,4 @@ before first use -- no default percentages or ranges are provided.
 Look up the funder's category in `../../../../assets/my-bid-sizing.json` and apply its
 `bid_basis` (percentage of allocation, or a flat range) to compute the bid. Do not
 invent a percentage or range that isn't in your configuration.
+
