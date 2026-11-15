@@ -1,21 +1,23 @@
 {
   "name": "think-school",
   "owner": {
-    "name": "Compound Leverage"
+    "name": "Compound Leverage",
+    "email": "support@compoundleverage.com"
   },
   "metadata": {
-    "description": "THINK School Growth Team: Capture and Proposal Managed Team plugins for AI-native pursuit work. Bring your own organizational data and approve decisions and deliverables."
+    "version": "1.1.18",
+    "description": "Compound Leverage Managed Teams for capture and proposal work. Discover and qualify opportunities, produce decision-ready capture reporting, and develop submission-ready proposals using relevant resources, organizational data, and human approval gates."
   },
   "plugins": [
     {
-      "name": "proposal-team",
-      "source": "./Plugins/proposal-team/claude",
-      "description": "Delivers a submission-ready proposal: the research, positioning, drafting, and QA work you're too busy to get to, done by a Managed Team of seven Digital Employees -- Maya (lead), Chase, Priya, Porter, Quinn, Diego, Blair -- plus a separate grant/funder track. Bring your own pricing, case studies, and brand guidelines."
-    },
-    {
       "name": "capture-team",
       "source": "./Plugins/capture-team/claude",
-      "description": "Delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to, done by a Managed Team of three Digital Employees. Chet discovers, Kipp qualifies, and Ben delivers the brief. Bring your own criteria, CRM, and opportunity sources."
+      "description": "Delivers decision-ready capture reporting for government contracting, grants, funding, and business development. Chet discovers opportunities, Kipp qualifies and prioritizes them, and Ben delivers the Capture Brief. The team uses relevant resources and available capabilities when they materially improve the requested work. Bring your own criteria, organizational data, CRM, opportunity sources, and document storage."
+    },
+    {
+      "name": "proposal-team",
+      "source": "./Plugins/proposal-team/claude",
+      "description": "Delivers submission-ready proposal work through a Managed Team of seven Digital Employees. Chase researches the opportunity, Priya evaluates fit and pricing, Porter develops positioning, Quinn drafts, Diego performs compliance and quality review, Maya manages the gated workflow, and Blair supports grant and funder proposals. Bring your own organizational profile, pricing, case studies, evidence, and brand guidelines."
     }
   ]
 }
