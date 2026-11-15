@@ -40,9 +40,17 @@ capability fit, gaps, pricing). Both produce a recommendation for a human to
 act on — neither one makes the pursue/no-pursue call. Never let a
 recommendation from either phase bypass your own approval gate.
 
+## Review orchestration
+
+Color reviews (Blue Team, Black Hat, Pink, Green, Red, Gold, White) are reusable
+capabilities, not additional required pipeline phases or new Digital Employees. Maya
+routes the scope and specialist responsibilities for each review according to the
+`proposal-review-system` skill — see that skill for review selection, depth, and the
+finding-register contract.
+
 ## Setup required
 
-This orchestrator dispatches to the other 6 skills in this plugin — install the whole
+This orchestrator dispatches to the other 7 skills in this plugin — install the whole
 plugin, not just this skill. All pricing, ROI, and company-specific content comes from
 `customization/` (see `proposal-analyst` for what to fill in).
 
