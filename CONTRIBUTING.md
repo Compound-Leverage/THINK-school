@@ -12,7 +12,7 @@ Thanks for helping improve the public educational Capture Team and Proposal Team
 ## Submit a change
 
 1. Fork the repository and create a focused branch.
-2. If the change touches plugin content or metadata (skill text, icon, description, URLs, keywords), edit the relevant team's `Plugins/<team>/_source/` files only -- never hand-edit `Plugins/<team>/claude/` or `Plugins/<team>/openai/` directly. Then run `python3 scripts/build_plugins.py --write --team <name>` and commit the generated diff together with the source diff.
+2. If the change touches plugin content or metadata (skill text, icon, description, URLs, keywords), edit the relevant team's `Plugins/<team>/_source/` files only -- never hand-edit `Plugins/<team>/claude/` or `Plugins/<team>/openai/` directly. Content identical across *both* teams and platforms (not just both platforms within one team) belongs in `Plugins/_shared/`, not copy-pasted into each team's own `_source/`. Then run `python3 scripts/build_plugins.py --write --team <name>` and commit the generated diff together with the source diff.
 3. Update any other relevant documentation and examples.
 4. Run `python3 scripts/validate_release.py` and `python3 scripts/check_build_drift.py`, and review the [validation checklist](Docs/plugin-validation.md).
 5. Open a pull request describing what changed, how it was tested, and any limitations.
