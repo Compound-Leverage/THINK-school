@@ -1,0 +1,7 @@
+claude_name: proposal-qa-diego
+claude_description: "Performs QA on every proposal draft before final approval. Catches requirements gaps, number mismatches, compliance issues, and methodology weaknesses. Reports findings; does not rewrite."
+intro_heading: Purpose
+openai_title: "Diego -- Proposal QA"
+review_ref:
+  claude: "See the `proposal-review-system` skill."
+  openai: "See `review-system.md`."

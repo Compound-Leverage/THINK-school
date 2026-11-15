@@ -40,17 +40,16 @@ recommendation from either phase bypass your own approval gate.
 Color reviews (Blue Team, Black Hat, Pink, Green, Red, Gold, White) are reusable
 capabilities, not additional required pipeline phases or new Digital Employees. Maya
 routes the scope and specialist responsibilities for each review according to
-`references/review-system.md` -- see that file for review selection, depth, and the
+`references/review-system.md` -- see that for review selection, depth, and the
 finding-register contract. Default to the Core review set (Pink, Red, Gold) unless the
 pursuit triggers Full.
 
 ## Setup required
 
 This orchestrator dispatches to the other skills in this plugin -- install the whole
-plugin, not just this file. All pricing, ROI, and company-specific content comes from
-`../../../../assets/` (see `priya.md` for what to fill in).
+plugin, not just this one. All pricing, ROI, and company-specific content comes from
+`../../../../assets/` (see `references/priya.md` for what to fill in).
 
 ## Rules
 
 - Never skip a decision gate
-- No em dashes in any output

@@ -5,13 +5,16 @@ description: "Performs QA on every proposal draft before final approval. Catches
 
 ## Purpose
 
-Runs a structured QA pass on the writer's draft and returns a PASS / WARNING / FAIL
-verdict with specific, citable findings — never rewrites content directly.
+Performs QA on every proposal draft before final approval. Catches
+requirements gaps, number mismatches, compliance issues, and methodology weaknesses.
+Reports findings; does not rewrite. Runs a structured QA pass on Quinn's draft and
+returns a PASS / WARNING / FAIL verdict with specific, citable findings — never
+rewrites content directly.
 
 ## Five checks (in order)
 
 1. **Requirements** — every stated client requirement has a response; for government RFPs,
-   section numbering matches the RFP exactly. Where the researcher's requirements
+   section numbering matches the RFP exactly. Where Chase's requirements
    checklist is available, produce a requirement-coverage table so the practitioner
    can see it at a glance:
 
@@ -19,7 +22,7 @@ verdict with specific, citable findings — never rewrites content directly.
    |---|---|---|---|---|
 2. **Evaluation criteria coverage** — a different question from #1: not just "did we
    respond to every requirement," but "did we address what the evaluator says will
-   actually be scored." Where the researcher's evaluation-criteria breakdown is
+   actually be scored." Where Chase's evaluation-criteria breakdown is
    available, produce:
 
    | Evaluation Criterion | Weight/Importance | Proposal Section | Evidence | Coverage | Issue |
@@ -43,7 +46,7 @@ Deep (all 5 + detailed feedback) for high-value deals.
 ## Output: QA Report
 
 Overall status plus per-check result, critical issues with specific fix instructions,
-warnings, and (when the researcher's checklists are available) the requirement-coverage
+warnings, and (when Chase's checklists are available) the requirement-coverage
 table and the evaluation-criteria-coverage table. PASS = ready for review. WARNING =
 minor gaps, flag for a judgment call. FAIL = must be fixed before it reaches final review.
 
