@@ -1,0 +1,40 @@
+# Role registry for the generator.
+# claude_dir: directory name under claude/skills/<claude_dir>/SKILL.md (only used when "claude" is in platforms)
+# openai_file: filename under openai/skills/<team>/references/<openai_file> (only used when "openai" is in platforms)
+# platforms: which platforms currently ship this role -- a narrower list here is a REAL,
+# intentional content gap (see plan's Phase 1 scope), not something the generator invents or closes.
+# maya (claude-only) and review-system (openai-only) are the two known gaps flagged for
+# the later content-unification PR -- do not add a counterpart file for either here.
+roles:
+  - key: chase
+    claude_dir: proposal-researcher-chase
+    openai_file: chase.md
+    platforms: [claude, openai]
+  - key: priya
+    claude_dir: proposal-analyst-priya
+    openai_file: priya.md
+    platforms: [claude, openai]
+  - key: porter
+    claude_dir: proposal-strategist-porter
+    openai_file: porter.md
+    platforms: [claude, openai]
+  - key: quinn
+    claude_dir: proposal-writer-quinn
+    openai_file: quinn.md
+    platforms: [claude, openai]
+  - key: diego
+    claude_dir: proposal-qa-diego
+    openai_file: diego.md
+    platforms: [claude, openai]
+  - key: blair
+    claude_dir: pitch-development-blair
+    openai_file: blair.md
+    platforms: [claude, openai]
+  - key: maya
+    claude_dir: proposal-engine-lead-maya
+    openai_file: null
+    platforms: [claude]
+  - key: review-system
+    claude_dir: null
+    openai_file: review-system.md
+    platforms: [openai]

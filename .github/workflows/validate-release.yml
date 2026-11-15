@@ -15,5 +15,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Validate marketplace and documentation
         run: python scripts/validate_release.py
+      - name: Check generated plugin output matches _source (non-blocking)
+        continue-on-error: true
+        run: python scripts/check_build_drift.py
