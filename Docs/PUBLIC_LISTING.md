@@ -108,19 +108,24 @@ Try: "Find government contract opportunities that fit my organization"
 **Name:** Managed Teams for Proposal Work
 (31 chars -- fits the ~30-char limit; verify in the submission portal.)
 
-**Subtitle:** Win the work with compliant proposals -- by Compound Leverage
-(~63 chars -- verify the portal's actual subtitle limit; may need trimming.
-Publisher goes here, matching the verified developer identity.)
+**Subtitle:** Assess, respond & review proposals
 
-**Description:** Part of THINK School, Compound Leverage's free practitioner
-resource. A Managed Team of seven Digital Employees that carries a qualified
-opportunity from research through a submission-ready proposal -- requirement
-extraction, competitive positioning, drafting, and QA, plus a parallel
-grant/funder track. Every stage stops for your approval before moving on.
-Configurable to your own business -- bring your pricing, case studies, and
-brand guidelines.
+**Description:** A Managed Team that assesses opportunities, develops proposal
+responses, and reviews the work before submission so your team can respond to
+more RFPs, RFQs, grants, and other solicitations.
 
-Try: "Run this opportunity through Go/No-Go and deal assessment"
+It analyzes solicitation requirements and evaluation criteria, assesses
+capability fit, gaps, risk, ROI, and pricing, researches the opportunity and
+competitive landscape, develops positioning and win themes, drafts the
+response, and reviews it for requirements coverage, compliance, consistency,
+and quality.
+
+Configure the team with your company profile, pricing, past performance, case
+studies, brand guidelines, and review criteria. Receive structured research,
+proposal drafts, compliance reporting, review findings, recommendations, and
+next actions. Every stage stops for your approval before advancing.
+
+Try: "Assess whether we should respond to this RFP"
 
 (Format check for both: confirm in the submission portal whether example
 prompts belong inline in the full description or are handled entirely by the

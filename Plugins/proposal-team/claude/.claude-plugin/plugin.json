@@ -1,9 +1,9 @@
 {
   "name": "proposal-team",
   "displayName": "Managed Teams for Proposal Work",
-  "version": "1.1.19",
+  "version": "1.1.20",
   "icon": "./assets/think-school.png",
-  "description": "A Proposal Managed Team that delivers a submission-ready proposal: the research, positioning, drafting, and QA work you're too busy to get to.\n\n- Chase analyzes solicitation requirements, evaluation criteria, incumbents, and opportunity intelligence.\n- Priya assesses capability fit, gaps, risk, ROI, and pricing.\n- Porter develops competitive positioning and win themes.\n- Quinn drafts the proposal, while Diego checks requirements, evaluation-criteria coverage, consistency, compliance, and methodology.\n- Maya orchestrates the workflow with human approval between each stage.\n- Blair provides a separate grant-and-funder track.\n\nConfigure the team with your own company profile, pricing, case studies, and brand guidelines.\n\nWant to build, direct, and manage your own Managed Teams?\n\nTHINK School on Skool teaches you how.",
+  "description": "A Managed Team that assesses opportunities, develops proposal responses, and reviews the work before submission so your team can respond to more RFPs, RFQs, grants, and other solicitations.\n\nIt analyzes solicitation requirements and evaluation criteria, assesses capability fit, gaps, risk, ROI, and pricing, researches the opportunity and competitive landscape, develops positioning and win themes, drafts the response, and reviews it for requirements coverage, compliance, consistency, and quality.\n\nConfigure the team with your company profile, pricing, past performance, case studies, brand guidelines, and review criteria. Receive structured research, proposal drafts, compliance reporting, review findings, recommendations, and next actions. Every stage stops for your approval before advancing.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
@@ -21,6 +21,10 @@
     "think-school",
     "proposal",
     "rfp",
+    "rfp-response",
+    "proposal-writing",
+    "proposal-review",
+    "compliance-matrix",
     "capture-management",
     "grant-writing"
   ]

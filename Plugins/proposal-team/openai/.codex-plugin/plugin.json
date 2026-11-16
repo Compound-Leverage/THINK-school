@@ -1,7 +1,7 @@
 {
   "name": "proposal-team",
-  "version": "1.1.19",
-  "description": "Delivers a submission-ready proposal: the research, positioning, drafting, and QA work you're too busy to get to, done by a Managed Team of seven Digital Employees -- Maya (lead), Chase, Priya, Porter, Quinn, Diego, Blair -- plus a separate grant/funder track. Bring your own pricing, case studies, and brand guidelines.",
+  "version": "1.1.20",
+  "description": "Assesses opportunities, develops proposal responses, and reviews the work before submission so your team can respond to more RFPs, RFQs, grants, and other solicitations. Analyzes requirements and evaluation criteria, develops strategy and win themes, drafts the response, and reports compliance gaps, review findings, recommendations, and next actions. Bring your own company profile, pricing, past performance, case studies, and brand guidelines.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
@@ -15,6 +15,10 @@
     "think-school",
     "proposal",
     "rfp",
+    "rfp-response",
+    "proposal-writing",
+    "proposal-review",
+    "compliance-matrix",
     "capture-management",
     "grant-writing",
     "government-contractor",
@@ -24,8 +28,8 @@
   "skills": "./skills",
   "interface": {
     "displayName": "Managed Team for Proposal Work",
-    "shortDescription": "Assess, strategize, & propose",
-    "longDescription": "A Proposal Managed Team that delivers a submission-ready proposal: the research, positioning, drafting, and QA work you're too busy to get to.\n\n- Chase analyzes solicitation requirements, evaluation criteria, incumbents, and opportunity intelligence.\n- Priya assesses capability fit, gaps, risk, ROI, and pricing.\n- Porter develops competitive positioning and win themes.\n- Quinn drafts the proposal, while Diego checks requirements, evaluation-criteria coverage, consistency, compliance, and methodology.\n- Maya orchestrates the workflow with human approval between each stage.\n- Blair provides a separate grant-and-funder track.\n\nConfigure the team with your own company profile, pricing, case studies, and brand guidelines.\n\nWant to build, direct, and manage your own Managed Teams?\n\nTHINK School on Skool teaches you how.",
+    "shortDescription": "Assess, respond & review proposals",
+    "longDescription": "A Managed Team that assesses opportunities, develops proposal responses, and reviews the work before submission so your team can respond to more RFPs, RFQs, grants, and other solicitations.\n\nIt analyzes solicitation requirements and evaluation criteria, assesses capability fit, gaps, risk, ROI, and pricing, researches the opportunity and competitive landscape, develops positioning and win themes, drafts the response, and reviews it for requirements coverage, compliance, consistency, and quality.\n\nConfigure the team with your company profile, pricing, past performance, case studies, brand guidelines, and review criteria. Receive structured research, proposal drafts, compliance reporting, review findings, recommendations, and next actions. Every stage stops for your approval before advancing.",
     "developerName": "Compound Leverage",
     "category": "Business & Operations",
     "capabilities": [
@@ -40,9 +44,9 @@
     "composerIcon": "./assets/think-school.png",
     "logo": "./assets/think-school.png",
     "defaultPrompt": [
-      "Should we pursue this opportunity?",
-      "Analyze this solicitation's requirements and evaluation criteria",
-      "Review this proposal for compliance and requirements gaps"
+      "Assess whether we should respond to this RFP",
+      "Analyze this solicitation and build a compliant response plan",
+      "Review this proposal against the requirements and evaluation criteria"
     ]
   }
 }
