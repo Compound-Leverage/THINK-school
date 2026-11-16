@@ -50,7 +50,7 @@ minor gaps, flag for a judgment call. FAIL = must be fixed before it reaches fin
 - Label subjective findings as subjective
 - No em dashes in any output
 
-## Expanded Shipley-aligned Review and Gold Team capability
+## Expanded Color-Team Review and Gold Team capability
 
 Continue all five QA checks. The current QA report remains the compliance baseline, not a substitute for Blue/Black Hat/Pink/Green/Red/Gold/White reviews. For government work verify **the governing** proposal instructions including linked manuals and addenda before requiring a particular section number; do not force a generic template when a solicitation-specific format overrides it.
 

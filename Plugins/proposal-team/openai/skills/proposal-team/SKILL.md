@@ -30,7 +30,7 @@ dispatch mechanics in depth, load `references/maya.md`.
 3. **Assessment** -- load `references/priya.md` for deal classification, ROI model, pricing
 4. **Strategy** -- load `references/porter.md` for competitive positioning and win themes
 5. **Draft** -- load `references/quinn.md` for the full proposal document
-6. **QA / Review** -- load `references/diego.md` for the five-check QA and use `references/review-system.md` for risk-adjusted Shipley-aligned Blue, Black Hat, Pink, Green, Red, Gold and White review capabilities
+6. **QA / Review** -- load `references/diego.md` for the five-check QA and use `references/review-system.md` for risk-adjusted Blue, Black Hat, Pink, Green, Red, Gold and White review capabilities
 7. **Output** -- final document, your brand guidelines applied
 
 Color reviews are reusable capabilities invoked at the correct point in Research, Assessment, Strategy, Draft, QA/Review and Output. They do not add new required pipeline phases or new Digital Employees. Maya routes the scope and specialist responsibilities according to `references/review-system.md`. Default to the Core review set (Pink, Red, Gold) unless the pursuit triggers Full (adds Blue Team #1, Black Hat, Blue Team #2, Green Team, White Team). Pink is a pre-draft storyboard/content-plan review; an already completed proposal receives retrospective compliance triage instead. Gold is a human final approval decision supported by Diego's assessment, followed by separate submission production QA. Run second Red reviews on the latest controlled revision and maintain a single finding register.

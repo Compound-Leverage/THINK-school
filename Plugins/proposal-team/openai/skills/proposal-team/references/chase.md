@@ -57,6 +57,6 @@ not something Chase resolves on his own.
 - Note information gaps -- never fill a gap with an assumption
 - Quantify pain points with evidence where possible
 
-## Shipley-aligned review support
+## Color-team review support
 
 During Blue Team and Black Hat, provide source-based customer issues, buyer preferences, incumbent/competitor intelligence and confidence labels. Do not assume a named rival. For Pink/Red/Gold, maintain the controlling solicitation/source register, including incorporated hyperlinks, addenda, special preparation manuals, formatting and submission instructions. Record inaccessible sources as UNVERIFIED. Follow `../references/review-system.md`.

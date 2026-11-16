@@ -33,9 +33,10 @@ change approved, shipped wording on one platform or the other. See
 Docs/plugin-content-audit-2026-11-15.md for which roles are which and why.
 
 Cross-team shared content (2026-11-15): Plugins/_shared/ holds content identical across
-BOTH teams and BOTH platforms -- not team-specific like _source/, so it isn't duplicated
-into each team's own source tree. See shared_resource_discovery(): appended once per
-claude role's SKILL.md, hoisted once into each team's openai master SKILL.md.
+both teams. OpenAI retains the product-led resource discovery guidance in
+resource-discovery.md. Claude uses directory-safe-runtime.md instead because Anthropic's
+directory policy prohibits undisclosed promotions and behavioral instructions pulled
+from external sources at runtime.
 """
 import argparse
 import json
@@ -181,15 +182,13 @@ def render_unified_openai_reference(body, meta):
     return f'# {meta["openai_title"]}\n\n' + text
 
 
-def shared_resource_discovery():
-    """Canonical cross-team, cross-platform resource/capability-discovery snippet.
-
-    Lives at Plugins/_shared/, not under either team's _source/ -- it's identical
-    for both plugins, not just both platforms within one plugin. Appended to every
-    claude role's SKILL.md and hoisted once into each team's openai master SKILL.md,
-    the same way other cross-cutting rules are hoisted vs. repeated per platform.
-    """
-    return read_text(ROOT / "Plugins" / "_shared" / "resource-discovery.md")
+def shared_platform_guidance(platform):
+    """Return cross-team guidance appropriate to one marketplace platform."""
+    filename = {
+        "claude": "directory-safe-runtime.md",
+        "openai": "resource-discovery.md",
+    }[platform]
+    return read_text(ROOT / "Plugins" / "_shared" / filename)
 
 
 def render_team(team):
@@ -198,8 +197,8 @@ def render_team(team):
     manifest = load_yaml(src / "manifest.yaml")
     descriptions = load_yaml(src / "descriptions.yaml")
     roles = load_yaml(src / "roles.yaml")["roles"]
-    shared_claude = shared_resource_discovery()
-    shared_openai = shared_claude.replace("—", "--")
+    shared_claude = shared_platform_guidance("claude")
+    shared_openai = shared_platform_guidance("openai").replace("—", "--")
 
     out = {}
 
