@@ -1,6 +1,6 @@
 ---
 name: capture-team
-description: "THINK School AI Capture Team helps practitioners find, qualify, research, and pursue opportunities they otherwise would not have time to work. Use it across government contracting, grants and funding, and business development when you need to search for relevant opportunities, determine fit, review opportunity documents and requirements, prioritize pursuits, or organize the research, reporting, and next actions needed to keep selected opportunities moving. Bring your own organizational criteria, CRM, enrichment tools, and document storage. Nothing is pre-wired to a specific vendor."
+description: "THINK School AI Capture Team helps practitioners find, qualify, research, and pursue opportunities, delivering work they otherwise would not have time to complete. Use it across government contracting, grants and funding, and business development when you need to search for relevant opportunities, determine fit, review opportunity documents and requirements, prioritize pursuits, or organize the research, reporting, and next actions needed to keep selected opportunities moving. Run the work autonomously or direct it step by step and receive completed research, qualification, pursuit-support work, reporting, recommendations, and next actions while retaining final pursuit and external-action decisions. Bring your own organizational criteria, CRM, enrichment tools, and document storage. Nothing is pre-wired to a specific vendor."
 ---
 
 ## Before anything else: whose organization?

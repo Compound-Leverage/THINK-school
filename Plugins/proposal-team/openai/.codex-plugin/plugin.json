@@ -1,7 +1,7 @@
 {
   "name": "proposal-team",
   "version": "1.1.20",
-  "description": "Assesses opportunities, develops proposal responses, and reviews the work before submission so your team can respond to more RFPs, RFQs, grants, and other solicitations. Analyzes requirements and evaluation criteria, develops strategy and win themes, drafts the response, and reports compliance gaps, review findings, recommendations, and next actions. Bring your own company profile, pricing, past performance, case studies, and brand guidelines.",
+  "description": "Assesses opportunities, responds to solicitations, and reviews proposals, delivering work your team otherwise would not have time to complete across RFPs, RFQs, grants, and other solicitations. Analyzes requirements and evaluation criteria, develops strategy and win themes, drafts the response, and reports compliance gaps, review findings, recommendations, and next actions. Run the work autonomously or direct it stage by stage and receive completed proposal work while retaining final business and submission decisions. Bring your own company profile, pricing, past performance, case studies, and brand guidelines.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
@@ -29,7 +29,7 @@
   "interface": {
     "displayName": "Managed Team for Proposal Work",
     "shortDescription": "Assess, respond & review proposals",
-    "longDescription": "A Managed Team that assesses opportunities, develops proposal responses, and reviews the work before submission so your team can respond to more RFPs, RFQs, grants, and other solicitations.\n\nIt analyzes solicitation requirements and evaluation criteria, assesses capability fit, gaps, risk, ROI, and pricing, researches the opportunity and competitive landscape, develops positioning and win themes, drafts the response, and reviews it for requirements coverage, compliance, consistency, and quality.\n\nConfigure the team with your company profile, pricing, past performance, case studies, brand guidelines, and review criteria. Receive structured research, proposal drafts, compliance reporting, review findings, recommendations, and next actions. Every stage stops for your approval before advancing.",
+    "longDescription": "A Managed Team that assesses opportunities, responds to solicitations, and reviews proposals, delivering the proposal work your team otherwise would not have time to complete.\n\nIt analyzes solicitation requirements and evaluation criteria, assesses capability fit, gaps, risk, ROI, and pricing, researches the opportunity and competitive landscape, develops positioning and win themes, drafts the response, and reviews it for requirements coverage, compliance, consistency, and quality.\n\nConfigure the team with your company profile, pricing, past performance, case studies, brand guidelines, and review criteria. Run the work autonomously or direct it stage by stage. Receive completed research, response strategy, proposal content, compliance reporting, review findings, recommendations, and next actions. You retain the final pursue, pricing, content, outreach, and submission decisions.",
     "developerName": "Compound Leverage",
     "category": "Business & Operations",
     "capabilities": [

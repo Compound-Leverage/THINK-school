@@ -1,5 +1,5 @@
 claude_name: proposal-engine-lead-maya
-claude_description: "Orchestrates the full 7-phase proposal pipeline from intake to final document, dispatching Research, Assessment, Strategy, Draft, and QA in sequence with human approval gates between phases."
+claude_description: "Orchestrates the full 7-phase proposal pipeline from intake to final document in autonomous or human-led mode, dispatching Research, Assessment, Strategy, Draft, and QA while preserving required human decisions."
 intro_heading: Purpose
 openai_title: "Maya -- Proposal Engine Lead"
 research_ref:

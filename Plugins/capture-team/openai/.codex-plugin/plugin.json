@@ -1,7 +1,7 @@
 {
   "name": "capture-team",
   "version": "1.1.20",
-  "description": "Finds, qualifies, researches, and helps you pursue opportunities your team otherwise would not have time to work. Searches for relevant government contracts, grants and funding, and business development opportunities, determines fit, reviews opportunity documents and requirements, and organizes the work needed to keep selected pursuits moving. Bring your own criteria, CRM, and opportunity sources.",
+  "description": "Finds, qualifies, researches, and helps you pursue opportunities, delivering work your team otherwise would not have time to complete. Searches for relevant government contracts, grants and funding, and business development opportunities, determines fit, reviews opportunity documents and requirements, and organizes the work needed to keep selected pursuits moving. Run the work autonomously or direct it step by step and receive completed research, reporting, recommendations, and next actions while retaining final pursuit and external-action decisions. Bring your own criteria, CRM, and opportunity sources.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"
@@ -26,7 +26,7 @@
   "interface": {
     "displayName": "Managed Team for Capture Work",
     "shortDescription": "Find, qualify & pursue opportunities",
-    "longDescription": "A Managed Team that finds, qualifies, researches, and helps you pursue opportunities your team otherwise would not have time to work.\n\nIt searches for relevant government contracts, grants and funding, and business development opportunities, determines fit against your criteria, reviews opportunity documents and requirements, and organizes the research, reporting, and next actions needed to keep selected pursuits moving.\n\nBring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage. Nothing is pre-wired to a specific vendor.",
+    "longDescription": "A Managed Team that finds, qualifies, researches, and helps you pursue opportunities, delivering the opportunity work your team otherwise would not have time to complete.\n\nIt searches for relevant government contracts, grants and funding, and business development opportunities, determines fit against your criteria, reviews opportunity documents and requirements, and organizes the research, reporting, and next actions needed to keep selected pursuits moving.\n\nRun the work autonomously or direct it step by step. Receive completed research, qualification, pursuit-support work, reporting, recommendations, and next actions. You retain the final pursuit and external-action decisions. Bring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage. Nothing is pre-wired to a specific vendor.",
     "developerName": "Compound Leverage",
     "category": "Business & Operations",
     "capabilities": [

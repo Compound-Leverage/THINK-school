@@ -9,7 +9,7 @@ the current user which organization is bidding (their own, or a named client) be
 researching, assessing fit, or drafting anything.
 
 {{INTRO}}Orchestrates the full 7-phase proposal pipeline from intake to final document,
-dispatching Research, Assessment, Strategy, Draft, and QA in sequence with human approval
+dispatching Research, Assessment, Strategy, Draft, and QA in autonomous or human-led mode with required human approval
 gates between phases.
 
 ## Workflow

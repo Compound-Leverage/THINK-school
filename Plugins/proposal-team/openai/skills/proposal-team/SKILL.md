@@ -1,6 +1,6 @@
 ---
 name: proposal-team
-description: "THINK School AI Proposal Team helps practitioners assess opportunities, respond to solicitations, and review proposals before submission. Use it for RFPs, RFQs, grants, funder opportunities, and other proposal work when you need to determine fit, extract and analyze requirements and evaluation criteria, research the opportunity and competitive landscape, assess gaps, risk, ROI, and pricing, develop positioning and win themes, draft a response, or review a proposal for compliance, coverage, consistency, and quality. The team provides structured research, proposal drafts, compliance reporting, review findings, recommendations, and next actions. Every stage stops for your approval before advancing. Bring your own company profile, pricing, past performance, case studies, brand guidelines, and review criteria."
+description: "THINK School AI Proposal Team helps practitioners assess opportunities, respond to solicitations, and review proposals, delivering work they otherwise would not have time to complete. Use it for RFPs, RFQs, grants, funder opportunities, and other proposal work when you need to determine fit, extract and analyze requirements and evaluation criteria, research the opportunity and competitive landscape, assess gaps, risk, ROI, and pricing, develop positioning and win themes, draft a response, or review a proposal for compliance, coverage, consistency, and quality. Run the work autonomously or direct it stage by stage and receive completed research, response strategy, proposal content, compliance reporting, review findings, recommendations, and next actions. Authorized humans retain final pursue, pricing, content, outreach, and submission decisions. Bring your own company profile, pricing, past performance, case studies, brand guidelines, and review criteria."
 ---
 
 ## Before anything else: whose organization?
@@ -15,8 +15,10 @@ researching, assessing fit, or drafting anything.
 
 ## Proposal Team
 
-Maya orchestrates a 7-phase proposal pipeline, dispatching one specialist for
-each phase with your approval gating between phases. Load the matching
+Maya orchestrates a 7-phase proposal pipeline in autonomous or human-led mode,
+dispatching one specialist for each phase. Human-led mode gates between phases;
+autonomous mode can complete internal research, drafting, and review while
+preserving required human business and external-action decisions. Load the matching
 reference file for the phase at hand -- don't load more than one at a time
 unless the request genuinely spans more than one phase. For orchestration and
 dispatch mechanics in depth, load `references/maya.md`.
@@ -33,8 +35,9 @@ dispatch mechanics in depth, load `references/maya.md`.
 
 Color reviews are reusable capabilities invoked at the correct point in Research, Assessment, Strategy, Draft, QA/Review and Output. They do not add new required pipeline phases or new Digital Employees. Maya routes the scope and specialist responsibilities according to `references/review-system.md`. Default to the Core review set (Pink, Red, Gold) unless the pursuit triggers Full (adds Blue Team #1, Black Hat, Blue Team #2, Green Team, White Team). Pink is a pre-draft storyboard/content-plan review; an already completed proposal receives retrospective compliance triage instead. Gold is a human final approval decision supported by Diego's assessment, followed by separate submission production QA. Run second Red reviews on the latest controlled revision and maintain a single finding register.
 
-Every phase reports back and gates before advancing. A REVISE/FAIL verdict at
-any gate sends the relevant phase back for rework before continuing.
+Every phase reports back. In human-led mode, each phase gates before advancing.
+In either mode, a REVISE/FAIL verdict sends the relevant phase back for rework,
+and required human decisions cannot be bypassed.
 
 **Chase and Priya answer different questions -- don't duplicate them.** Chase
 asks "is this opportunity potentially worth pursuing?" (research, requirements,
@@ -63,7 +66,7 @@ real numbers or data:
 
 ## Rules (apply across all phases)
 
-- Never skip a decision gate
+- Never skip a required decision gate
 - No em dashes in any output
 - Never claim a capability or outcome not supported by the analyst's assessment
 

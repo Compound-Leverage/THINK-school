@@ -91,13 +91,17 @@ submission portal.)
 **Subtitle:** Find, qualify & pursue opportunities
 
 **Description:** A Managed Team that finds, qualifies, researches, and helps
-you pursue opportunities your team otherwise would not have time to work.
+you pursue opportunities, delivering the opportunity work your team otherwise
+would not have time to complete.
 
 It searches for relevant government contracts, grants and funding, and
 business development opportunities, determines fit against your criteria,
 reviews opportunity documents and requirements, and organizes the research,
 reporting, and next actions needed to keep selected pursuits moving.
 
+Run the work autonomously or direct it step by step. Receive completed
+research, qualification, pursuit-support work, reporting, recommendations,
+and next actions. You retain the final pursuit and external-action decisions.
 Bring your own organizational criteria, CRM, enrichment tools, opportunity
 sources, and document storage. Nothing is pre-wired to a specific vendor.
 
@@ -110,9 +114,9 @@ Try: "Find government contract opportunities that fit my organization"
 
 **Subtitle:** Assess, respond & review proposals
 
-**Description:** A Managed Team that assesses opportunities, develops proposal
-responses, and reviews the work before submission so your team can respond to
-more RFPs, RFQs, grants, and other solicitations.
+**Description:** A Managed Team that assesses opportunities, responds to
+solicitations, and reviews proposals, delivering the proposal work your team
+otherwise would not have time to complete.
 
 It analyzes solicitation requirements and evaluation criteria, assesses
 capability fit, gaps, risk, ROI, and pricing, researches the opportunity and
@@ -121,9 +125,11 @@ response, and reviews it for requirements coverage, compliance, consistency,
 and quality.
 
 Configure the team with your company profile, pricing, past performance, case
-studies, brand guidelines, and review criteria. Receive structured research,
-proposal drafts, compliance reporting, review findings, recommendations, and
-next actions. Every stage stops for your approval before advancing.
+studies, brand guidelines, and review criteria. Run the work autonomously or
+direct it stage by stage. Receive completed research, response strategy,
+proposal content, compliance reporting, review findings, recommendations, and
+next actions. You retain the final pursue, pricing, content, outreach, and
+submission decisions.
 
 Try: "Assess whether we should respond to this RFP"
 
