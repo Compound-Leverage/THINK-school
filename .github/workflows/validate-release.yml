@@ -3,7 +3,7 @@ on:
   push:
     branches: [Staging, main]
   pull_request:
-    branches: [main]
+    branches: [Staging, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,5 +21,11 @@ jobs:
         run: python scripts/validate_release.py
       - name: Check generated plugin output matches _source
         run: python scripts/check_build_drift.py
-      - name: Build and validate OpenAI submission archives
-        run: python scripts/build_openai_zip.py --team all
+      - name: Build and verify cross-platform release packages
+        run: python scripts/build_release_packages.py
+      - name: Upload release packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: think-school-release-packages
+          path: release-packages/
+          if-no-files-found: error

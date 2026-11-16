@@ -14,18 +14,20 @@ import sys
 from build_plugins import TEAMS, check_team, load_yaml, ROOT
 
 
-def report_version_drift():
+def check_version_parity():
+    ok = True
     for team in TEAMS:
         manifest = load_yaml(ROOT / "Plugins" / team / "_source" / "manifest.yaml")
         claude_version = manifest["claude"]["version"]
         openai_version = manifest["openai"]["version"]
         if claude_version != openai_version:
             print(
-                f"[{team}] NOTE (non-fatal): claude version ({claude_version}) and "
-                f"openai version ({openai_version}) differ. This may be intentional -- "
-                "platforms version/review independently -- but confirm it's not an "
-                "unintentional drift."
+                f"[{team}] ERROR: claude version ({claude_version}) and "
+                f"openai version ({openai_version}) differ. A release must carry one "
+                "version across both platform packages."
             )
+            ok = False
+    return ok
 
 
 def main():
@@ -33,7 +35,8 @@ def main():
     for team in TEAMS:
         if not check_team(team):
             ok = False
-    report_version_drift()
+    if not check_version_parity():
+        ok = False
     if not ok:
         print(
             "\nDrift detected: committed Plugins/*/claude/ or Plugins/*/openai/ content "

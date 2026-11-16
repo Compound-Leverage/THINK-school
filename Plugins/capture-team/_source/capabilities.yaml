@@ -1,0 +1,30 @@
+schema_version: 1
+capabilities:
+  - id: autonomous-workflow
+    claude:
+      path: skills/capture-team/SKILL.md
+      marker: "## Workflow"
+    openai:
+      path: skills/capture-team/SKILL.md
+      marker: "## Capture Team"
+  - id: autonomous-reporting
+    claude:
+      path: skills/capture-team/SKILL.md
+      marker: "## Autonomous reporting contract"
+    openai:
+      path: skills/capture-team/SKILL.md
+      marker: "## Autonomous reporting contract"
+  - id: decision-recommendation
+    claude:
+      path: skills/capture-team/SKILL.md
+      marker: "Investigate / Conditional Pursue"
+    openai:
+      path: skills/capture-team/SKILL.md
+      marker: "Investigate / Conditional Pursue"
+  - id: human-approval-gate
+    claude:
+      path: skills/capture-team/SKILL.md
+      marker: "Human decision"
+    openai:
+      path: skills/capture-team/SKILL.md
+      marker: "makes the final pursuit call"
