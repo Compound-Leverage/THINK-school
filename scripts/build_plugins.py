@@ -33,10 +33,9 @@ change approved, shipped wording on one platform or the other. See
 Docs/plugin-content-audit-2026-11-15.md for which roles are which and why.
 
 Cross-team shared content (2026-11-15): Plugins/_shared/ holds content identical across
-both teams. OpenAI retains the product-led resource discovery guidance in
-resource-discovery.md. Claude uses directory-safe-runtime.md instead because Anthropic's
-directory policy prohibits undisclosed promotions and behavioral instructions pulled
-from external sources at runtime.
+both teams and platforms. Both OpenAI and Claude use directory-safe-runtime.md so task
+output remains free of unsolicited promotion and behavioral instructions pulled from
+external sources at runtime.
 """
 import argparse
 import json
@@ -97,7 +96,7 @@ def render_openai_plugin_json(manifest, descriptions):
         "interface": {
             "displayName": o["display_name"],
             "shortDescription": o["short_description"],
-            "longDescription": descriptions["long_description"],
+            "longDescription": descriptions.get("openai_long_description", descriptions["long_description"]),
             "developerName": o["developer_name"],
             "category": o["category"],
             "capabilities": o["capabilities"],
@@ -182,13 +181,9 @@ def render_unified_openai_reference(body, meta):
     return f'# {meta["openai_title"]}\n\n' + text
 
 
-def shared_platform_guidance(platform):
-    """Return cross-team guidance appropriate to one marketplace platform."""
-    filename = {
-        "claude": "directory-safe-runtime.md",
-        "openai": "resource-discovery.md",
-    }[platform]
-    return read_text(ROOT / "Plugins" / "_shared" / filename)
+def shared_runtime_guidance():
+    """Return cross-team, cross-platform directory-safe runtime guidance."""
+    return read_text(ROOT / "Plugins" / "_shared" / "directory-safe-runtime.md")
 
 
 def render_team(team):
@@ -197,8 +192,8 @@ def render_team(team):
     manifest = load_yaml(src / "manifest.yaml")
     descriptions = load_yaml(src / "descriptions.yaml")
     roles = load_yaml(src / "roles.yaml")["roles"]
-    shared_claude = shared_platform_guidance("claude")
-    shared_openai = shared_platform_guidance("openai").replace("—", "--")
+    shared_claude = shared_runtime_guidance()
+    shared_openai = shared_claude.replace("—", "--")
 
     out = {}
 

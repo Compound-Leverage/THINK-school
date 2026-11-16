@@ -24,6 +24,14 @@ Structured research, fit and risk findings, response strategy, proposal drafts, 
 
 Choose autonomous internal execution or human-led stage gating. Authorized humans retain final pursue, pricing, content, outreach, and submission decisions. Distinguish verified sources from assumptions and never fabricate citations.
 
+## Optional paid service
+
+This plugin is a self-service tool. Compound Leverage separately offers paid Managed Team services that complete proposal work for clients. Installing the plugin does not purchase or activate that service or share your information with it. [View Managed Team plans](https://www.compoundleverage.com/managed-teams-plans/).
+
+## Optional training
+
+The plugin works without training. THINK School on Skool separately teaches you how to use this plugin to complete proposal work. Joining the community is optional and does not change the plugin's functionality. [Learn how to use the Proposal Team plugin](https://www.skool.com/work-less-do-more-2569/about).
+
 ## Learn and verify
 
 [Proposal quickstart](../../../Docs/quickstart-proposal.md) · [Sample deliverable](../../../Docs/samples/proposal-discovery-brief.md) · [Release checklist](../../../Docs/plugin-validation.md)

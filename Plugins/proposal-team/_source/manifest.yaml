@@ -29,7 +29,7 @@ claude:
     - grant-writing
 
 openai:
-  version: "1.1.21"
+  version: "1.1.22"
   display_name: "Managed Team for Proposal Work"
   short_description: "Assess, respond & review"
   developer_name: Compound Leverage
