@@ -185,7 +185,7 @@ OpenAI's submission requires 5 positive + 3 negative test cases per plugin.
 Every prompt below is grounded in what the shipped SKILL.md/references
 content actually does -- nothing invented, nothing the package can't back up.
 
-### THINK School AI Capture Team
+### Managed Team for Capture Work
 
 **Positive (should work):**
 1. "Find named groups or clusters that share a capacity gap we can fill" --
@@ -210,7 +210,7 @@ content actually does -- nothing invented, nothing the package can't back up.
    stage" -- output is a candidate record for human triage, not a
    conversion promise
 
-### THINK School AI Proposal Team
+### Managed Team for Proposal Work
 
 **Positive (should work):**
 1. "Run this opportunity through Go/No-Go and deal assessment" -- Chase + Priya

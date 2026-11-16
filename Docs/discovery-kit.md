@@ -4,15 +4,15 @@ Use these descriptions when sharing the free, source-available Capture Team and 
 
 ## Search-friendly page sections for the Learn resources page
 
-### Free AI Capture Team plugin for government contractors
+### Free Managed Team for Capture Work for government contractors
 
-Explore a free, source-available AI Capture Team for Claude Code and OpenAI Codex. Learn how to organize opportunity discovery, qualification, research, and capture briefs with human review before pursuit decisions.
+Explore a free, source-available Managed Team for Capture Work for Claude Code and OpenAI Codex. Find, qualify, research, and help pursue opportunities through autonomous or human-led work while retaining final pursuit decisions.
 
 [Install Capture Team on GitHub](https://github.com/Compound-Leverage/THINK-school/tree/main/Plugins) · [See a fictional capture brief](../Docs/samples/capture-brief.md)
 
-### Free AI Proposal Team plugin for government contract proposals
+### Free Managed Team for Proposal Work for government contract proposals
 
-Explore a free, source-available AI Proposal Team for Claude Code and OpenAI Codex. Practice proposal discovery, positioning, drafting, and quality review using fictional examples and human approval gates.
+Explore a free, source-available Managed Team for Proposal Work for Claude Code and OpenAI Codex. Assess opportunities, respond to solicitations, and review proposals through autonomous or human-led work while retaining final business and submission decisions.
 
 [Install Proposal Team on GitHub](https://github.com/Compound-Leverage/THINK-school/tree/main/Plugins) · [See a fictional proposal discovery brief](../Docs/samples/proposal-discovery-brief.md)
 
@@ -22,7 +22,7 @@ Suggested search phrases: AI proposal writing plugin; government contract captur
 
 ## Post 1 — Capture Team
 
-We published a free AI Capture Team for government contractors.
+We published a free Managed Team for Capture Work for government contractors.
 
 It helps organize opportunity discovery, qualification, research, and capture briefs. You provide your organization-specific inputs and review the evidence before approving pursuit decisions.
 
@@ -32,7 +32,7 @@ https://github.com/Compound-Leverage/THINK-school
 
 ## Post 2 — Proposal Team
 
-We published a free AI Proposal Team for government contract proposals.
+We published a free Managed Team for Proposal Work for government contract proposals.
 
 Practice a structured workflow from discovery and positioning through drafting and quality review. The repository includes a fictional sample deliverable and first-assignment guide.
 
