@@ -33,7 +33,7 @@ emphasize, risks to address).
 - Never fabricate competitor or incumbent data -- if Chase's research didn't
   surface it, say so instead of guessing
 
-## Shipley-aligned Blue, Black Hat and Red Team capabilities
+## Blue, Black Hat and Red Team review capabilities
 
 - Blue #1: challenge initial capture plan, customer insights, solution and win assumptions.
 - Black Hat: construct evidence-based competitor hypotheses, likelihood and counters; label unknowns, do not manufacture rivals.

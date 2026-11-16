@@ -92,6 +92,22 @@ for manifest, platform, metadata in [
         except (OSError, ValueError) as exc:
             errors.append(f"{meta}: invalid plugin metadata: {exc}")
         require(any(package.rglob("SKILL.md")), f"{package}: no SKILL.md")
+        for skill in package.rglob("SKILL.md"):
+            skill_content = skill.read_text(encoding="utf-8")
+            require("Shipley" not in skill_content,
+                    f"{skill}: contains unnecessary third-party branding: Shipley")
+        if platform == "claude":
+            forbidden_runtime_content = {
+                "https://www.compoundleverage.com/content.md": "dynamic external instruction index",
+                "https://www.compoundleverage.com/managed-teams-plans/": "undisclosed promotional offer",
+                "https://www.skool.com/": "undisclosed third-party promotion",
+                "https://www.shipleywins.com/": "external third-party reference",
+            }
+            for skill in package.rglob("SKILL.md"):
+                skill_content = skill.read_text(encoding="utf-8")
+                for forbidden, reason in forbidden_runtime_content.items():
+                    require(forbidden not in skill_content,
+                            f"{skill}: contains {reason}: {forbidden}")
 
 require(not (ROOT / "Archive").exists(), "Archive/ must remain on legacy-archive branch")
 
