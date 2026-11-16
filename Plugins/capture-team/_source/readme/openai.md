@@ -30,7 +30,7 @@ This plugin is a self-service tool. Compound Leverage separately offers paid Man
 
 ## Optional training
 
-The plugin works without training. THINK School on Skool separately teaches you how to use Managed Teams and this plugin to get work done. Joining the community is optional and does not change the plugin's functionality. [Learn with THINK School](https://www.skool.com/work-less-do-more-2569/about).
+The plugin works without training. THINK School on Skool separately teaches you how to use this plugin to complete capture work. Joining the community is optional and does not change the plugin's functionality. [Learn how to use the Capture Team plugin](https://www.skool.com/work-less-do-more-2569/about).
 
 ## Learn and verify
 
