@@ -28,6 +28,10 @@ Choose autonomous internal execution or human-led stage gating. Authorized human
 
 This plugin is a self-service tool. Compound Leverage separately offers paid Managed Team services that complete proposal work for clients. Installing the plugin does not purchase or activate that service or share your information with it. [View Managed Team plans](https://www.compoundleverage.com/managed-teams-plans/).
 
+## Optional training
+
+The plugin works without training. THINK School on Skool separately teaches you how to use Managed Teams and this plugin to get work done. Joining the community is optional and does not change the plugin's functionality. [Learn with THINK School](https://www.skool.com/work-less-do-more-2569/about).
+
 ## Learn and verify
 
 [Proposal quickstart](../../../Docs/quickstart-proposal.md) · [Sample deliverable](../../../Docs/samples/proposal-discovery-brief.md) · [Release checklist](../../../Docs/plugin-validation.md)
