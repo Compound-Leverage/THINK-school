@@ -24,6 +24,10 @@ A sourced opportunity shortlist (or explicitly fictional practice data), fit and
 
 Run internal discovery, qualification, research, and reporting autonomously or direct the work step by step. The user makes final pursuit decisions. No CRM updates or external outreach without permission. Distinguish verified sources from assumptions and never fabricate citations.
 
+## Optional paid service
+
+This plugin is a self-service tool. Compound Leverage separately offers paid Managed Team services that complete capture work for clients. Installing the plugin does not purchase or activate that service or share your information with it. [View Managed Team plans](https://www.compoundleverage.com/managed-teams-plans/).
+
 ## Learn and verify
 
 [Capture quickstart](../../../Docs/quickstart-capture.md) · [Sample deliverable](../../../Docs/samples/capture-brief.md) · [Release checklist](../../../Docs/plugin-validation.md)
