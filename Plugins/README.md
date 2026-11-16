@@ -13,6 +13,10 @@ The six stages describe the **learning and work lifecycle**, not a claim that ev
 
 The repository is the **user-install distribution path**. Official marketplace approval is not needed to install the packages using a supported client. The platform-specific manifests below support discovery and installation from this repository; an official listing is an optional separate channel.
 
+Both platform packages are generated from one canonical source, validated against one
+capability contract, and released at the same version. See the
+[distribution and release process](../Docs/distribution-and-release.md).
+
 
 ### Claude Code
 

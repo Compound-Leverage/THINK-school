@@ -1,0 +1,30 @@
+schema_version: 1
+capabilities:
+  - id: autonomous-workflow
+    claude:
+      path: skills/proposal-engine-lead-maya/SKILL.md
+      marker: "## Workflow"
+    openai:
+      path: skills/proposal-team/SKILL.md
+      marker: "## Workflow"
+  - id: autonomous-reporting
+    claude:
+      path: skills/proposal-engine-lead-maya/SKILL.md
+      marker: "## Autonomous reporting contract"
+    openai:
+      path: skills/proposal-team/SKILL.md
+      marker: "## Autonomous reporting contract"
+  - id: compliance-reporting
+    claude:
+      path: skills/proposal-qa-diego/SKILL.md
+      marker: "## Output: QA Report"
+    openai:
+      path: skills/proposal-team/references/diego.md
+      marker: "## Output: QA Report"
+  - id: human-approval-gate
+    claude:
+      path: skills/proposal-engine-lead-maya/SKILL.md
+      marker: "Never skip a decision gate"
+    openai:
+      path: skills/proposal-team/SKILL.md
+      marker: "required human decisions cannot be bypassed"

@@ -7,7 +7,9 @@ bring-your-own-data.
 Full architecture reference (all three repos, MCP tools, entitlement model) lives in
 Compound Leverage's private internal documentation and is not published in this repo.
 
-Install this marketplace with **auto-update turned off** (`/plugin` → **Marketplaces**
-→ `think-school` → **Disable auto-update**) — these plugins are meant to be customized
-with your own data (`customization/*.json`, IDs in `Skills/schema.md`), and an
-auto-update would overwrite those changes.
+The released plugin roots are generated artifacts. Keep organization-specific data in
+the supported in-package templates or authorized session context, and preserve a copy
+outside an installed plugin cache before updating. Third-party Claude marketplaces do
+not auto-update by default; users may enable auto-update or run an explicit update.
+OpenAI and Anthropic directory publication have separate review and update gates. See
+[distribution and release parity](distribution-and-release.md).

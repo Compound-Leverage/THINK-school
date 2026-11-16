@@ -8,3 +8,4 @@ node_modules/
 !.claude/skills/**
 .DS_Store
 openai-plugin/*.zip
+release-packages/
