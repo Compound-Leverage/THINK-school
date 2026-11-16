@@ -11,7 +11,7 @@ shared_urls:
   terms_of_service: https://www.compoundleverage.com/terms/
 
 claude:
-  version: "1.1.19"
+  version: "1.1.20"
   display_name: "Managed Teams for Proposal Work"
   support_url: https://www.compoundleverage.com/contact/
   documentation_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
@@ -21,13 +21,17 @@ claude:
     - think-school
     - proposal
     - rfp
+    - rfp-response
+    - proposal-writing
+    - proposal-review
+    - compliance-matrix
     - capture-management
     - grant-writing
 
 openai:
-  version: "1.1.19"
+  version: "1.1.20"
   display_name: "Managed Team for Proposal Work"
-  short_description: "Assess, strategize, & propose"
+  short_description: "Assess, respond & review"
   developer_name: Compound Leverage
   category: "Business & Operations"
   capabilities:
@@ -36,15 +40,19 @@ openai:
   support_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
   brand_color: "#6944BA"
   default_prompt:
-    - "Should we pursue this opportunity?"
-    - "Analyze this solicitation's requirements and evaluation criteria"
-    - "Review this proposal for compliance and requirements gaps"
+    - "Assess whether we should respond to this RFP"
+    - "Analyze this solicitation and build a compliant response plan"
+    - "Review this proposal against the requirements and evaluation criteria"
   keywords:
     - ai-team
     - digital-employee
     - think-school
     - proposal
     - rfp
+    - rfp-response
+    - proposal-writing
+    - proposal-review
+    - compliance-matrix
     - capture-management
     - grant-writing
     - government-contractor

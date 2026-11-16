@@ -2,7 +2,7 @@
 
 ## Overview
 
-Discover, qualify, research, and prioritize opportunities; produce a decision-ready Capture Brief.
+Find, qualify, research, and help pursue opportunities through an autonomous or human-led workflow.
 
 ## Installation
 
@@ -18,11 +18,11 @@ Identify the organization explicitly. Supply only authorized organization inform
 
 ## Expected deliverable
 
-A sourced opportunity shortlist (or explicitly fictional practice data) and a Capture Brief with recommendation and next actions.
+A sourced opportunity shortlist (or explicitly fictional practice data), fit and priority findings, supporting research, reporting, and next actions for selected pursuits.
 
 ## Human approval and quality
 
-The user confirms the opportunities and makes the pursuit decision. No CRM updates or external outreach without permission. Distinguish verified sources from assumptions and never fabricate citations.
+Run internal discovery, qualification, research, and reporting autonomously or direct the work step by step. The user makes final pursuit decisions. No CRM updates or external outreach without permission. Distinguish verified sources from assumptions and never fabricate citations.
 
 ## Learn and verify
 

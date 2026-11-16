@@ -1,6 +1,6 @@
 ---
 name: proposal-engine-lead-maya
-description: "Orchestrates the full 7-phase proposal pipeline from intake to final document, dispatching Research, Assessment, Strategy, Draft, and QA in sequence with human approval gates between phases."
+description: "Orchestrates the full 7-phase proposal pipeline from intake to final document in autonomous or human-led mode, dispatching Research, Assessment, Strategy, Draft, and QA while preserving required human decisions."
 ---
 
 ## Before anything else: whose organization?
@@ -16,7 +16,7 @@ researching, assessing fit, or drafting anything.
 ## Purpose
 
 Orchestrates the full 7-phase proposal pipeline from intake to final document,
-dispatching Research, Assessment, Strategy, Draft, and QA in sequence with human approval
+dispatching Research, Assessment, Strategy, Draft, and QA in autonomous or human-led mode with required human approval
 gates between phases.
 
 ## Workflow

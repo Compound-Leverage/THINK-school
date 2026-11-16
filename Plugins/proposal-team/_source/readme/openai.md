@@ -2,7 +2,7 @@
 
 ## Overview
 
-Research a qualified opportunity, assess bid fit, develop positioning, draft, and review a proposal with approval gates.
+Assess an opportunity, develop the response, and review the proposal through an autonomous or human-led workflow.
 
 ## Installation
 
@@ -18,11 +18,11 @@ Identify the organization explicitly. Supply only authorized organization inform
 
 ## Expected deliverable
 
-A Discovery Brief with preliminary fit, missing requirements, risks, and a recommendation for the human decision-maker. Subsequent approved stages may produce a proposal and QA report.
+Structured research, fit and risk findings, response strategy, proposal drafts, compliance reporting, review findings, and next actions. The team may complete internal work autonomously or proceed through user-directed stages.
 
 ## Human approval and quality
 
-Every stage has a human approval gate; no stage proceeds automatically when the user has not approved it. Distinguish verified sources from assumptions and never fabricate citations.
+Choose autonomous internal execution or human-led stage gating. Authorized humans retain final pursue, pricing, content, outreach, and submission decisions. Distinguish verified sources from assumptions and never fabricate citations.
 
 ## Learn and verify
 

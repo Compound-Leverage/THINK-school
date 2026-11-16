@@ -63,6 +63,24 @@ for manifest, platform, metadata in [
                         require(target.is_relative_to(package.resolve()) and target.is_dir(),
                                 f"{meta}: missing in-root {field}: {value}")
                 interface = details.get("interface", {})
+                require(isinstance(interface, dict), f"{meta}: missing interface object")
+                if isinstance(interface, dict):
+                    for field, limit in (
+                        ("displayName", 30),
+                        ("shortDescription", 30),
+                        ("longDescription", 4000),
+                        ("developerName", 80),
+                    ):
+                        value = interface.get(field, "")
+                        require(isinstance(value, str) and bool(value.strip()),
+                                f"{meta}: missing interface.{field}")
+                        if isinstance(value, str):
+                            require(len(value) <= limit,
+                                    f"{meta}: interface.{field} exceeds {limit} characters")
+                    short_description = interface.get("shortDescription", "")
+                    if isinstance(short_description, str):
+                        require("\n" not in short_description and "\r" not in short_description,
+                                f"{meta}: interface.shortDescription must fit on one line")
                 for field in ("composerIcon", "logo"):
                     value = interface.get(field, "") if isinstance(interface, dict) else ""
                     require(isinstance(value, str) and value.startswith("./") and ".." not in Path(value).parts,

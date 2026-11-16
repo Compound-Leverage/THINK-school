@@ -1,6 +1,6 @@
 ---
 name: capture-team
-description: "THINK School AI Capture Team helps practitioners find opportunities worth pursuing, qualify them against organizational criteria, prioritize where to spend pursuit capacity, and turn the resulting intelligence into decision-ready Capture Briefs. Three specialized Digital Employees -- Chet, Kipp, and Ben -- work together across government contracting, grants and funding, and business development pursuit workflows. Bring your own organizational criteria, CRM, enrichment tools, and document storage. Nothing is pre-wired to a specific vendor."
+description: "The Capture Managed Team helps practitioners find, qualify, research, and pursue opportunities, delivering work they otherwise would not have time to complete. Use it across government contracting, grants and funding, and business development when you need to search for relevant opportunities, determine fit, review opportunity documents and requirements, prioritize pursuits, or organize the research, reporting, and next actions needed to keep selected opportunities moving. Run the work autonomously or direct it step by step and receive completed research, qualification, pursuit-support work, reporting, recommendations, and next actions while retaining final pursuit and external-action decisions. Bring your own organizational criteria, CRM, enrichment tools, and document storage. Nothing is pre-wired to a specific vendor."
 ---
 
 ## Before anything else: whose organization?
@@ -42,7 +42,7 @@ never represent it as an autonomous business decision.
 
 Capture Team ends at the pursue/investigate/do-not-pursue recommendation and
 brief. It does not draft proposals or run proposal QA -- that's THINK
-School AI Proposal Team's job, downstream of this one.
+Proposal Managed Team's job, downstream of this one.
 
 ## Setup required
 
