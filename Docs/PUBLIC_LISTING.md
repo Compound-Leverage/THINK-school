@@ -88,7 +88,7 @@ already engaged, e.g. [`SUPPORT.md`](../SUPPORT.md).
 (30 chars -- fits the ~30-char limit reported for this field; verify in the
 submission portal.)
 
-**Subtitle:** Find, qualify & pursue opportunities
+**Subtitle:** Find, qualify & pursue
 
 **Description:** A Managed Team that finds, qualifies, researches, and helps
 you pursue opportunities, delivering the opportunity work your team otherwise
@@ -112,7 +112,7 @@ Try: "Find government contract opportunities that fit my organization"
 **Name:** Managed Teams for Proposal Work
 (31 chars -- fits the ~30-char limit; verify in the submission portal.)
 
-**Subtitle:** Assess, respond & review proposals
+**Subtitle:** Assess, respond & review
 
 **Description:** A Managed Team that assesses opportunities, responds to
 solicitations, and reviews proposals, delivering the proposal work your team

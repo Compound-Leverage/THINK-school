@@ -31,7 +31,7 @@ claude:
 openai:
   version: "1.1.20"
   display_name: "Managed Team for Proposal Work"
-  short_description: "Assess, respond & review proposals"
+  short_description: "Assess, respond & review"
   developer_name: Compound Leverage
   category: "Business & Operations"
   capabilities:
