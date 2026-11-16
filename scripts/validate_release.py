@@ -63,6 +63,24 @@ for manifest, platform, metadata in [
                         require(target.is_relative_to(package.resolve()) and target.is_dir(),
                                 f"{meta}: missing in-root {field}: {value}")
                 interface = details.get("interface", {})
+                require(isinstance(interface, dict), f"{meta}: missing interface object")
+                if isinstance(interface, dict):
+                    for field, limit in (
+                        ("displayName", 30),
+                        ("shortDescription", 30),
+                        ("longDescription", 4000),
+                        ("developerName", 80),
+                    ):
+                        value = interface.get(field, "")
+                        require(isinstance(value, str) and bool(value.strip()),
+                                f"{meta}: missing interface.{field}")
+                        if isinstance(value, str):
+                            require(len(value) <= limit,
+                                    f"{meta}: interface.{field} exceeds {limit} characters")
+                    short_description = interface.get("shortDescription", "")
+                    if isinstance(short_description, str):
+                        require("\n" not in short_description and "\r" not in short_description,
+                                f"{meta}: interface.shortDescription must fit on one line")
                 for field in ("composerIcon", "logo"):
                     value = interface.get(field, "") if isinstance(interface, dict) else ""
                     require(isinstance(value, str) and value.startswith("./") and ".." not in Path(value).parts,
@@ -74,6 +92,21 @@ for manifest, platform, metadata in [
         except (OSError, ValueError) as exc:
             errors.append(f"{meta}: invalid plugin metadata: {exc}")
         require(any(package.rglob("SKILL.md")), f"{package}: no SKILL.md")
+        for skill in package.rglob("SKILL.md"):
+            skill_content = skill.read_text(encoding="utf-8")
+            require("Shipley" not in skill_content,
+                    f"{skill}: contains unnecessary third-party branding: Shipley")
+        forbidden_runtime_content = {
+            "https://www.compoundleverage.com/content.md": "dynamic external instruction index",
+            "https://www.compoundleverage.com/managed-teams-plans/": "undisclosed promotional offer",
+            "https://www.skool.com/": "undisclosed third-party promotion",
+            "https://www.shipleywins.com/": "external third-party reference",
+        }
+        for skill in package.rglob("SKILL.md"):
+            skill_content = skill.read_text(encoding="utf-8")
+            for forbidden, reason in forbidden_runtime_content.items():
+                require(forbidden not in skill_content,
+                        f"{skill}: contains {reason}: {forbidden}")
 
 require(not (ROOT / "Archive").exists(), "Archive/ must remain on legacy-archive branch")
 

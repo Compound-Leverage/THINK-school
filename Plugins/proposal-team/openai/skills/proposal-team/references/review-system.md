@@ -1,10 +1,6 @@
-# Shipley-aligned Review Capability Library
+# Color-Team Review Capability Library
 
-This is a THINK Managed Teams implementation of the review points described in Shipley's published Winning Color Team Reviews material, not an assertion that Shipley endorses or certifies this product. Use official concepts and objective definitions. Tailor the effort, number of participants, and artifacts to the pursuit.
-
-Sources:
-- https://www.shipleywins.com/corporate-training/winning-color-team-reviews
-- https://www.shipleywins.com/blogs/color-team-reviews
+This packaged review library defines risk-adjusted color-team review points using objective criteria. Tailor the effort, number of participants, and artifacts to the pursuit.
 
 ## Architecture and ownership
 
@@ -67,7 +63,7 @@ Do not invent commitments, people, costs, dates, citations, external endorsement
 3. Human/content owner disposes each finding; reviewer independently validates corrections.
 4. Red/Green material reopeners return to the appropriate review; Gold cannot pass while critical requirements remain open or unverified without an explicit human risk decision.
 5. Gold requests *human* approval of final proposal and final price.
-6. After Gold, Diego checks the exact approved export, tables, pagination, attachments, signatures, upload fields and actual submission instructions. This **submission QA** is a THINK operational check, not another Shipley color team.
+6. After Gold, Diego checks the exact approved export, tables, pagination, attachments, signatures, upload fields and actual submission instructions. This **submission QA** is an operational check, not another color-team review.
 7. White records lessons after submission and, where available, evaluation feedback/award outcome.
 
 ## Separation of duties

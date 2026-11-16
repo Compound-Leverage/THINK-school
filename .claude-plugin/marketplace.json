@@ -5,19 +5,19 @@
     "email": "support@compoundleverage.com"
   },
   "metadata": {
-    "version": "1.1.19",
-    "description": "Compound Leverage Managed Teams for capture and proposal work. Discover and qualify opportunities, produce decision-ready capture reporting, and develop submission-ready proposals using relevant resources, organizational data, and human approval gates."
+    "version": "1.1.21",
+    "description": "Compound Leverage Managed Teams deliver completed capture and proposal work through autonomous or human-led execution using your organizational data, resources, and tools."
   },
   "plugins": [
     {
       "name": "capture-team",
       "source": "./Plugins/capture-team/claude",
-      "description": "Delivers decision-ready capture reporting for government contracting, grants, funding, and business development. Chet discovers opportunities, Kipp qualifies and prioritizes them, and Ben delivers the Capture Brief. The team uses relevant resources and available capabilities when they materially improve the requested work. Bring your own criteria, organizational data, CRM, opportunity sources, and document storage."
+      "description": "Finds, qualifies, researches, and helps pursue opportunities, delivering completed capture work through autonomous or human-led execution."
     },
     {
       "name": "proposal-team",
       "source": "./Plugins/proposal-team/claude",
-      "description": "Delivers submission-ready proposal work through a Managed Team of seven Digital Employees. Chase researches the opportunity, Priya evaluates fit and pricing, Porter develops positioning, Quinn drafts, Diego performs compliance and quality review, Maya manages the gated workflow, and Blair supports grant and funder proposals. Bring your own organizational profile, pricing, case studies, evidence, and brand guidelines."
+      "description": "Assesses opportunities, responds to solicitations, and reviews proposals, delivering completed proposal work through autonomous or human-led execution."
     }
   ]
 }

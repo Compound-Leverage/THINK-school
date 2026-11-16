@@ -1,9 +1,9 @@
 {
   "name": "capture-team",
   "displayName": "Managed Teams for Capture Work",
-  "version": "1.1.19",
+  "version": "1.1.21",
   "icon": "./assets/think-school.png",
-  "description": "A Capture Managed Team that delivers a decision-ready Capture Brief: the opportunity research and qualification work you're too busy to get to.\n\nUse it across government contracting, grants and funding, or business development workflows. Bring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage.\n\nNothing is pre-wired to a specific vendor. Three Digital Employees work together: Chet discovers, Kipp qualifies and prioritizes, and Ben delivers the brief.\n\nWant to build, direct, and manage your own Managed Teams?\n\nTHINK School on Skool teaches you how.",
+  "description": "A Managed Team that finds, qualifies, researches, and helps you pursue opportunities, delivering the opportunity work your team otherwise would not have time to complete.\n\nIt searches for relevant government contracts, grants and funding, and business development opportunities, determines fit against your criteria, reviews opportunity documents and requirements, and organizes the research, reporting, and next actions needed to keep selected pursuits moving.\n\nRun the work autonomously or direct it step by step. Receive completed research, qualification, pursuit-support work, reporting, recommendations, and next actions. You retain the final pursuit and external-action decisions. Bring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage. Nothing is pre-wired to a specific vendor.",
   "author": {
     "name": "Compound Leverage",
     "url": "https://compoundleverage.com"

@@ -11,7 +11,7 @@ shared_urls:
   terms_of_service: https://www.compoundleverage.com/terms/
 
 claude:
-  version: "1.1.19"
+  version: "1.1.21"
   display_name: "Managed Teams for Capture Work"
   support_url: https://www.compoundleverage.com/contact/
   documentation_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
@@ -25,9 +25,9 @@ claude:
     - intelligence-brief
 
 openai:
-  version: "1.1.19"
+  version: "1.1.22"
   display_name: "Managed Team for Capture Work"
-  short_description: "Find, assess & prioritize bids"
+  short_description: "Find, qualify & pursue"
   developer_name: Compound Leverage
   category: "Business & Operations"
   capabilities:

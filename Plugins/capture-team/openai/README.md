@@ -2,7 +2,7 @@
 
 ## Overview
 
-Discover, qualify, research, and prioritize opportunities; produce a decision-ready Capture Brief.
+Find, qualify, research, and help pursue opportunities through an autonomous or human-led workflow.
 
 ## Installation
 
@@ -18,11 +18,19 @@ Identify the organization explicitly. Supply only authorized organization inform
 
 ## Expected deliverable
 
-A sourced opportunity shortlist (or explicitly fictional practice data) and a Capture Brief with recommendation and next actions.
+A sourced opportunity shortlist (or explicitly fictional practice data), fit and priority findings, supporting research, reporting, and next actions for selected pursuits.
 
 ## Human approval and quality
 
-The user confirms the opportunities and makes the pursuit decision. No CRM updates or external outreach without permission. Distinguish verified sources from assumptions and never fabricate citations.
+Run internal discovery, qualification, research, and reporting autonomously or direct the work step by step. The user makes final pursuit decisions. No CRM updates or external outreach without permission. Distinguish verified sources from assumptions and never fabricate citations.
+
+## Optional paid service
+
+This plugin is a self-service tool. Compound Leverage separately offers paid Managed Team services that complete capture work for clients. Installing the plugin does not purchase or activate that service or share your information with it. [View Managed Team plans](https://www.compoundleverage.com/managed-teams-plans/).
+
+## Optional training
+
+The plugin works without training. THINK School on Skool separately teaches you how to use this plugin to complete capture work. Joining the community is optional and does not change the plugin's functionality. [Learn how to use the Capture Team plugin](https://www.skool.com/work-less-do-more-2569/about).
 
 ## Learn and verify
 

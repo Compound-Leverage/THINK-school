@@ -51,20 +51,19 @@ category term + job-function term in one ~30-char name), different words.
 New names: **"Managed Teams for Capture Work"** (30 chars) and **"Managed
 Teams for Proposal Work"** (31 chars), set via `displayName` in each
 plugin.json (Claude and Codex) and in `.agents/plugins/marketplace.json`.
-"THINK School" no longer appears in the searchable name itself -- it still
-appears in the description's closing CTA ("THINK School on Skool teaches you
-how") and as the `homepage` link, so the funnel path is unchanged.
+"THINK School" no longer appears in the searchable name. Capture Team's
+listing copy focuses on the opportunity work the team performs; broader
+product discovery belongs on the Compound Leverage website and in support
+documentation rather than in the marketplace description.
 
 **Publisher: Compound Leverage, not THINK School.** Per this project's
 original brief, Compound Leverage is the company/publisher and THINK School
 is the product brand -- and OpenAI's developer identity verification
 (completed 2026-08-28) is already tied to "Business -- Compound Leverage."
 That's the identity OpenAI will show as the verified publisher regardless of
-listing copy, so the subtitle says "by Compound Leverage" to match rather
-than introducing a third, unexplained brand name on top of the two already in
-the listing name and description. Manifest `author.name`/`developerName`
-fields already say "Compound Leverage" for both plugins -- no change needed
-there.
+listing copy. Manifest `author.name`/`developerName` fields already say
+"Compound Leverage" for both plugins, so the functional subtitle can focus on
+what the Managed Team does without repeating the publisher name.
 
 Guiding principle: **public plugins help you do the work. THINK School teaches
 you how to build, customize, and manage the workforce.** The free tier is not
@@ -73,15 +72,14 @@ is the system, capability development, resources, and community around it, not
 a fuller version of the same tool.
 
 Distribution funnel: search/discovery -> ChatGPT or Claude plugin -> real
-outcome -> recognizes THINK School -> deeper need -> THINK School on Skool.
+outcome -> recognizes Compound Leverage -> deeper product or service need.
 GitHub is an independent direct-install distribution channel. Official OpenAI and Claude marketplace listings are separate channels with their own review and deployment timelines.
 
 Not every user is ready for Skool membership immediately -- the "Learn" content
 hub (https://www.compoundleverage.com/examples/: free tools, guides, articles,
 research, no signup required) is the zero-commitment parallel path for people
-who want to see more before joining. Keep this out of the plugin manifest's own
-upsell line (that stays a single, clean CTA to Skool, per OpenAI's
-anti-advertising guidance) -- it lives in repo docs people read once they're
+who want to see more before joining. Keep this out of the plugin manifest and
+marketplace description; it lives in repo docs people read once they're
 already engaged, e.g. [`SUPPORT.md`](../SUPPORT.md).
 
 ## Listing 1: Managed Teams for Capture Work
@@ -90,40 +88,50 @@ already engaged, e.g. [`SUPPORT.md`](../SUPPORT.md).
 (30 chars -- fits the ~30-char limit reported for this field; verify in the
 submission portal.)
 
-**Subtitle:** Find and pursue opportunities -- by Compound Leverage
-(~53 chars -- verify the portal's actual subtitle limit before submitting.
-Publisher goes here, matching the verified developer identity -- see naming
-note below.)
+**Subtitle:** Find, qualify & pursue
 
-**Description:** Part of THINK School, Compound Leverage's free practitioner
-resource. A Managed Team of three Digital Employees that finds named groups worth
-pursuing, enriches and classifies inbound leads against your ICP, and turns
-signals into client-ready intelligence briefs. Configurable to your own
-business -- bring your ICP, capability map, and connect whatever CRM,
-enrichment tool, and document storage you already use. Nothing is pre-wired
-to a specific vendor, and no proprietary Compound Leverage accounts or data
-are required.
+**Description:** A Managed Team that finds, qualifies, researches, and helps
+you pursue opportunities, delivering the opportunity work your team otherwise
+would not have time to complete.
 
-Try: "Find named groups or clusters that share a capacity gap we can fill"
+It searches for relevant government contracts, grants and funding, and
+business development opportunities, determines fit against your criteria,
+reviews opportunity documents and requirements, and organizes the research,
+reporting, and next actions needed to keep selected pursuits moving.
+
+Run the work autonomously or direct it step by step. Receive completed
+research, qualification, pursuit-support work, reporting, recommendations,
+and next actions. You retain the final pursuit and external-action decisions.
+Bring your own organizational criteria, CRM, enrichment tools, opportunity
+sources, and document storage. Nothing is pre-wired to a specific vendor.
+
+Try: "Find government contract opportunities that fit my organization"
 
 ## Listing 2: Managed Teams for Proposal Work
 
 **Name:** Managed Teams for Proposal Work
 (31 chars -- fits the ~30-char limit; verify in the submission portal.)
 
-**Subtitle:** Win the work with compliant proposals -- by Compound Leverage
-(~63 chars -- verify the portal's actual subtitle limit; may need trimming.
-Publisher goes here, matching the verified developer identity.)
+**Subtitle:** Assess, respond & review
 
-**Description:** Part of THINK School, Compound Leverage's free practitioner
-resource. A Managed Team of seven Digital Employees that carries a qualified
-opportunity from research through a submission-ready proposal -- requirement
-extraction, competitive positioning, drafting, and QA, plus a parallel
-grant/funder track. Every stage stops for your approval before moving on.
-Configurable to your own business -- bring your pricing, case studies, and
-brand guidelines.
+**Description:** A Managed Team that assesses opportunities, responds to
+solicitations, and reviews proposals, delivering the proposal work your team
+otherwise would not have time to complete.
 
-Try: "Run this opportunity through Go/No-Go and deal assessment"
+It analyzes solicitation requirements and evaluation criteria, assesses
+capability fit, gaps, risk, ROI, and pricing, researches the opportunity and
+competitive landscape, develops positioning and win themes, drafts the
+response, and reviews it for requirements coverage, compliance, consistency,
+and quality.
+
+Configure the team with your company profile, pricing, past performance, case
+studies, brand guidelines, and review criteria. Run the work autonomously or
+direct it stage by stage. Receive completed research, response strategy,
+proposal content, compliance reporting, review findings, recommendations, and
+next actions. You retain the final pursue, pricing, content, outreach, and
+submission decisions.
+
+Try: "Assess whether we should respond to this RFP"
 
 (Format check for both: confirm in the submission portal whether example
 prompts belong inline in the full description or are handled entirely by the
@@ -177,7 +185,7 @@ OpenAI's submission requires 5 positive + 3 negative test cases per plugin.
 Every prompt below is grounded in what the shipped SKILL.md/references
 content actually does -- nothing invented, nothing the package can't back up.
 
-### THINK School AI Capture Team
+### Managed Team for Capture Work
 
 **Positive (should work):**
 1. "Find named groups or clusters that share a capacity gap we can fill" --
@@ -202,7 +210,7 @@ content actually does -- nothing invented, nothing the package can't back up.
    stage" -- output is a candidate record for human triage, not a
    conversion promise
 
-### THINK School AI Proposal Team
+### Managed Team for Proposal Work
 
 **Positive (should work):**
 1. "Run this opportunity through Go/No-Go and deal assessment" -- Chase + Priya
