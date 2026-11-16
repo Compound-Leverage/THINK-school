@@ -1,0 +1,12 @@
+intro_heading: "Capture Team Lead"
+claude_name: capture-team
+claude_description: "Orchestrates autonomous or human-led capture work from discovery through qualification and a decision-ready Capture Brief while preserving human pursuit and external-action decisions."
+discovery_ref:
+  claude: "the cluster-discovery-chet skill"
+  openai: "references/chet.md"
+qualification_ref:
+  claude: "the crm-intake-kipp skill"
+  openai: "references/kipp.md"
+reporting_ref:
+  claude: "the signal-delivery-ben skill"
+  openai: "references/ben.md"

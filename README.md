@@ -47,7 +47,8 @@ flowchart LR
 
 - [Capture Team quickstart](Docs/quickstart-capture.md) · [Sample Capture Brief](Docs/samples/capture-brief.md)
 - [Proposal Team quickstart](Docs/quickstart-proposal.md) · [Sample Discovery Brief](Docs/samples/proposal-discovery-brief.md)
-- [Plugin release validation checklist](Docs/plugin-validation.md) — installation tests still pending
+- [Plugin release validation checklist](Docs/plugin-validation.md)
+- [Distribution, update, and release parity](Docs/distribution-and-release.md)
 
 ## Distribution: direct installation and official marketplaces
 
@@ -75,4 +76,4 @@ Legacy materials are preserved on the [`legacy-archive` branch](https://github.c
 
 ## Project information
 
-[Latest release notes](Docs/RELEASE-NOTES-v1.1.0.md) · [License](LICENSE) · [Terms](TERMS.md) · [Privacy](PRIVACY.md) · [Support](SUPPORT.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
+[Latest release notes](Docs/RELEASE-NOTES-v1.2.0.md) · [License](LICENSE) · [Terms](TERMS.md) · [Privacy](PRIVACY.md) · [Support](SUPPORT.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)

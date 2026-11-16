@@ -6,8 +6,11 @@ import sys
 from pathlib import Path
 from urllib.parse import unquote
 
+import yaml
+
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
+package_versions = {}
 def require(condition, message):
     if not condition:
         errors.append(message)
@@ -41,6 +44,9 @@ for manifest, platform, metadata in [
         try:
             details = json.loads(meta.read_text(encoding="utf-8"))
             require(details.get("name") == name, f"{meta}: name mismatch")
+            version = details.get("version")
+            require(isinstance(version, str) and bool(version), f"{meta}: missing version")
+            package_versions[(name, platform)] = version
             if platform == "claude":
                 icon = details.get("icon", "")
                 require(isinstance(icon, str) and bool(icon), f"{meta}: missing directory icon")
@@ -108,6 +114,48 @@ for manifest, platform, metadata in [
                 require(forbidden not in skill_content,
                         f"{skill}: contains {reason}: {forbidden}")
 
+# Each team release is one cross-platform capability release. Provider review timing
+# may differ, but package versions and declared capabilities may not drift.
+for team in ("capture-team", "proposal-team"):
+    claude_version = package_versions.get((team, "claude"))
+    openai_version = package_versions.get((team, "openai"))
+    require(claude_version == openai_version,
+            f"{team}: Claude version {claude_version!r} != OpenAI version {openai_version!r}")
+
+    contract_path = ROOT / "Plugins" / team / "_source" / "capabilities.yaml"
+    try:
+        contract = yaml.safe_load(contract_path.read_text(encoding="utf-8"))
+        capabilities = contract["capabilities"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        errors.append(f"{contract_path}: invalid capability contract: {exc}")
+        continue
+    ids = [item.get("id") for item in capabilities if isinstance(item, dict)]
+    require(len(ids) == len(set(ids)) and all(ids), f"{contract_path}: capability ids must be unique")
+    for capability in capabilities:
+        capability_id = capability.get("id", "<missing>")
+        for platform in ("claude", "openai"):
+            evidence = capability.get(platform, {})
+            rel = evidence.get("path", "") if isinstance(evidence, dict) else ""
+            marker = evidence.get("marker", "") if isinstance(evidence, dict) else ""
+            target = ROOT / "Plugins" / team / platform / rel
+            require(bool(rel) and bool(marker),
+                    f"{contract_path}: {capability_id} missing {platform} evidence")
+            if target.is_file() and marker:
+                require(marker in target.read_text(encoding="utf-8"),
+                        f"{target}: missing {capability_id} marker {marker!r}")
+            else:
+                require(False, f"{target}: missing capability evidence file")
+
+try:
+    claude_marketplace_version = json.loads(
+        (ROOT / ".claude-plugin" / "marketplace.json").read_text(encoding="utf-8")
+    )["metadata"]["version"]
+    released_versions = {v for v in package_versions.values() if v}
+    require(released_versions == {claude_marketplace_version},
+            f"marketplace/package versions differ: {sorted(released_versions)} vs {claude_marketplace_version}")
+except (OSError, ValueError, KeyError, TypeError) as exc:
+    errors.append(f".claude-plugin/marketplace.json: invalid metadata.version: {exc}")
+
 require(not (ROOT / "Archive").exists(), "Archive/ must remain on legacy-archive branch")
 
 # Validate links in the actively maintained navigation and quickstart docs.
@@ -115,6 +163,7 @@ docs = [
     "README.md", "Marketplaces/README.md", "Plugins/README.md",
     "Docs/repo-map.md", "Docs/quickstart-capture.md",
     "Docs/quickstart-proposal.md", "Docs/plugin-validation.md",
+    "Docs/distribution-and-release.md",
     "Docs/samples/capture-brief.md", "Docs/samples/proposal-discovery-brief.md",
 ]
 pattern = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")

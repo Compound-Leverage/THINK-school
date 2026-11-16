@@ -1,12 +1,17 @@
 # Role registry for the generator.
 # claude_dir: directory name under claude/skills/<claude_dir>/SKILL.md (only used when "claude" is in platforms)
 # openai_file: filename under openai/skills/<team>/references/<openai_file> (only used when "openai" is in platforms)
-# platforms: which platforms currently ship this role -- a narrower list here is a REAL,
-# intentional content gap (see plan's Phase 1 scope), not something the generator invents or closes.
-# All three roles here have a body.md + meta.yaml in their skills/<role>/ dir (unified --
+# platforms: which platforms ship this source shape. The capture-team orchestrator is
+# Claude-only because OpenAI's equivalent is the platform master skill; the capability
+# contract verifies that both rendered packages expose the same workflow.
+# All roles here have a body.md + meta.yaml in their skills/<role>/ dir (unified --
 # one canonical body rendered into both platform shapes). See
 # Docs/plugin-content-audit-2026-11-15.md for what that means and why.
 roles:
+  - key: capture-team
+    claude_dir: capture-team
+    openai_file: unused.md
+    platforms: [claude]
   - key: chet
     claude_dir: cluster-discovery-chet
     openai_file: chet.md

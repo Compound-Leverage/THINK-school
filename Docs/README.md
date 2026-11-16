@@ -9,6 +9,8 @@ Reference material about this repo itself, not about any one persona or plugin.
 | [`ai-native-services.md`](./ai-native-services.md) | Packaging and managing AI-native services |
 | [`architecture-reference.md`](./architecture-reference.md) | Where this public repo fits relative to Compound Leverage's private architecture |
 | [`PUBLIC_LISTING.md`](./PUBLIC_LISTING.md) | Historical marketplace listing and submission reference |
+| [`distribution-and-release.md`](./distribution-and-release.md) | Cross-platform package parity, update behavior, and release gates |
+| [`RELEASE-NOTES-v1.2.0.md`](./RELEASE-NOTES-v1.2.0.md) | Current parity release scope, validation, and remaining publication gates |
 
 ## Questions
 

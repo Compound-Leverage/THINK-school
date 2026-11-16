@@ -32,10 +32,9 @@ selectively combined/dropped Rules bullets) and force-unifying them would silent
 change approved, shipped wording on one platform or the other. See
 Docs/plugin-content-audit-2026-11-15.md for which roles are which and why.
 
-Cross-team shared content (2026-11-15): Plugins/_shared/ holds content identical across
-both teams and platforms. Both OpenAI and Claude use directory-safe-runtime.md so task
-output remains free of unsolicited promotion and behavioral instructions pulled from
-external sources at runtime.
+Cross-team shared content: Plugins/_shared/ holds content identical across both teams
+and platforms. Both OpenAI and Claude use directory-safe-runtime.md and
+autonomous-reporting.md so compliance boundaries and reporting behavior cannot drift.
 """
 import argparse
 import json
@@ -182,8 +181,12 @@ def render_unified_openai_reference(body, meta):
 
 
 def shared_runtime_guidance():
-    """Return cross-team, cross-platform directory-safe runtime guidance."""
-    return read_text(ROOT / "Plugins" / "_shared" / "directory-safe-runtime.md")
+    """Return cross-team, cross-platform runtime guidance."""
+    parts = [
+        read_text(ROOT / "Plugins" / "_shared" / "directory-safe-runtime.md").rstrip(),
+        read_text(ROOT / "Plugins" / "_shared" / "autonomous-reporting.md").rstrip(),
+    ]
+    return "\n\n".join(parts) + "\n"
 
 
 def render_team(team):
@@ -222,13 +225,13 @@ def render_team(team):
     out["claude/README.md"] = read_bytes(src / "readme" / "claude.md")
     out["openai/README.md"] = read_bytes(src / "readme" / "openai.md")
 
-    # openai master SKILL.md (verbatim) + hoisted shared resource-discovery section
+    # openai master SKILL.md (verbatim) + hoisted cross-platform runtime guidance
     master = read_text(src / "openai_master" / "SKILL.md").rstrip("\n") + "\n\n" + shared_openai
     out[f"openai/skills/{team}/SKILL.md"] = master.encode("utf-8")
 
     # per-role skill content: unified (one body.md -> both shapes) or legacy
     # (separate claude.md/openai.md, copied out verbatim) -- see module docstring.
-    # Every claude role gets the shared resource-discovery section appended, since
+    # Every claude role gets the shared runtime guidance appended, since
     # claude loads one skill at a time with no always-on master to hoist it into.
     for role in roles:
         key = role["key"]

@@ -236,9 +236,11 @@ content actually does -- nothing invented, nothing the package can't back up.
 
 ## Versioning
 
-Standard semver (`MAJOR.MINOR.PATCH`) applies to each plugin's `version`
-field independently -- Capture Team and Proposal Team version on their own
-schedules, not in lockstep.
+Standard semver (`MAJOR.MINOR.PATCH`) applies to each functional release. Claude and
+OpenAI packages for a changed team must carry the same version, and the repository
+currently releases Capture Team and Proposal Team together so all four package
+versions remain in lockstep. Provider review and publication timing may differ without
+changing the prepared package version.
 
 - **PATCH** (third digit) -- bug fixes, behavior corrections, wording/
   instruction clarifications, metadata copy changes (description, subtitle,

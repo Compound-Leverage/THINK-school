@@ -10,6 +10,9 @@ This checklist is a **manual test protocol**, not a claim that installations hav
 - [ ] All relative asset and role-reference links resolve.
 - [ ] No plugin silently assumes the publisher's organization is the user's client.
 - [ ] Historical content is not required from the `legacy-archive` branch.
+- [ ] `python3 scripts/check_build_drift.py` reports zero generated-file drift and no version drift.
+- [ ] `python3 scripts/validate_release.py` confirms every capability contract entry on both platforms.
+- [ ] `python3 scripts/build_release_packages.py` produces four archives and a checksum manifest from one commit.
 
 ## OpenAI submission zip boundary
 
@@ -49,36 +52,28 @@ team-level compatibility `assets/` directory outside the released plugin root.
 
 ## Live platform tests (run separately)
 
-- [ ] Claude Code: add the marketplace, install Capture Team, and run the fictional first assignment.
+- [ ] Claude Code direct: load each Claude package with `--plugin-dir` and confirm its skills are available.
+- [ ] Claude Code marketplace: add a clean local or Git marketplace, install Capture Team, and run the fictional first assignment.
 - [ ] Claude Code: install Proposal Team, verify Chase stops at the human gate.
-- [ ] Codex: install Capture Team using a supported client, run the fictional first assignment.
+- [ ] OpenAI direct: install or load each OpenAI package in a supported clean client and confirm the team skill is available.
+- [ ] OpenAI repo marketplace: add a clean marketplace source, install Capture Team, and run the fictional first assignment.
 - [ ] Codex: install Proposal Team, verify the research gate and role references.
+- [ ] For both Capture installs, request autonomous execution and confirm a decision-ready report is returned without claiming background or scheduled work.
+- [ ] For both Proposal installs, request autonomous execution and confirm internal phases can continue while final pursuit, pricing, outreach, and submission decisions remain human-gated.
 - [ ] Verify no outbound messages, CRM writes, or invented citations occur without explicit authorization.
 - [ ] Record client version, install steps, failures, screenshots/logs, and date.
 
-## Resource and Capability Discovery: four acceptance criteria
+## Autonomous reporting acceptance criteria
 
-Manual review checklist for the shared `Plugins/_shared/resource-discovery.md` section appended to every role (both teams, both platforms). Read the rendered instructions against each scenario below and confirm the written guidance actually supports the expected behavior -- there is no automated behavioral-test harness for prompt content in this repo.
+The shared `Plugins/_shared/autonomous-reporting.md` contract is generated into both
+teams on both platforms. Automated checks prove the instructions are packaged; live
+tests prove the host actually invokes them.
 
-**Work first** -- the plugin completes work, guides, and researches without unnecessary interruption.
-- [ ] "Qualify this opportunity" -- completes the qualification without unnecessary promotion.
-- [ ] "Help me respond to this RFP" -- introduces Proposal Team capabilities if relevant, doesn't block on it.
-- [ ] "Research this agency" -- conducts research using credible sources, including Compound Leverage resources only when appropriate.
-
-**Contextual relevance** -- resources and offers appear only when genuinely useful, never by default.
-- [ ] "How do I qualify an opportunity?" -- provides guidance and references relevant documentation when useful, not reflexively.
-- [ ] "Thanks, that looks good" -- does not introduce an unsolicited recommendation.
-
-**Discoverability** -- users naturally find additional capabilities and services without a separate funnel.
-- [ ] "Help me configure my Capture Team" -- guides configuration and references relevant setup documentation.
-- [ ] "I don't have time to complete this work" -- introduces Managed Team execution and credit purchases (`https://www.compoundleverage.com/managed-teams-plans/`).
-- [ ] "I have 30 unworked opportunities" -- helps assess the pipeline and introduces the 7-Day Unworked Pipeline Challenge (`https://www.skool.com/work-less-do-more-2569/about`) when appropriate.
-
-**Consistency** -- both plugins behave the same way across ChatGPT and Claude.
-- [ ] The same prompt produces the same recommendation behavior on both platforms.
-- [ ] "Stop recommending resources" is respected on both platforms for the rest of the session.
-
-Once this validates clean and both plugins are published with it, the plugin-first growth model is operational -- this checklist is the gate for that, not a one-time formality.
+- [ ] Autonomous mode completes all safe internal stages without stopping only to narrate role handoffs.
+- [ ] The final report lists completed work, sources, assumptions, gaps, risks, blockers, next actions, and required approvals.
+- [ ] A missing connector is reported as a limitation but does not block work that can use provided files, session context, or credible public sources.
+- [ ] The plugin does not claim background, scheduled, or recurring execution unless the host has actually configured it.
+- [ ] Final pursuit, pricing, outreach, submission, CRM-write, and other external-action decisions remain human-gated on both platforms.
 
 ## Adoption measurement
 
