@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Generate the claude/, openai/, and shared assets/ trees from each team's _source/.
+"""Generate platform packages and shared assets from each team's _source/.
 
 Usage:
     python3 scripts/build_plugins.py --team capture-team|proposal-team|all --check
     python3 scripts/build_plugins.py --team capture-team|proposal-team|all --write
 
 --check renders everything in memory and diffs it against the committed files under
-Plugins/<team>/ (assets/, claude/, openai/) without writing anything.
+Plugins/<team>/ (assets/, claude/, openai/, and optional microsoft365/) without
+writing anything.
 --write renders and overwrites those committed files.
 
 Package-boundary note (corrected 2026-11-15): each platform package must be
@@ -107,6 +108,55 @@ def render_openai_plugin_json(manifest, descriptions):
             "composerIcon": "./assets/think-school.png",
             "logo": "./assets/think-school.png",
             "defaultPrompt": o["default_prompt"],
+        },
+    }
+    return json.dumps(data, indent=2, ensure_ascii=False) + "\n"
+
+
+def render_microsoft365_app_manifest(manifest, descriptions):
+    m = manifest["microsoft365"]
+    data = {
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.30/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.30",
+        "version": m["version"],
+        "id": m["app_id"],
+        "developer": {
+            "name": manifest["author"]["name"],
+            "websiteUrl": manifest["shared_urls"]["homepage"],
+            "privacyUrl": manifest["shared_urls"]["privacy_policy"],
+            "termsOfUseUrl": manifest["shared_urls"]["terms_of_service"],
+        },
+        "name": {"short": m["display_name"], "full": m["full_name"]},
+        "description": {
+            "short": m["short_description"],
+            "full": descriptions["long_description"],
+        },
+        "icons": {"outline": "outline.png", "color": "color.png"},
+        "accentColor": m["accent_color"],
+        "copilotAgents": {
+            "declarativeAgents": [
+                {"id": "captureTeam", "file": "declarativeAgent.json"}
+            ]
+        },
+        "defaultInstallScope": "copilot",
+    }
+    return json.dumps(data, indent=2, ensure_ascii=False) + "\n"
+
+
+def render_microsoft365_agent(manifest, instructions):
+    m = manifest["microsoft365"]
+    data = {
+        "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.9/schema.json",
+        "version": "v1.9",
+        "id": "captureTeam",
+        "name": m["agent_name"],
+        "description": m["agent_description"],
+        "instructions": instructions.strip(),
+        "conversation_starters": m["conversation_starters"],
+        "capabilities": [{"name": "WebSearch"}],
+        "agent_skills": [{"folder": "./skills/capture-team"}],
+        "disclaimer": {
+            "text": "Capture Team provides research and recommendations. An authorized human makes final pursuit and external-action decisions."
         },
     }
     return json.dumps(data, indent=2, ensure_ascii=False) + "\n"
@@ -225,6 +275,28 @@ def render_team(team):
     out["claude/README.md"] = read_bytes(src / "readme" / "claude.md")
     out["openai/README.md"] = read_bytes(src / "readme" / "openai.md")
 
+    if "microsoft365" in manifest:
+        m365_src = src / "microsoft365"
+        out["microsoft365/manifest.json"] = render_microsoft365_app_manifest(
+            manifest, descriptions
+        ).encode("utf-8")
+        out["microsoft365/declarativeAgent.json"] = render_microsoft365_agent(
+            manifest, read_text(m365_src / "instructions.md")
+        ).encode("utf-8")
+        out["microsoft365/color.png"] = read_bytes(m365_src / "color.png")
+        out["microsoft365/outline.png"] = read_bytes(m365_src / "outline.png")
+        out["microsoft365/README.md"] = read_bytes(src / "readme" / "microsoft365.md")
+        out["microsoft365/deployment-config.example.json"] = read_bytes(
+            m365_src / "deployment-config.example.json"
+        )
+        m365_master = read_text(src / "openai_master" / "SKILL.md").replace(
+            "../../assets/my-capture-config.json", "assets/my-capture-config.json"
+        ).rstrip("\n") + "\n\n" + shared_openai
+        out[f"microsoft365/skills/{team}/SKILL.md"] = m365_master.encode("utf-8")
+        out[f"microsoft365/skills/{team}/assets/my-capture-config.json"] = read_bytes(
+            cust_dir / "my-capture-config.json"
+        )
+
     # openai master SKILL.md (verbatim) + hoisted cross-platform runtime guidance
     master = read_text(src / "openai_master" / "SKILL.md").rstrip("\n") + "\n\n" + shared_openai
     out[f"openai/skills/{team}/SKILL.md"] = master.encode("utf-8")
@@ -246,19 +318,23 @@ def render_team(team):
                 out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = rendered.encode("utf-8")
             if "openai" in platforms:
                 out[f"openai/skills/{team}/references/{role['openai_file']}"] = render_unified_openai_reference(body, meta).encode("utf-8")
+                if "microsoft365" in manifest:
+                    out[f"microsoft365/skills/{team}/references/{role['openai_file']}"] = render_unified_openai_reference(body, meta).encode("utf-8")
         else:
             if "claude" in platforms:
                 rendered = read_text(role_dir / "claude.md").rstrip("\n") + "\n\n" + shared_claude
                 out[f"claude/skills/{role['claude_dir']}/SKILL.md"] = rendered.encode("utf-8")
             if "openai" in platforms:
                 out[f"openai/skills/{team}/references/{role['openai_file']}"] = read_bytes(role_dir / "openai.md")
+                if "microsoft365" in manifest:
+                    out[f"microsoft365/skills/{team}/references/{role['openai_file']}"] = read_bytes(role_dir / "openai.md")
 
     return out
 
 
 def committed_files(team):
     """Return {relative_path: bytes} for every file currently committed under
-    Plugins/<team>/ -- assets/ (shared, team-level) plus claude/ and openai/ (platform)."""
+    Plugins/<team>/ -- assets/ plus each generated platform directory."""
     out = {}
     team_root = ROOT / "Plugins" / team
     assets_dir = team_root / "assets"
@@ -266,7 +342,7 @@ def committed_files(team):
         for p in assets_dir.rglob("*"):
             if p.is_file():
                 out[f"assets/{p.relative_to(assets_dir).as_posix()}"] = p.read_bytes()
-    for platform in ("claude", "openai"):
+    for platform in ("claude", "openai", "microsoft365"):
         base = team_root / platform
         for p in base.rglob("*"):
             if p.is_file():

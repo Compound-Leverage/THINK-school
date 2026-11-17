@@ -5,7 +5,7 @@
 | Area | Purpose |
 |---|---|
 | [Marketplaces](../Marketplaces/README.md) | Platform-specific marketplace entry points for Capture and Proposal |
-| [Plugins](../Plugins/README.md) | Claude and Codex execution packages |
+| [Plugins](../Plugins/README.md) | Claude, Codex, and Microsoft 365 Copilot packages |
 | [Skills](../Skills/README.md) | Standalone capabilities |
 | [Docs](README.md) | Supporting architecture, methodology, and service guides |
 
@@ -13,6 +13,7 @@
 
 - `Plugins/<team>/claude/`: Claude Code-native team packages.
 - `Plugins/<team>/openai/`: Codex-oriented execution packages; different skill structure.
+- `Plugins/capture-team/microsoft365/`: installable Microsoft 365 Copilot app package source.
 - `.claude-plugin/` and `.agents/plugins/`: platform-required marketplace manifests; do not relocate for cosmetic navigation.
 - `Skills/`: standalone reusable skills, separate from plugin-internal execution skills.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CI drift check: fail if committed Plugins/<team>/{claude,openai}/ output no longer
+"""CI drift check: fail if committed generated platform output no longer
 matches what build_plugins.py would generate from _source/.
 
 This is what actually prevents the "same field hand-edited in two plugin.json files"
@@ -18,13 +18,15 @@ def check_version_parity():
     ok = True
     for team in TEAMS:
         manifest = load_yaml(ROOT / "Plugins" / team / "_source" / "manifest.yaml")
-        claude_version = manifest["claude"]["version"]
-        openai_version = manifest["openai"]["version"]
-        if claude_version != openai_version:
+        platform_versions = {
+            platform: settings["version"]
+            for platform, settings in manifest.items()
+            if platform in {"claude", "openai", "microsoft365"}
+        }
+        if len(set(platform_versions.values())) != 1:
             print(
-                f"[{team}] ERROR: claude version ({claude_version}) and "
-                f"openai version ({openai_version}) differ. A release must carry one "
-                "version across both platform packages."
+                f"[{team}] ERROR: platform versions differ: {platform_versions}. "
+                "A release must carry one version across its platform packages."
             )
             ok = False
     return ok
@@ -39,7 +41,7 @@ def main():
         ok = False
     if not ok:
         print(
-            "\nDrift detected: committed Plugins/*/claude/ or Plugins/*/openai/ content "
+            "\nDrift detected: committed generated platform content "
             "does not match what build_plugins.py generates from _source/. Either someone "
             "hand-edited the shipped tree directly, or _source/ is out of date. Fix by "
             "editing _source/ and running `python3 scripts/build_plugins.py --write`, "
