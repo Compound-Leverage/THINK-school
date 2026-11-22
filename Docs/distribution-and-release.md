@@ -1,9 +1,9 @@
 # Distribution and release parity
 
 Each Managed Team ships as one functional release across its supported package shapes.
-Capture Team supports Claude, OpenAI, and Microsoft 365 Copilot. Proposal Team supports
-Claude and OpenAI. Platform syntax may differ, but a team's declared capabilities and
-version must match across its packages.
+Capture Team and Proposal Team both support Claude, OpenAI, and Microsoft 365 Copilot.
+Platform syntax may differ, but a team's declared capabilities and version must match
+across its packages.
 
 ## Build architecture
 
@@ -16,9 +16,11 @@ python3 scripts/check_build_drift.py
 python3 scripts/build_release_packages.py
 ```
 
-The generator writes `Plugins/<team>/claude/`, `Plugins/<team>/openai/`, and, for
-Capture Team, `Plugins/capture-team/microsoft365/`. Repository marketplaces install the
-Claude and OpenAI directories. `build_release_packages.py` archives the generated
+The generator writes `Plugins/<team>/claude/`, `Plugins/<team>/openai/`, and
+`Plugins/<team>/microsoft365/` for every team whose `_source/manifest.yaml` declares a
+`microsoft365` block (Capture Team and Proposal Team, currently). Repository
+marketplaces install the Claude and OpenAI directories. `build_release_packages.py`
+archives the generated
 directories for provider or tenant submission and writes `release-manifest.json` with
 the source commit and SHA-256 checksum of every archive. Do not hand-edit a
 generated package or build a provider upload from another directory.

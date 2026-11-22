@@ -13,7 +13,7 @@
 
 - `Plugins/<team>/claude/`: Claude Code-native team packages.
 - `Plugins/<team>/openai/`: Codex-oriented execution packages; different skill structure.
-- `Plugins/capture-team/microsoft365/`: installable Microsoft 365 Copilot app package source.
+- `Plugins/<team>/microsoft365/`: installable Microsoft 365 Copilot app package source (Capture Team and Proposal Team).
 - `.claude-plugin/` and `.agents/plugins/`: platform-required marketplace manifests; do not relocate for cosmetic navigation.
 - `Skills/`: standalone reusable skills, separate from plugin-internal execution skills.
 

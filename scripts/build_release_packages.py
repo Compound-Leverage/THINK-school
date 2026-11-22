@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TEAMS = ("capture-team", "proposal-team")
 PLATFORMS_BY_TEAM = {
     "capture-team": ("claude", "openai", "microsoft365"),
-    "proposal-team": ("claude", "openai"),
+    "proposal-team": ("claude", "openai", "microsoft365"),
 }
 
 

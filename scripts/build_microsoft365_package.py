@@ -3,6 +3,16 @@
 
 The public repository package stays organization-neutral. This builder injects only
 explicitly approved tenant scopes and writes the configured ZIP to an output directory.
+
+Capture Team only (2026-11-21): this builder's config schema (`active_pursuit_type`,
+the `capture_config` override allowlist) matches Capture Team's single
+`my-capture-config.json`. Proposal Team's organization-specific inputs are five
+separate files (company profile, pricing, case studies, brand guidelines, bid sizing)
+with no equivalent "active mode" selector, so deciding which of their fields are safe
+to expose as tenant overrides is a product decision, not a mechanical rename -- it is
+intentionally not done here. See Plugins/proposal-team/_source/readme/microsoft365.md.
+The generic, organization-neutral Microsoft 365 package for Proposal Team (built by
+build_plugins.py / build_release_packages.py) is unaffected by this limitation.
 """
 import argparse
 import json

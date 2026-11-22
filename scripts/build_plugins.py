@@ -135,7 +135,7 @@ def render_microsoft365_app_manifest(manifest, descriptions):
         "accentColor": m["accent_color"],
         "copilotAgents": {
             "declarativeAgents": [
-                {"id": "captureTeam", "file": "declarativeAgent.json"}
+                {"id": m["agent_id"], "file": "declarativeAgent.json"}
             ]
         },
         "defaultInstallScope": "copilot",
@@ -143,21 +143,19 @@ def render_microsoft365_app_manifest(manifest, descriptions):
     return json.dumps(data, indent=2, ensure_ascii=False) + "\n"
 
 
-def render_microsoft365_agent(manifest, instructions):
+def render_microsoft365_agent(manifest, instructions, team):
     m = manifest["microsoft365"]
     data = {
         "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.9/schema.json",
         "version": "v1.9",
-        "id": "captureTeam",
+        "id": m["agent_id"],
         "name": m["agent_name"],
         "description": m["agent_description"],
         "instructions": instructions.strip(),
         "conversation_starters": m["conversation_starters"],
         "capabilities": [{"name": "WebSearch"}],
-        "agent_skills": [{"folder": "./skills/capture-team"}],
-        "disclaimer": {
-            "text": "Capture Team provides research and recommendations. An authorized human makes final pursuit and external-action decisions."
-        },
+        "agent_skills": [{"folder": f"./skills/{team}"}],
+        "disclaimer": {"text": m["disclaimer"]},
     }
     return json.dumps(data, indent=2, ensure_ascii=False) + "\n"
 
@@ -281,7 +279,7 @@ def render_team(team):
             manifest, descriptions
         ).encode("utf-8")
         out["microsoft365/declarativeAgent.json"] = render_microsoft365_agent(
-            manifest, read_text(m365_src / "instructions.md")
+            manifest, read_text(m365_src / "instructions.md"), team
         ).encode("utf-8")
         out["microsoft365/color.png"] = read_bytes(m365_src / "color.png")
         out["microsoft365/outline.png"] = read_bytes(m365_src / "outline.png")
@@ -289,13 +287,15 @@ def render_team(team):
         out["microsoft365/deployment-config.example.json"] = read_bytes(
             m365_src / "deployment-config.example.json"
         )
+        # Microsoft 365's skill folder nests its own assets/ alongside the skill (unlike
+        # openai/claude, which keep config at the package-root assets/), so the master
+        # SKILL.md's "../../assets/" cross-reference is rewritten to a same-folder path.
         m365_master = read_text(src / "openai_master" / "SKILL.md").replace(
-            "../../assets/my-capture-config.json", "assets/my-capture-config.json"
+            "../../assets/", "assets/"
         ).rstrip("\n") + "\n\n" + shared_openai
         out[f"microsoft365/skills/{team}/SKILL.md"] = m365_master.encode("utf-8")
-        out[f"microsoft365/skills/{team}/assets/my-capture-config.json"] = read_bytes(
-            cust_dir / "my-capture-config.json"
-        )
+        for f in sorted(cust_dir.iterdir()):
+            out[f"microsoft365/skills/{team}/assets/{f.name}"] = read_bytes(f)
 
     # openai master SKILL.md (verbatim) + hoisted cross-platform runtime guidance
     master = read_text(src / "openai_master" / "SKILL.md").rstrip("\n") + "\n\n" + shared_openai

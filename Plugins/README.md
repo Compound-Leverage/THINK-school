@@ -5,7 +5,7 @@ The [public marketplaces](../Marketplaces/README.md) contain two independently i
 | Team | Work stages | Claude Code | OpenAI (Codex) | Microsoft 365 Copilot |
 |---|---|---|---|---|
 | [Capture Team](capture-team/claude/) | Find, Qualify, Research, Capture | `Plugins/capture-team/claude/` | [`Plugins/capture-team/openai/`](capture-team/openai/) | [`Plugins/capture-team/microsoft365/`](capture-team/microsoft365/) |
-| [Proposal Team](proposal-team/claude/) | Respond, Review | `Plugins/proposal-team/claude/` | [`Plugins/proposal-team/openai/`](proposal-team/openai/) | Not packaged |
+| [Proposal Team](proposal-team/claude/) | Respond, Review | `Plugins/proposal-team/claude/` | [`Plugins/proposal-team/openai/`](proposal-team/openai/) | [`Plugins/proposal-team/microsoft365/`](proposal-team/microsoft365/) |
 
 The six stages describe the **learning and work lifecycle**, not a claim that every stage has a dedicated built-in Digital Employee or integration. Check each plugin's actual supported capabilities and configure your own organization inputs.
 
@@ -35,11 +35,11 @@ The repository's Codex marketplace manifest uses [`.agents/plugins/marketplace.j
 
 ### Microsoft 365 Copilot
 
-Capture Team ships as an installable Microsoft 365 app package containing a
-declarative agent and Agent Skill. Build the ZIP with
+Capture Team and Proposal Team each ship as an installable Microsoft 365 app package
+containing a declarative agent and Agent Skill. Build the ZIPs with
 `python3 scripts/build_release_packages.py`, then follow the
 [Microsoft 365 installation and governance guide](../Docs/microsoft365-copilot.md).
-Creating the ZIP does not upload, publish, approve, assign, or install it in a tenant.
+Creating a ZIP does not upload, publish, approve, assign, or install it in a tenant.
 
 ## Quickstarts and quality checks
 
