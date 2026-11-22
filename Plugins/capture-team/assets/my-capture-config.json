@@ -1,6 +1,42 @@
 {
-  "_instructions": "REQUIRED: Configure your capability map, qualification criteria, CRM database IDs, enrichment provider, and delivery destination for Capture Team (Chet, Kipp, Ben). 'qualification_profiles' below covers any pursuit-qualification type -- business-development ICP, GovCon eligibility/capability alignment, or grant eligibility/program alignment -- just set profile_type and fill in the criteria for whichever applies to you. Deadlines are a first-class signal throughout, not an afterthought. Notion and Google Drive fields below are illustrative -- rename/restructure to match whatever CRM and storage you actually use. Update whenever your capture process changes.",
+  "_instructions": "REQUIRED: Configure the named organization, active pursuit type, capability map, qualification criteria, CRM database IDs, enrichment provider, and delivery destination for Capture Team (Chet, Kipp, Ben). 'qualification_profiles' covers business-development ICP, GovCon eligibility/capability alignment, grant eligibility/program alignment, and membership-development fit. Deadlines are a first-class signal throughout, not an afterthought. Notion and Google Drive fields are illustrative -- rename or restructure them to match the CRM and storage you actually use. Update whenever your capture process changes.",
   "_last_updated": "[DATE YOU LAST UPDATED THIS FILE]",
+
+  "organization": {
+    "name": "[ORGANIZATION NAME]",
+    "business_owner": "[AUTHORIZED BUSINESS OWNER]"
+  },
+
+  "pursuit_types": {
+    "_instructions": "Select one active pursuit type for an assignment. Add organization-specific types without changing the shared Find -> Qualify -> Research -> Capture workflow.",
+    "active": "[business_development | govcon | grant_funding | membership_development]",
+    "available": [
+      {
+        "id": "business_development",
+        "label": "Business development",
+        "candidate_noun": "prospect",
+        "deliverable": "Capture Brief"
+      },
+      {
+        "id": "govcon",
+        "label": "Government contracting",
+        "candidate_noun": "opportunity",
+        "deliverable": "Capture Brief"
+      },
+      {
+        "id": "grant_funding",
+        "label": "Grant and funding",
+        "candidate_noun": "funding opportunity",
+        "deliverable": "Capture Brief"
+      },
+      {
+        "id": "membership_development",
+        "label": "Membership development",
+        "candidate_noun": "prospective member or membership progression opportunity",
+        "deliverable": "Membership Development Briefing"
+      }
+    ]
+  },
 
   "capability_map": {
     "_instructions": "One entry per placement-capable capability, for Chet's cluster discovery.",
@@ -23,7 +59,7 @@
   "qualification_profiles": [
     {
       "profile_id": "[PROFILE-1]",
-      "profile_type": "[business_development | govcon | grant_funding]",
+      "profile_type": "[business_development | govcon | grant_funding | membership_development]",
       "label": "[e.g. 'Government contractor, 10-200 employees' -- or a grant/funding profile like 'Community nonprofit, education programs', or a GovCon profile like 'Set-aside eligible, NAICS 541611']",
       "org_types": ["[TYPE 1]", "[TYPE 2]"],
       "size_range": "[e.g. 10-200 employees or a revenue range -- leave blank if not applicable to this profile type]",

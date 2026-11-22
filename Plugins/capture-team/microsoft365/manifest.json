@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.30/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.30",
+  "version": "1.4.0",
+  "id": "9b02e575-2775-4ef4-a5a1-b1d5ee247041",
+  "developer": {
+    "name": "Compound Leverage",
+    "websiteUrl": "https://www.compoundleverage.com/",
+    "privacyUrl": "https://www.compoundleverage.com/privacy/",
+    "termsOfUseUrl": "https://www.compoundleverage.com/terms/"
+  },
+  "name": {
+    "short": "Capture Team",
+    "full": "Managed Team for Capture Work"
+  },
+  "description": {
+    "short": "Find, qualify, research, and brief pursuits",
+    "full": "A Managed Team that finds, qualifies, researches, and helps you pursue opportunities, delivering the opportunity work your team otherwise would not have time to complete.\n\nIt searches for relevant government contracts, grants and funding, and business development opportunities, determines fit against your criteria, reviews opportunity documents and requirements, and organizes the research, reporting, and next actions needed to keep selected pursuits moving.\n\nRun the work autonomously or direct it step by step. Receive completed research, qualification, pursuit-support work, reporting, recommendations, and next actions. You retain the final pursuit and external-action decisions. Bring your own organizational criteria, CRM, enrichment tools, opportunity sources, and document storage. Nothing is pre-wired to a specific vendor."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#6944BA",
+  "copilotAgents": {
+    "declarativeAgents": [
+      {
+        "id": "captureTeam",
+        "file": "declarativeAgent.json"
+      }
+    ]
+  },
+  "defaultInstallScope": "copilot"
+}

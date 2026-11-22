@@ -1,0 +1,29 @@
+{
+  "organization": {
+    "name": "[CUSTOMER ORGANIZATION]",
+    "owner": "[BUSINESS OWNER]",
+    "support_contact": "[SUPPORT CONTACT]"
+  },
+  "agent": {
+    "short_name": "Proposal Team",
+    "name": "Managed Team for Proposal Work",
+    "description": "Assesses opportunities, responds to solicitations, and reviews proposals for human review."
+  },
+  "knowledge": {
+    "sharepoint_urls": [
+      "[APPROVED SHAREPOINT SITE OR FOLDER URL]"
+    ],
+    "teams_urls": [],
+    "email": {
+      "enabled": false,
+      "shared_mailbox": "",
+      "group_mailboxes": [],
+      "folders": []
+    },
+    "people": {
+      "enabled": false,
+      "include_related_content": false
+    },
+    "web_search": true
+  }
+}

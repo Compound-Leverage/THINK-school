@@ -122,6 +122,14 @@ for team in ("capture-team", "proposal-team"):
     require(claude_version == openai_version,
             f"{team}: Claude version {claude_version!r} != OpenAI version {openai_version!r}")
 
+    manifest_source = yaml.safe_load(
+        (ROOT / "Plugins" / team / "_source" / "manifest.yaml").read_text(encoding="utf-8")
+    )
+    if "microsoft365" in manifest_source:
+        microsoft365_version = manifest_source["microsoft365"].get("version")
+        require(microsoft365_version == claude_version,
+                f"{team}: Microsoft 365 version {microsoft365_version!r} != Claude/OpenAI {claude_version!r}")
+
     contract_path = ROOT / "Plugins" / team / "_source" / "capabilities.yaml"
     try:
         contract = yaml.safe_load(contract_path.read_text(encoding="utf-8"))
@@ -133,7 +141,10 @@ for team in ("capture-team", "proposal-team"):
     require(len(ids) == len(set(ids)) and all(ids), f"{contract_path}: capability ids must be unique")
     for capability in capabilities:
         capability_id = capability.get("id", "<missing>")
-        for platform in ("claude", "openai"):
+        platforms = ["claude", "openai"]
+        if (ROOT / "Plugins" / team / "microsoft365").is_dir():
+            platforms.append("microsoft365")
+        for platform in platforms:
             evidence = capability.get(platform, {})
             rel = evidence.get("path", "") if isinstance(evidence, dict) else ""
             marker = evidence.get("marker", "") if isinstance(evidence, dict) else ""
@@ -145,6 +156,45 @@ for team in ("capture-team", "proposal-team"):
                         f"{target}: missing {capability_id} marker {marker!r}")
             else:
                 require(False, f"{target}: missing capability evidence file")
+
+# Microsoft 365 Copilot is an app package: manifest and referenced agent/skill files
+# must stay inside the package, icons must have exact dimensions (checked by PNG IHDR),
+# and the generic public package must not request write-capable email access.
+import struct
+def png_size(path):
+    with path.open("rb") as stream:
+        header = stream.read(24)
+    require(header[:8] == b"\x89PNG\r\n\x1a\n", f"{path}: not a PNG")
+    return struct.unpack(">II", header[16:24])
+
+for team in ("capture-team", "proposal-team"):
+    m365 = ROOT / "Plugins" / team / "microsoft365"
+    if not m365.is_dir():
+        continue
+    try:
+        app = json.loads((m365 / "manifest.json").read_text(encoding="utf-8"))
+        agent = json.loads((m365 / "declarativeAgent.json").read_text(encoding="utf-8"))
+        require(app.get("manifestVersion") == "1.30", f"{team}: Microsoft 365 app manifest must use 1.30")
+        require(agent.get("version") == "v1.9", f"{team}: Microsoft 365 declarative agent must use v1.9")
+        agent_ref = app["copilotAgents"]["declarativeAgents"][0]
+        require(agent_ref.get("file") == "declarativeAgent.json", f"{team}: Microsoft 365 agent reference mismatch")
+        skill_refs = agent.get("agent_skills", [])
+        require(0 < len(skill_refs) <= 8, f"{team}: Microsoft 365 agent must reference 1-8 skills")
+        for skill_ref in skill_refs:
+            folder = skill_ref.get("folder", "")
+            require(folder.startswith("./") and ".." not in Path(folder).parts,
+                    f"{team}: Microsoft 365 unsafe skill path: {folder}")
+            require((m365 / folder / "SKILL.md").is_file(),
+                    f"{team}: Microsoft 365 missing skill: {folder}/SKILL.md")
+        require(len(agent.get("instructions", "")) <= 8000,
+                f"{team}: Microsoft 365 instructions exceed 8,000 characters")
+        capability_names = {item.get("name") for item in agent.get("capabilities", [])}
+        require("EmailActions" not in capability_names,
+                f"{team}: generic Microsoft 365 package must not enable EmailActions")
+        require(png_size(m365 / "color.png") == (192, 192), f"{team}: Microsoft 365 color icon must be 192x192")
+        require(png_size(m365 / "outline.png") == (32, 32), f"{team}: Microsoft 365 outline icon must be 32x32")
+    except (OSError, ValueError, KeyError, TypeError, IndexError) as exc:
+        errors.append(f"{team}: Microsoft 365 package invalid: {exc}")
 
 try:
     claude_marketplace_version = json.loads(
@@ -164,6 +214,7 @@ docs = [
     "Docs/repo-map.md", "Docs/quickstart-capture.md",
     "Docs/quickstart-proposal.md", "Docs/plugin-validation.md",
     "Docs/distribution-and-release.md",
+    "Docs/microsoft365-copilot.md",
     "Docs/samples/capture-brief.md", "Docs/samples/proposal-discovery-brief.md",
 ]
 pattern = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")

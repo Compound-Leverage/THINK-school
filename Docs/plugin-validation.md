@@ -11,8 +11,10 @@ This checklist is a **manual test protocol**, not a claim that installations hav
 - [ ] No plugin silently assumes the publisher's organization is the user's client.
 - [ ] Historical content is not required from the `legacy-archive` branch.
 - [ ] `python3 scripts/check_build_drift.py` reports zero generated-file drift and no version drift.
-- [ ] `python3 scripts/validate_release.py` confirms every capability contract entry on both platforms.
-- [ ] `python3 scripts/build_release_packages.py` produces four archives and a checksum manifest from one commit.
+- [ ] `python3 scripts/validate_release.py` confirms every capability contract entry on every supported platform.
+- [ ] `python3 scripts/build_release_packages.py` produces six archives and a checksum manifest from one commit.
+- [ ] Each Microsoft 365 ZIP (Capture Team and Proposal Team) has `manifest.json` at the archive root, passes Microsoft validation, and remains under 10 MB.
+- [ ] A customer-configured Microsoft 365 package contains only approved source scopes and no `EmailActions` capability.
 
 ## OpenAI submission zip boundary
 
@@ -58,22 +60,24 @@ team-level compatibility `assets/` directory outside the released plugin root.
 - [ ] OpenAI direct: install or load each OpenAI package in a supported clean client and confirm the team skill is available.
 - [ ] OpenAI repo marketplace: add a clean marketplace source, install Capture Team, and run the fictional first assignment.
 - [ ] Codex: install Proposal Team, verify the research gate and role references.
-- [ ] For both Capture installs, request autonomous execution and confirm a decision-ready report is returned without claiming background or scheduled work.
-- [ ] For both Proposal installs, request autonomous execution and confirm internal phases can continue while final pursuit, pricing, outreach, and submission decisions remain human-gated.
+- [ ] Microsoft 365: upload the exact Capture Team and Proposal Team ZIPs to a development or test tenant and verify each declarative agent and packaged skill load.
+- [ ] Microsoft 365: verify an authorized user can access only approved sources and an unauthorized user cannot retrieve them.
+- [ ] For every Capture install, request autonomous execution and confirm a decision-ready report is returned without claiming background or scheduled work.
+- [ ] For every Proposal install, request autonomous execution and confirm internal phases can continue while final pursuit, pricing, outreach, and submission decisions remain human-gated.
 - [ ] Verify no outbound messages, CRM writes, or invented citations occur without explicit authorization.
 - [ ] Record client version, install steps, failures, screenshots/logs, and date.
 
 ## Autonomous reporting acceptance criteria
 
 The shared `Plugins/_shared/autonomous-reporting.md` contract is generated into both
-teams on both platforms. Automated checks prove the instructions are packaged; live
+teams on every supported platform. Automated checks prove the instructions are packaged; live
 tests prove the host actually invokes them.
 
 - [ ] Autonomous mode completes all safe internal stages without stopping only to narrate role handoffs.
 - [ ] The final report lists completed work, sources, assumptions, gaps, risks, blockers, next actions, and required approvals.
 - [ ] A missing connector is reported as a limitation but does not block work that can use provided files, session context, or credible public sources.
 - [ ] The plugin does not claim background, scheduled, or recurring execution unless the host has actually configured it.
-- [ ] Final pursuit, pricing, outreach, submission, CRM-write, and other external-action decisions remain human-gated on both platforms.
+- [ ] Final pursuit, pricing, outreach, submission, CRM-write, and other external-action decisions remain human-gated on every platform.
 
 ## Adoption measurement
 

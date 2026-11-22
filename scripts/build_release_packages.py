@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build one versioned, checksum-pinned release bundle for both platforms.
+"""Build versioned, checksum-pinned release bundles for supported platforms.
 
 Every archive is copied from the committed generated package directory used by the
 repository marketplace. The same bytes therefore back direct installs and provider
@@ -19,7 +19,10 @@ from build_plugins import render_team
 
 ROOT = Path(__file__).resolve().parents[1]
 TEAMS = ("capture-team", "proposal-team")
-PLATFORMS = ("claude", "openai")
+PLATFORMS_BY_TEAM = {
+    "capture-team": ("claude", "openai", "microsoft365"),
+    "proposal-team": ("claude", "openai", "microsoft365"),
+}
 
 
 def sha256(path):
@@ -42,7 +45,7 @@ def team_version(team):
     manifest = yaml.safe_load(
         (ROOT / "Plugins" / team / "_source" / "manifest.yaml").read_text(encoding="utf-8")
     )
-    versions = {manifest[platform]["version"] for platform in PLATFORMS}
+    versions = {manifest[platform]["version"] for platform in PLATFORMS_BY_TEAM[team]}
     if len(versions) != 1:
         raise ValueError(f"{team}: platform versions differ: {sorted(versions)}")
     return versions.pop()
@@ -70,7 +73,10 @@ def build_archive(team, platform, version, output_dir):
             f"{package}: generated-package drift; missing={missing}, "
             f"extra={extra}, changed={changed}"
         )
-    metadata = package / (".claude-plugin/plugin.json" if platform == "claude" else ".codex-plugin/plugin.json")
+    if platform == "microsoft365":
+        metadata = package / "manifest.json"
+    else:
+        metadata = package / (".claude-plugin/plugin.json" if platform == "claude" else ".codex-plugin/plugin.json")
     details = json.loads(metadata.read_text(encoding="utf-8"))
     if details.get("version") != version:
         raise ValueError(f"{metadata}: expected version {version}")
@@ -84,12 +90,15 @@ def build_archive(team, platform, version, output_dir):
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as bundle:
         for item in sorted(package.rglob("*")):
             if item.is_file():
-                bundle.write(item, Path(team) / item.relative_to(package))
+                archive_path = item.relative_to(package)
+                if platform != "microsoft365":
+                    archive_path = Path(team) / archive_path
+                bundle.write(item, archive_path)
 
     with tempfile.TemporaryDirectory() as temp_dir:
         with zipfile.ZipFile(archive) as bundle:
             bundle.extractall(temp_dir)
-        extracted = Path(temp_dir) / team
+        extracted = Path(temp_dir) if platform == "microsoft365" else Path(temp_dir) / team
         original_files = {
             p.relative_to(package): sha256(p) for p in package.rglob("*") if p.is_file()
         }
@@ -111,7 +120,7 @@ def main():
 
     records = []
     for team in TEAMS:
-        for platform in PLATFORMS:
+        for platform in PLATFORMS_BY_TEAM[team]:
             archive = build_archive(team, platform, versions[team], args.output_dir)
             records.append({
                 "team": team,

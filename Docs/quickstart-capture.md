@@ -1,6 +1,6 @@
 # Capture Team — first assignment (about one minute to start)
 
-**Install:** Choose [Claude Code](../.claude-plugin/README.md) or [OpenAI Codex](../.agents/README.md). Installation differs by client; follow the platform instructions and confirm the plugin appears before proceeding.
+**Install:** Choose [Claude Code](../.claude-plugin/README.md), [OpenAI Codex](../.agents/README.md), or [Microsoft 365 Copilot](microsoft365-copilot.md). Installation differs by client; follow the platform instructions and confirm the plugin appears before proceeding.
 
 **Configure:** Identify the organization explicitly. For OpenAI Codex, fill in the placeholders in [my-capture-config.json](../Plugins/capture-team/assets/my-capture-config.json) with your own capability and qualification criteria. Provide authorized sources and integrations only when available.
 

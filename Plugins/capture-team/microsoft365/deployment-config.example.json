@@ -1,0 +1,30 @@
+{
+  "organization": {
+    "name": "[CUSTOMER ORGANIZATION]",
+    "owner": "[BUSINESS OWNER]",
+    "support_contact": "[SUPPORT CONTACT]"
+  },
+  "active_pursuit_type": "membership_development",
+  "agent": {
+    "short_name": "Membership Development",
+    "name": "Managed Team for Membership Development",
+    "description": "Finds, qualifies, researches, and briefs membership development opportunities for human review."
+  },
+  "knowledge": {
+    "sharepoint_urls": [
+      "[APPROVED SHAREPOINT SITE OR FOLDER URL]"
+    ],
+    "teams_urls": [],
+    "email": {
+      "enabled": false,
+      "shared_mailbox": "",
+      "group_mailboxes": [],
+      "folders": []
+    },
+    "people": {
+      "enabled": false,
+      "include_related_content": false
+    },
+    "web_search": true
+  }
+}

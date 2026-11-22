@@ -7,11 +7,17 @@ capabilities:
     openai:
       path: skills/proposal-team/SKILL.md
       marker: "## Workflow"
+    microsoft365:
+      path: skills/proposal-team/SKILL.md
+      marker: "## Workflow"
   - id: autonomous-reporting
     claude:
       path: skills/proposal-engine-lead-maya/SKILL.md
       marker: "## Autonomous reporting contract"
     openai:
+      path: skills/proposal-team/SKILL.md
+      marker: "## Autonomous reporting contract"
+    microsoft365:
       path: skills/proposal-team/SKILL.md
       marker: "## Autonomous reporting contract"
   - id: compliance-reporting
@@ -21,10 +27,16 @@ capabilities:
     openai:
       path: skills/proposal-team/references/diego.md
       marker: "## Output: QA Report"
+    microsoft365:
+      path: skills/proposal-team/references/diego.md
+      marker: "## Output: QA Report"
   - id: human-approval-gate
     claude:
       path: skills/proposal-engine-lead-maya/SKILL.md
       marker: "Never skip a decision gate"
     openai:
+      path: skills/proposal-team/SKILL.md
+      marker: "required human decisions cannot be bypassed"
+    microsoft365:
       path: skills/proposal-team/SKILL.md
       marker: "required human decisions cannot be bypassed"

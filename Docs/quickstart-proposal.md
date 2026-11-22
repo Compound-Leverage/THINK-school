@@ -1,6 +1,6 @@
 # Proposal Team — first assignment (about one minute to start)
 
-**Install:** Choose [Claude Code](../.claude-plugin/README.md) or [OpenAI Codex](../.agents/README.md). Confirm installation in your environment.
+**Install:** Choose [Claude Code](../.claude-plugin/README.md), [OpenAI Codex](../.agents/README.md), or [Microsoft 365 Copilot](microsoft365-copilot.md). Installation differs by client; follow the platform instructions and confirm the plugin appears before proceeding.
 
 **Configure:** Name the bidding organization and provide its actual capabilities, proposal criteria, and authorized materials when working on a real bid. OpenAI Codex includes placeholder configuration assets in [the proposal skill](../Plugins/proposal-team/assets/); placeholders are not real company data.
 
