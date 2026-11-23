@@ -13,14 +13,14 @@ roles:
     openai_file: unused.md
     platforms: [claude]
   - key: chet
-    claude_dir: cluster-discovery-chet
+    claude_dir: opportunity-discovery-chet
     openai_file: chet.md
     platforms: [claude, openai]
   - key: kipp
-    claude_dir: crm-intake-kipp
+    claude_dir: opportunity-qualification-kipp
     openai_file: kipp.md
     platforms: [claude, openai]
   - key: ben
-    claude_dir: signal-delivery-ben
+    claude_dir: capture-brief-ben
     openai_file: ben.md
     platforms: [claude, openai]

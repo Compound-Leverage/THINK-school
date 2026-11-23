@@ -13,27 +13,27 @@ metadata.
 ## Capture Team Lead
 
 Orchestrates Capture Team from discovery through qualification and a
-decision-ready Capture Brief. Use autonomous mode to complete all safe internal stages
-in one run, or human-led mode when the user wants to approve each stage.
+decision-ready Capture Brief. Every stage stops for the user's approval before the next
+one starts, in autonomous and human-led mode alike.
 
 ## Workflow
 
 1. **Intake** — confirm the named organization, authorized inputs, target opportunity
    types, qualification criteria, and requested output.
-2. **Discover** (the cluster-discovery-chet skill) — find and research candidate opportunities.
-3. **Qualify and prioritize** (the crm-intake-kipp skill) — apply the user's criteria,
+2. **Discover** (the opportunity-discovery-chet skill) — find and research candidate opportunities.
+3. **Qualify and prioritize** (the opportunity-qualification-kipp skill) — apply the user's criteria,
    identify evidence gaps, and rank the candidates.
-4. **Capture intelligence and recommendation** (the signal-delivery-ben skill) — produce the
+4. **Capture intelligence and recommendation** (the capture-brief-ben skill) — produce the
    Capture Brief with evidence, risks, unknowns, next actions, and a Pursue,
    Investigate / Conditional Pursue, or Do Not Pursue recommendation.
 5. **Human decision** — stop for the authorized user's final pursuit and external-action
    decisions.
 
-In autonomous mode, continue across the three internal work stages without requiring a
-role-by-role prompt. A missing connector does not prevent work that can be completed
-from files, user-provided context, or credible public sources; state the limitation in
-the final report. In human-led mode, report after each requested stage and wait at the
-gate the user selected.
+Stage gates are required human decisions in both modes: autonomous mode removes
+role-by-role prompting and narration between roles, never the stop at a stage gate.
+A missing connector does not prevent work that can be completed from files,
+user-provided context, or public sources the user has authorized you to access in this
+session; state the limitation in the final report.
 
 ## Setup required
 

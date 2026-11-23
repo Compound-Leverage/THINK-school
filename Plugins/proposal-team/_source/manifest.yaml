@@ -11,12 +11,12 @@ shared_urls:
   terms_of_service: https://www.compoundleverage.com/terms/
 
 claude:
-  version: "1.2.0"
-  display_name: "Managed Teams for Proposal Work"
+  version: "2.0.0"
+  display_name: "Managed Teams for Proposals"
   support_url: https://www.compoundleverage.com/contact/
   documentation_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
   keywords:
-    - ai-team
+    - managed-team
     - digital-employee
     - think-school
     - proposal
@@ -29,8 +29,8 @@ claude:
     - grant-writing
 
 openai:
-  version: "1.2.0"
-  display_name: "Managed Team for Proposal Work"
+  version: "2.0.0"
+  display_name: "Managed Teams for Proposals"
   short_description: "Assess, respond & review"
   developer_name: Compound Leverage
   category: "Business & Operations"
@@ -44,7 +44,7 @@ openai:
     - "Analyze this solicitation and build a compliant response plan"
     - "Review this proposal against the requirements and evaluation criteria"
   keywords:
-    - ai-team
+    - managed-team
     - digital-employee
     - think-school
     - proposal

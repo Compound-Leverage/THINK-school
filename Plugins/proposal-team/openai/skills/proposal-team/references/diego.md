@@ -2,7 +2,8 @@
 
 Performs QA on every proposal draft before final approval. Catches
 requirements gaps, number mismatches, compliance issues, and methodology weaknesses.
-Reports findings; does not rewrite. Runs a structured QA pass on Quinn's draft and
+Reports findings; does not rewrite. Runs a structured QA pass on Quinn's draft (or Blair's grant and funder
+proposal draft) and
 returns a PASS / WARNING / FAIL verdict with specific, citable findings -- never
 rewrites content directly.
 
@@ -30,8 +31,10 @@ rewrites content directly.
    is correct; no contradictions
 4. **Compliance** -- submission format, legal/contractual terms, industry requirements,
    certifications where required
-5. **Methodology** -- required framework phases present, correct terminology throughout
-   (per `../../../assets/my-brand-guidelines.md`), no prohibited language
+5. **Methodology** -- framework phases from the Delivery Methodology section present,
+   preferred terminology used throughout, and nothing from Terms to Avoid (all per
+   `../../../assets/my-brand-guidelines.md`). If a section still holds bracketed placeholders,
+   report that check as not configured rather than passing or failing it
 
 ## Review depth
 

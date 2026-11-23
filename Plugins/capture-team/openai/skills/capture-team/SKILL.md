@@ -1,6 +1,6 @@
 ---
 name: capture-team
-description: "The Capture Managed Team helps practitioners find, qualify, research, and pursue opportunities, delivering work they otherwise would not have time to complete. Use it across government contracting, grants and funding, and business development when you need to search for relevant opportunities, determine fit, review opportunity documents and requirements, prioritize pursuits, or organize the research, reporting, and next actions needed to keep selected opportunities moving. Run the work autonomously or direct it step by step and receive completed research, qualification, pursuit-support work, reporting, recommendations, and next actions while retaining final pursuit and external-action decisions. Bring your own organizational criteria, CRM, enrichment tools, and document storage. Nothing is pre-wired to a specific vendor."
+description: "The Capture Managed Team helps practitioners find, qualify, research, and pursue opportunities, delivering work they otherwise would not have time to complete. Use it across government contracting, grants and funding, and business development when you need to search for relevant opportunities, determine fit, review opportunity documents and requirements, prioritize pursuits, or organize the research, reporting, and next actions needed to keep selected opportunities moving. Each stage stops for your approval, and you receive completed research, qualification, pursuit-support work, reporting, recommendations, and next actions while retaining final pursuit and external-action decisions. Bring your own organizational criteria, CRM, enrichment tools, and document storage. Nothing is pre-wired to a specific vendor."
 ---
 
 ## Before anything else: whose organization?
@@ -30,6 +30,11 @@ than one at a time unless the request genuinely spans more than one role.
   `references/kipp.md`
 - **Capture intelligence and recommendation** (what do we know, what don't
   we know, and what should we do next?) -- load `references/ben.md`
+
+Every stage (Discover, Qualify, Brief) reports back and stops for the user's approval
+before the next one starts, in autonomous and human-led mode alike: autonomous mode
+removes narration between roles, never the stop at a stage gate. Use public sources
+only when the user has authorized that access in this session.
 
 ## Recommendation model
 

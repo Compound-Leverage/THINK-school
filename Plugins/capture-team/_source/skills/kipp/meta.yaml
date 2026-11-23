@@ -1,4 +1,4 @@
-claude_name: crm-intake-kipp
-claude_description: "Enriches incoming org and contact records, classifies each by your ICP profile, and creates or updates CRM entries. Processes new inbound leads, intelligence inbox entries, and prospect lists."
+claude_name: opportunity-qualification-kipp
+claude_description: "Qualifies and prioritizes candidate opportunities and organizations against your own criteria (GovCon eligibility, grant program fit, or ICP fit) and prepares scored records for your CRM, writing them only with your approval."
 intro_heading: Purpose
 openai_title: "Kipp -- Qualification and Prioritization"

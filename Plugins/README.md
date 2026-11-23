@@ -41,8 +41,8 @@ The repository's Codex marketplace manifest uses [`.agents/plugins/marketplace.j
 
 Begin with the [quickstart](../Docs/quickstart-capture.md) for your team. Provide authorized organization-specific inputs and approve the deliverable at each relevant gate.
 
-- **Capture Team:** Chet (cluster discovery), Kipp (CRM intake), Ben (signal delivery).
-- **Proposal Team:** Maya (orchestration), Chase (research), Priya (assessment), Porter (strategy), Quinn (writing), Diego (QA), Blair (funder pitch development).
+- **Capture Team:** Chet (opportunity discovery), Kipp (qualification and prioritization), Ben (Capture Brief and recommendation).
+- **Proposal Team:** Maya (orchestration), Chase (research), Priya (assessment), Porter (strategy), Quinn (writing), Diego (QA), Blair (grant and funder proposals).
 
 ## Preserved source packages
 

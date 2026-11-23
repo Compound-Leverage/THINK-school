@@ -28,3 +28,10 @@ capabilities:
     openai:
       path: skills/capture-team/SKILL.md
       marker: "makes the final pursuit call"
+  - id: stage-gate-every-mode
+    claude:
+      path: skills/capture-team/SKILL.md
+      marker: "never the stop at a stage gate"
+    openai:
+      path: skills/capture-team/SKILL.md
+      marker: "never the stop at a stage gate"

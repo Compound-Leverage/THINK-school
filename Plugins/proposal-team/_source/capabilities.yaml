@@ -28,3 +28,31 @@ capabilities:
     openai:
       path: skills/proposal-team/SKILL.md
       marker: "required human decisions cannot be bypassed"
+  - id: phase-gate-every-mode
+    claude:
+      path: skills/proposal-engine-lead-maya/SKILL.md
+      marker: "never the stop at a phase gate"
+    openai:
+      path: skills/proposal-team/references/maya.md
+      marker: "never the stop at a phase gate"
+  - id: grant-track-routing
+    claude:
+      path: skills/proposal-engine-lead-maya/SKILL.md
+      marker: "After a Go, route to `grant-proposal-blair`"
+    openai:
+      path: skills/proposal-team/references/maya.md
+      marker: "After a Go, route to `references/blair.md`"
+  - id: grant-track-qa
+    claude:
+      path: skills/grant-proposal-blair/SKILL.md
+      marker: "## QA before approval"
+    openai:
+      path: skills/proposal-team/references/blair.md
+      marker: "## QA before approval"
+  - id: grant-track-go-no-go
+    claude:
+      path: skills/grant-proposal-blair/SKILL.md
+      marker: "Blair starts only after Chase's Go/No-Go Discovery Brief"
+    openai:
+      path: skills/proposal-team/references/blair.md
+      marker: "Blair starts only after Chase's Go/No-Go Discovery Brief"

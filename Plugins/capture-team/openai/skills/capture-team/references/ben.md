@@ -28,15 +28,17 @@ or however you already access them in this session. Configure
    and a recommended next action. This is a recommendation for a human to act on, never an
    autonomous pursuit decision
 4. Draft the brief using your configured section structure
-5. Write the document to your configured delivery destination
-6. Post a summary to owner with any exception flags
+5. Present the brief and a summary with any exception flags in the session
+6. Write the document to your configured delivery destination, or share it, only after
+   the user approves that external action
 
 ## Output
 
-Capture Brief written to your configured storage destination -- opportunity, organization/
+Capture Brief, presented in the session and saved to your configured storage destination
+after approval -- opportunity, organization/
 funder/agency, why it may fit, qualification result, evidence, gaps, risks, deadline,
 missing information, recommended next action, and pursuit recommendation (Pursue /
-Investigate / Do Not Pursue). Summary posted to owner with exception flags.
+Investigate / Conditional Pursue / Do Not Pursue), plus a summary with exception flags.
 
 ## Rules
 

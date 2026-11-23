@@ -3,20 +3,23 @@ claude_description: "Orchestrates the full 7-phase proposal pipeline from intake
 intro_heading: Purpose
 openai_title: "Maya -- Proposal Engine Lead"
 research_ref:
-  claude: "`proposal-researcher`"
+  claude: "`proposal-researcher-chase`"
   openai: "`references/chase.md`"
 assessment_ref:
-  claude: "`proposal-analyst`"
+  claude: "`proposal-analyst-priya`"
   openai: "`references/priya.md`"
 strategy_ref:
-  claude: "`proposal-strategist`"
+  claude: "`proposal-strategist-porter`"
   openai: "`references/porter.md`"
 draft_ref:
-  claude: "`proposal-writer`"
+  claude: "`proposal-writer-quinn`"
   openai: "`references/quinn.md`"
 qa_ref:
-  claude: "`proposal-qa`"
+  claude: "`proposal-qa-diego`"
   openai: "`references/diego.md`"
 review_system_ref:
   claude: "the `proposal-review-system` skill"
   openai: "`references/review-system.md`"
+funder_ref:
+  claude: "`grant-proposal-blair`"
+  openai: "`references/blair.md`"

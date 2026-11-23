@@ -3,7 +3,7 @@
   "_last_updated": "[DATE YOU LAST UPDATED THIS FILE]",
 
   "capability_map": {
-    "_instructions": "One entry per placement-capable capability, for Chet's cluster discovery.",
+    "_instructions": "One entry per placement-capable capability. Chet uses it for both discovery patterns: individual grants, contracts, or funding opportunities, and clusters of groups that share a capacity gap.",
     "capabilities": [
       {
         "capability_id": "[CAPABILITY-1]",
@@ -63,13 +63,13 @@
   },
 
   "delivery": {
-    "_instructions": "Where Ben's finished briefs land. Named for Google Drive for illustration only -- use whatever storage location (OneDrive, SharePoint, etc.) and identifier your own tool needs.",
+    "_instructions": "Where Ben's finished Capture Briefs land. Named for Google Drive for illustration only -- use whatever storage location (OneDrive, SharePoint, etc.) and identifier your own tool needs. Writing or sharing a file is an external action: the team asks for your approval in the session before doing either.",
     "google_drive_folder_id": "[YOUR STORAGE FOLDER/LOCATION ID]",
-    "share_with_owner_on_completion": true
+    "share_with_owner_on_completion": false
   },
 
   "brief_structure": {
-    "_instructions": "Section headers for Ben's brief output. Customize to your delivery format.",
-    "sections": ["[Executive Summary]", "[Signal Detail]", "[Market Context]", "[Recommended Actions]"]
+    "_instructions": "Section headers for Ben's Capture Brief. Customize to your delivery format, but keep the recommendation, evidence, gaps, and human decision sections.",
+    "sections": ["[Executive Recommendation: Pursue | Investigate / Conditional Pursue | Do Not Pursue]", "[Opportunity and Organization]", "[Fit and Qualification Result]", "[Evidence and Sources]", "[Gaps, Risks, and Unknowns]", "[Deadline and Timing]", "[Recommended Next Action]", "[Human Decision Required]"]
   }
 }

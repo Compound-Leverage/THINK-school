@@ -139,10 +139,29 @@
     "blended_rate": "[Your blended rate if applicable]"
   },
 
+  "cost_build_up": {
+    "_instructions": "For cost-plus or government pricing reviewed by the Green Team. Leave blank if you only price by fixed fee or package.",
+    "labor_categories": [
+      {
+        "category": "[LABOR CATEGORY - e.g., 'Program Manager II']",
+        "direct_rate": "[DIRECT HOURLY RATE]",
+        "maps_to_role": "[Role name from hourly_rates, if any]"
+      }
+    ],
+    "indirect_rates": {
+      "fringe": "[PERCENTAGE]",
+      "overhead": "[PERCENTAGE]",
+      "g_and_a": "[PERCENTAGE]",
+      "basis": "[What each rate applies to, e.g. direct labor]"
+    },
+    "fee_or_margin": "[PERCENTAGE - target fee or margin]",
+    "subcontractor_markup": "[PERCENTAGE, if any]"
+  },
+
   "roi_defaults": {
-    "_instructions": "Default assumptions for ROI calculations",
-    "typical_improvement_percentage": "[30 | 40 | 50 - typical efficiency gain]",
-    "typical_break_even_months": "[3 | 6 | 9 - typical break-even period]",
+    "_instructions": "Default assumptions for ROI calculations. Use only figures backed by your own completed engagements; Priya applies the conservative end and labels every assumption.",
+    "typical_improvement_percentage": "[YOUR documented typical efficiency gain %, from completed engagements]",
+    "typical_break_even_months": "[YOUR documented typical break-even period in months]",
     "hourly_value_assumption": "[Dollar value of client hour saved]"
   }
 }
