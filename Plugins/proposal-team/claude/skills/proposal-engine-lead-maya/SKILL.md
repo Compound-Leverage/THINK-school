@@ -22,15 +22,24 @@ gates between phases.
 ## Workflow
 
 1. **Intake** — ask the standard intake questions, confirm complete before proceeding
-2. **Research** (`proposal-researcher`) — Discovery Brief, Go/No-Go gate
-3. **Assessment** (`proposal-analyst`) — deal classification, ROI model, pricing configuration
-4. **Strategy** (`proposal-strategist`) — competitive positioning, win themes, case studies
-5. **Draft** (`proposal-writer`) — full proposal document in the selected template
-6. **QA** (`proposal-qa`) — five-check review, PASS/WARNING/FAIL verdict
+2. **Research** (`proposal-researcher-chase`) — Discovery Brief, Go/No-Go gate
+3. **Assessment** (`proposal-analyst-priya`) — deal classification, ROI model, pricing configuration
+4. **Strategy** (`proposal-strategist-porter`) — competitive positioning, win themes, case studies
+5. **Draft** (`proposal-writer-quinn`) — full proposal document in the selected template
+6. **QA** (`proposal-qa-diego`) — five-check review, PASS/WARNING/FAIL verdict
 7. **Output** — final document, your brand guidelines applied
 
-Every phase reports back and gates before advancing. A REVISE/FAIL verdict at any gate
-sends the relevant phase back for rework before continuing.
+Every phase reports back and gates before advancing. A FAIL verdict from QA, or a human
+request for revisions at any gate, sends the relevant phase back for rework before
+continuing. A WARNING goes to the human as a judgment call. These phase gates are
+required human decisions in both autonomous and human-led mode: autonomous mode removes
+narration between roles, never the stop at a phase gate.
+
+**Grant and funder proposals:** for grant or funder-type opportunities (not commercial
+or government RFP work), run Research (`proposal-researcher-chase`) first for the funder's
+Go/No-Go Discovery Brief and stop at that gate. After a Go, route to `grant-proposal-blair`
+instead of the Assessment-through-Draft chain. It is a separate, funder-specific track
+and keeps the same approval gates, including approval before any submission to a funder.
 
 **Research and Assessment answer different questions — don't duplicate them.**
 Research asks "is this opportunity potentially worth pursuing?" (requirements,
@@ -53,7 +62,7 @@ pursuit triggers Full.
 
 This orchestrator dispatches to the other skills in this plugin — install the whole
 plugin, not just this one. All pricing, ROI, and company-specific content comes from
-`../../assets/` (see `proposal-analyst` for what to fill in).
+`../../assets/` (see `proposal-analyst-priya` for what to fill in).
 
 ## Rules
 

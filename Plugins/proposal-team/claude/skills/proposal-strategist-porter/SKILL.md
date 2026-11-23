@@ -46,7 +46,7 @@ emphasize, risks to address).
 - Blue #2: reconcile revised capture plan and solution before proposal planning.
 - Red: assess an evaluable draft as a skeptical customer evaluator against stated criteria, including price as appropriate; distinguish competitive recommendations from controlling compliance requirements. Rank findings by likely evaluation impact. For repeat Red passes, compare the latest document revision with previous disposition records; do not re-report fixed issues.
 
-Do not be sole independent evaluator of strategy you authored. Use the `proposal-review-system` skill for risk routing, status conventions and human approvals.
+Do not be sole independent evaluator of strategy you authored: Diego shares Red Team review, and a human records the final disposition. Use the `proposal-review-system` skill for risk routing, status conventions and human approvals.
 
 ## Directory-Safe Runtime Behavior
 

@@ -10,7 +10,7 @@ Follow the [Codex marketplace instructions](../../../.agents/README.md). Confirm
 
 ## Configuration
 
-Identify the organization explicitly. Supply only authorized organization information and sources. Configure the placeholder company profile, pricing, case studies, and brand guidelines in `./assets/`. Do not assume live CRM access, procurement data, or permission to contact third parties.
+Identify the organization explicitly. Supply only authorized organization information and sources. Configure the placeholder company profile, pricing, case studies, brand guidelines, and (for grants) bid-sizing files in `./assets/`. Keep a filled-in copy outside the plugin folder, because updates replace these files. Do not assume live CRM access, procurement data, or permission to contact third parties.
 
 ## First assignment
 
@@ -18,11 +18,11 @@ Identify the organization explicitly. Supply only authorized organization inform
 
 ## Expected deliverable
 
-Structured research, fit and risk findings, response strategy, proposal drafts, compliance reporting, review findings, and next actions. The team may complete internal work autonomously or proceed through user-directed stages.
+Structured research, fit and risk findings, response strategy, proposal drafts, compliance reporting, review findings, and next actions. Grant and funder opportunities follow Blair's funder track, with the same QA and approval gates.
 
 ## Human approval and quality
 
-Choose autonomous internal execution or human-led stage gating. Authorized humans retain final pursue, pricing, content, outreach, and submission decisions. Distinguish verified sources from assumptions and never fabricate citations.
+Every phase stops for your approval before the next one starts, in autonomous and human-led mode alike. Authorized humans retain final pursue, pricing, content, outreach, and submission decisions. Distinguish verified sources from assumptions and never fabricate citations.
 
 ## Optional paid service
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Find, qualify, research, and help pursue opportunities through an autonomous or human-led workflow.
+Find, qualify, research, and help pursue opportunities, with a stop for your approval after each stage.
 
 ## Installation
 
@@ -10,11 +10,11 @@ Follow the [Codex marketplace instructions](../../../.agents/README.md). Confirm
 
 ## Configuration
 
-Identify the organization explicitly. Supply only authorized organization information and sources. Complete the placeholders in `./assets/my-capture-config.json`. Do not assume live CRM access, procurement data, or permission to contact third parties.
+Identify the organization explicitly. Supply only authorized organization information and sources. Complete the placeholders in `./assets/my-capture-config.json`, and keep a filled-in copy outside the plugin folder, because updates replace it. Do not assume live CRM access, procurement data, or permission to contact third parties.
 
 ## First assignment
 
-> Use Capture Team for fictional Harborlight Systems. Find three fictional opportunities and label all invented details. Produce a Capture Brief with risks, unknowns, evidence gaps, and a Pursue / Investigate / Do Not Pursue recommendation. Stop for my approval.
+> Use Capture Team for fictional Harborlight Systems. Find three fictional opportunities and label all invented details. Produce a Capture Brief with risks, unknowns, evidence gaps, and a Pursue / Investigate / Conditional Pursue / Do Not Pursue recommendation. Stop for my approval.
 
 ## Expected deliverable
 
@@ -22,7 +22,7 @@ A sourced opportunity shortlist (or explicitly fictional practice data), fit and
 
 ## Human approval and quality
 
-Run internal discovery, qualification, research, and reporting autonomously or direct the work step by step. The user makes final pursuit decisions. No CRM updates or external outreach without permission. Distinguish verified sources from assumptions and never fabricate citations.
+Discovery, qualification, and the Capture Brief each stop for your approval before the next stage starts, in autonomous and human-led mode alike. The user makes final pursuit decisions. No CRM updates, file saves or shares, website reads, or external outreach without permission. Distinguish verified sources from assumptions and never fabricate citations.
 
 ## Optional paid service
 

@@ -36,7 +36,8 @@ default:
 
 Once you know whose organization, get their criteria one of three ways, in this order:
 1. Already stored in `my-capture-config.json` -- use it as configured
-2. Not stored, but they have a website -- offer to read it and draft a starting
+2. Not stored, but they have a website -- offer to read it and, only with their
+   permission, draft a starting
    `capability_map` and `qualification_profiles` entry from it (services offered, sectors
    served, geography, any visible certifications). Always show the draft back for
    confirmation or correction before saving -- a site's marketing copy is a starting
@@ -74,8 +75,8 @@ methodology, unchanged:
    re-test dependency
 3. For each capability with no groups mapped yet: run its signal keywords against your
    scanning sources looking for a hit that resolves to a real, bounded group -- not a
-   one-off organization. Write any new match back into your capability map so the next
-   scan treats it as pre-validated
+   one-off organization. Propose adding any new match to your capability map so the next
+   scan treats it as pre-validated, and write it only after the user confirms
 4. Per qualifying group, count how many member entities show the signal pattern -- this is
    the gap-volume count
 5. Mine each qualifying group for: membership list, buyer identity (who has hiring/
@@ -85,7 +86,7 @@ methodology, unchanged:
    collapse multiple groups into one
 7. A signal that doesn't match any mapped capability, seen more than once, isn't forced into
    a cluster -- log it as a build candidate instead
-8. On a recurring cadence, refresh existing groups: update membership, budget, deadline, and
+8. When the user asks for a refresh (or the host has a confirmed schedule), refresh existing groups: update membership, budget, deadline, and
    window estimates, and archive any candidate whose window has closed without conversion
 
 ## Output

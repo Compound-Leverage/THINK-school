@@ -2,7 +2,7 @@
 
 ## Architecture and ownership
 
-Reviews are reusable capabilities embedded into the existing Research, Assessment, Strategy, Draft, QA/Review and Output workflow, not seven additional mandatory pipeline stages and not seven new Digital Employees. Maya orchestrates. Chase provides source-grounded research, Priya reviews finance, Porter leads evaluator/strategy challenges, Quinn develops content plans and approved revisions, Diego independently verifies compliance and final readiness, and Blair supports funder-specific work as appropriate.
+Reviews are reusable capabilities embedded into the existing Research, Assessment, Strategy, Draft, QA/Review and Output workflow, not seven additional mandatory pipeline stages and not seven new Digital Employees. Maya orchestrates. Chase provides source-grounded research, Priya reviews finance, Porter leads evaluator/strategy challenges, Quinn develops content plans and approved revisions, Diego independently verifies compliance and final readiness, and Blair leads the grant and funder track, whose drafts go through the same QA and reviews.
 
 Review points can overlap and execute in parallel. A review is not automatically an approval: only the authorized human makes pursue, price, final-content and submittal decisions. No reviewer approves work merely because their own earlier output passed. A human Strategist can allocate real independent reviewers for material or conflicted work.
 

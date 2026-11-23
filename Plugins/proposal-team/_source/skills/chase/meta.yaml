@@ -4,4 +4,4 @@ intro_heading: Purpose
 openai_title: "Chase -- Proposal Researcher"
 review_ref:
   claude: "Follow the `proposal-review-system` skill."
-  openai: "Follow `../references/review-system.md`."
+  openai: "Follow `review-system.md`."

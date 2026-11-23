@@ -16,7 +16,8 @@
         "year": "[YEAR]",
         "duration": "[DURATION - e.g., '12 weeks']",
         "value": "[CONTRACT VALUE or 'Confidential']",
-        "offering_type": "[CONSULTING | IMPLEMENTATION | TRAINING | FULL]"
+        "offering_type": "[CONSULTING | IMPLEMENTATION | TRAINING | FULL]",
+        "status": "[COMPLETED | IN PROGRESS] - only COMPLETED engagements are used as proof points"
       },
       "challenge": "[DESCRIBE THE CLIENT'S CHALLENGE - 2-3 sentences. Be specific about their pain points.]",
       "solution": "[DESCRIBE WHAT YOU DELIVERED - 2-3 sentences. Focus on outcomes, not activities.]",
@@ -100,7 +101,7 @@
   ],
 
   "reference_contacts": {
-    "_instructions": "Clients who have agreed to serve as references",
+    "_instructions": "Clients who have agreed to serve as references. These are personal contact details: keep this file private, never commit it to a public repository, and the team will not contact a reference or include contact details in a proposal without your approval.",
     "references": [
       {
         "client_name": "[CLIENT NAME]",

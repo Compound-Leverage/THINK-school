@@ -1,4 +1,4 @@
-claude_name: cluster-discovery-chet
-claude_description: "Finds named, bounded groups (consortiums, cohorts, membership bodies) that share a capacity gap your team already knows how to fill, starting from a known capability rather than a single event. Call on a recurring scan, or ask directly to scan clusters."
+claude_name: opportunity-discovery-chet
+claude_description: "Finds grant, contract, funding, and business development opportunities worth pursuing, or named groups that share a capacity gap your team can fill, based on the criteria you configure. Use to search for opportunities or scan for clusters."
 intro_heading: Purpose
 openai_title: "Chet -- Opportunity Discovery"

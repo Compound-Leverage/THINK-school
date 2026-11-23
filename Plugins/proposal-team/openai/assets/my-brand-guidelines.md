@@ -83,6 +83,17 @@ _Use these terms consistently:_
 
 ---
 
+## Delivery Methodology
+
+### Framework Phases
+_List the phases every proposal must present, in order. Diego checks each proposal against this list. Leave blank if you don't use a fixed framework._
+
+1. [PHASE 1 - e.g., "Discover"]
+2. [PHASE 2 - e.g., "Design"]
+3. [PHASE 3 - e.g., "Deliver"]
+
+---
+
 ## Visual Standards
 
 ### Colors (for digital proposals)

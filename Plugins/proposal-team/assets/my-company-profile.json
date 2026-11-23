@@ -21,6 +21,7 @@
       {
         "service_line_name": "[SERVICE LINE 1 NAME]",
         "description": "[Brief description of this service]",
+        "evidence": "[Proof for this service line, e.g. case IDs from my-case-studies.json]",
         "key_competencies": [
           "[Competency 1]",
           "[Competency 2]",
@@ -30,6 +31,7 @@
       {
         "service_line_name": "[SERVICE LINE 2 NAME]",
         "description": "[Brief description of this service]",
+        "evidence": "[Proof for this service line, e.g. case IDs from my-case-studies.json]",
         "key_competencies": [
           "[Competency 1]",
           "[Competency 2]",
@@ -39,6 +41,7 @@
       {
         "service_line_name": "[SERVICE LINE 3 NAME]",
         "description": "[Brief description of this service]",
+        "evidence": "[Proof for this service line, e.g. case IDs from my-case-studies.json]",
         "key_competencies": [
           "[Competency 1]",
           "[Competency 2]",
@@ -124,6 +127,19 @@
     ],
     "memberships": [
       "[Professional associations]"
+    ],
+    "socioeconomic_status": [
+      "[Small business, 8(a), WOSB, HUBZone, SDVOSB, or other set-aside eligibility you hold]"
+    ],
+    "naics_codes": [
+      "[NAICS CODE - size standard you qualify under]"
+    ],
+    "government_identifiers": {
+      "uei": "[SAM.gov Unique Entity ID]",
+      "cage_code": "[CAGE CODE]"
+    },
+    "contract_vehicles": [
+      "[IDIQ, GWAC, BPA, or schedule you hold, with expiration date]"
     ]
   },
 

@@ -1,4 +1,10 @@
-claude_name: pitch-development-blair
-claude_description: "Converts pipeline prospects into customized grant and funder proposals. Generation is autonomous; submission to external funders requires your approval."
+claude_name: grant-proposal-blair
+claude_description: "Develops customized grant and funder proposals for qualified funding opportunities, using your funder categories, bid-sizing rules, and case studies. Drafts go through QA, and submission to external funders requires your approval."
 intro_heading: Purpose
-openai_title: "Blair -- Grant/Funder Pitch Development"
+openai_title: "Blair -- Grant and Funder Proposals"
+qa_ref:
+  claude: "`proposal-qa-diego`"
+  openai: "`references/diego.md`"
+research_ref:
+  claude: "`proposal-researcher-chase`"
+  openai: "`references/chase.md`"

@@ -24,8 +24,17 @@ gates between phases.
 6. **QA** (`references/diego.md`) -- five-check review, PASS/WARNING/FAIL verdict
 7. **Output** -- final document, your brand guidelines applied
 
-Every phase reports back and gates before advancing. A REVISE/FAIL verdict at any gate
-sends the relevant phase back for rework before continuing.
+Every phase reports back and gates before advancing. A FAIL verdict from QA, or a human
+request for revisions at any gate, sends the relevant phase back for rework before
+continuing. A WARNING goes to the human as a judgment call. These phase gates are
+required human decisions in both autonomous and human-led mode: autonomous mode removes
+narration between roles, never the stop at a phase gate.
+
+**Grant and funder proposals:** for grant or funder-type opportunities (not commercial
+or government RFP work), run Research (`references/chase.md`) first for the funder's
+Go/No-Go Discovery Brief and stop at that gate. After a Go, route to `references/blair.md`
+instead of the Assessment-through-Draft chain. It is a separate, funder-specific track
+and keeps the same approval gates, including approval before any submission to a funder.
 
 **Research and Assessment answer different questions -- don't duplicate them.**
 Research asks "is this opportunity potentially worth pursuing?" (requirements,

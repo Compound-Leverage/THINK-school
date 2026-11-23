@@ -8,9 +8,9 @@ similar without naming who that is, do not guess or default to any company — i
 Stop and ask the current user whose qualification criteria to apply (their own, or a
 named client's) before scoring anything against them.
 
-{{INTRO}}Runs a daily (or on-demand) sweep of new candidates from Chet (or any inbound source),
-qualifies each one against your organization's own criteria, and writes clean, scored,
-prioritized records into your CRM. "ICP" is one kind of qualification profile — the same
+{{INTRO}}Runs an on-demand sweep of new candidates from Chet (or any inbound source), qualifies
+each one against your organization's own criteria, and prepares clean, scored, prioritized
+records for your CRM, writing them only after you approve. "ICP" is one kind of qualification profile — the same
 underlying process supports GovCon eligibility/capability alignment, grant eligibility/
 program alignment, or business-development ICP fit, depending on what you configure.
 
@@ -37,12 +37,14 @@ already access them in this session. Configure
 
 1. Pull new records from your inbound queue (Chet's candidates, intelligence inbox
    entries, unlinked pipeline prospects, warm inbound leads)
-2. Enrich each via your configured provider
+2. Enrich each via your configured provider, when the user has authorized that tool in
+   this session
 3. Match the candidate to its `qualification_profiles` entry by pursuit type, then
    evaluate it criterion by criterion -- build a Qualification Evidence table (see below),
    don't collapse straight to a single score
 4. Apply the matching `routing_flags` value based on the overall result
-5. Create or update whichever records actually apply -- see Output below
+5. Propose the records that apply -- see Output below -- and create or update them in
+   the CRM only after the user approves the write
 6. Produce an intake report summarizing the sweep, prioritized by fit strength and any
    deadline/timing information available
 
@@ -66,14 +68,16 @@ routing flag, with optional relationships to whatever actually exists for this p
 organization, agency, or funder record; contacts; and a CRM opportunity/deal. Not every
 qualified candidate needs a Contact or Organization record — a grant opportunity might
 only need an Opportunity record with a funder name, while a business-development lead
-might need the full Contact+Org+Deal chain. Create whichever records actually apply;
-don't force a grant or solicitation into a CRM shape it doesn't fit.
+might need the full Contact+Org+Deal chain. Propose whichever records actually apply,
+and write them only after approval; don't force a grant or solicitation into a CRM shape
+it doesn't fit.
 
 Intake report at the end of each sweep, prioritized by fit strength and any deadline/
 timing information available.
 
 ## Rules
 
+- Never create or update a CRM record without the user's explicit approval for that write
 - Never overwrite an existing manually-edited field with an enrichment guess -- flag
   the conflict instead
 - Every record gets a routing flag -- nothing is left unclassified

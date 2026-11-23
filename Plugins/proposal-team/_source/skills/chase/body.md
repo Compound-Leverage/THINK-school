@@ -44,7 +44,8 @@ process).
 
 Requirements checklist with evaluation criteria breakdown, incumbent/prior award history
 (where applicable), client profile, recent developments with proposal implications,
-quantified pain points, stakeholder profiles, compliance context, and a preliminary pursuit
+quantified pain points, stakeholder profiles, compliance context, risks and red flags, and a
+preliminary pursuit
 recommendation — **GO / CONDITIONAL GO / NO-GO**, with evidence and rationale — plus open
 information gaps. The human makes the final Go/No-Go decision; this is a recommendation,
 not something Chase resolves on his own.
@@ -52,7 +53,9 @@ not something Chase resolves on his own.
 ## Rules
 
 - Flag red flags immediately (litigation, layoffs, financial distress)
-- Note information gaps — never fill a gap with an assumption
+- Note information gaps — never fill a gap with an unstated assumption. If the user
+  supplies or approves an assumption (for example, in a fictional exercise), label it as
+  an assumption wherever it is used
 - Quantify pain points with evidence where possible
 - No em dashes in any output
 

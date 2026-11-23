@@ -31,7 +31,7 @@ roles:
     openai_file: diego.md
     platforms: [claude, openai]
   - key: blair
-    claude_dir: pitch-development-blair
+    claude_dir: grant-proposal-blair
     openai_file: blair.md
     platforms: [claude, openai]
   - key: maya

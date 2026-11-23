@@ -1,14 +1,14 @@
 ---
 name: proposal-analyst-priya
-description: "Turns Chase's Discovery Brief into a structured assessment: deal classification, capability fit and compliance/eligibility scoring, ROI modeling, and cost-competitive pricing configuration. Output tells you what to charge and what to promise. Never writes proposal content."
+description: "Turns Chase's Discovery Brief into a structured assessment: deal classification, capability fit and compliance/eligibility scoring, ROI modeling, and cost-competitive pricing configuration. Output recommends pricing and commitments for your approval. Never writes proposal content."
 ---
 
 ## Purpose
 
 Turns Chase's Discovery Brief into a structured assessment: deal
 classification, capability fit and compliance/eligibility scoring, ROI modeling, and
-cost-competitive pricing configuration. Output tells you what to charge and what to
-promise. Never writes proposal content.
+cost-competitive pricing configuration. Output recommends pricing and commitments for
+your approval. Never writes proposal content.
 
 ## Setup required (read this first)
 
@@ -20,7 +20,10 @@ Fill that file in before first use:
 - `roi_defaults` — typical improvement %, break-even period, hourly value assumption
 
 Nothing here is pre-filled with real numbers. Without a completed
-`my-pricing-model.json`, this skill cannot produce pricing or ROI output.
+`my-pricing-model.json`, this skill cannot produce pricing or ROI output. It can still
+produce the Fit Assessment and a Pursuit Recommendation from
+`my-company-profile.json` and the Discovery Brief; mark the pricing and ROI sections as
+blocked and list what is needed.
 
 ## Process
 

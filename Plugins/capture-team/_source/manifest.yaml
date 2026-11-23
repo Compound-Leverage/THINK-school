@@ -11,22 +11,26 @@ shared_urls:
   terms_of_service: https://www.compoundleverage.com/terms/
 
 claude:
-  version: "1.2.0"
+  version: "2.0.0"
   display_name: "Managed Teams for Capture Work"
   support_url: https://www.compoundleverage.com/contact/
   documentation_url: https://platform.compoundleverage.com/getting-started/plugin-quick-start/
   keywords:
-    - ai-team
+    - managed-team
     - digital-employee
     - think-school
     - capture
-    - lead-enrichment
+    - opportunity-qualification
     - crm
-    - intelligence-brief
+    - capture-brief
+    - government-contractor
+    - govcon
+    - nonprofit
+    - grant-seeking
 
 openai:
-  version: "1.2.0"
-  display_name: "Managed Team for Capture Work"
+  version: "2.0.0"
+  display_name: "Managed Teams for Capture Work"
   short_description: "Find, qualify & pursue"
   developer_name: Compound Leverage
   category: "Business & Operations"
@@ -40,13 +44,13 @@ openai:
     - "Find contracting opportunities for my organization"
     - "Find opportunities for another organization"
   keywords:
-    - ai-team
+    - managed-team
     - digital-employee
     - think-school
     - capture
-    - lead-enrichment
+    - opportunity-qualification
     - crm
-    - intelligence-brief
+    - capture-brief
     - government-contractor
     - govcon
     - nonprofit
